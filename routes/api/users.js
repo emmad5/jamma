@@ -8,9 +8,6 @@ const passport = require('passport');
 const validateRegisterInput = require('../../validation/register');
 const validateLoginInput = require('../../validation/login');
 
-// router.get('/current', passport.authenticate('jwt', { session: false }), (req, res) => {
-//   res.json({ msg: 'Success' });
-// }); 
 
 router.get('/current', passport.authenticate('jwt', { session: false }), (req, res) => {
   res.json({
@@ -52,26 +49,6 @@ router.post("/register", (req, res) => {
             .catch(err => console.log(err))
         })
       })
-
-      // bcrypt.genSalt(10, (err, salt) => {
-      //   bcrypt.hash(newUser.password, salt, (err, hash) => {
-      //     if (err) throw err;
-      //     newUser.password = hash;
-      //     newUser
-      //       .save()
-      //       .then(user => {
-      //         const payload = { id: user.id, email: user.name };
-
-      //         jwt.sign(payload, keys.secretOrKey, { expiresIn: 3600 }, (err, token) => {
-      //           res.json({
-      //             success: true,
-      //             token: "Bearer " + token
-      //           });
-      //         });
-      //       })
-      //       .catch(err => console.log(err));
-      //   });
-      // });
     }
   });
 });
