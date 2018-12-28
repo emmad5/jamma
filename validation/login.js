@@ -23,4 +23,5 @@ module.exports = function validateLoginInput(data) {
     errors,
     isValid: Object.keys(errors).length === 0
   };
+
 };
