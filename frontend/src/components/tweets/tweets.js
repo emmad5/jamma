@@ -1,7 +1,8 @@
 import React from 'react';
-import TweetBox from '../tweets/tweet_box';
+import { withRouter } from 'react-router-dom';
+import TweetBox from './tweet_box';
 
-class Profile extends React.Component {
+class Tweet extends React.Component {
   constructor(props) {
     super(props);
 
@@ -11,8 +12,7 @@ class Profile extends React.Component {
   }
 
   componentWillMount() {
-    console.log(this.props.currentUser.id)
-    this.props.fetchUserTweets(this.props.currentUser.id);
+    this.props.fetchTweets();
   }
 
   componentWillReceiveProps(newState) {
@@ -21,11 +21,11 @@ class Profile extends React.Component {
 
   render() {
     if (this.state.tweets.length === 0) {
-      return (<div>This user has no Tweets</div>)
+      return (<div>There are no Tweets</div>)
     } else {
       return (
         <div>
-          <h2>All of This User's Tweets</h2>
+          <h2>All Tweets</h2>
           {this.state.tweets.map(tweet => (
             <TweetBox key={tweet._id} text={tweet.text} />
           ))}
@@ -34,4 +34,5 @@ class Profile extends React.Component {
     }
   }
 }
-export default Profile;
+
+export default withRouter(Tweet);

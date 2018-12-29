@@ -17,7 +17,7 @@ export const receiveUserTweets = tweets => ({
 export const receiveNewTweet = tweet => ({
   type: RECEIVE_NEW_TWEET,
   tweet
-});
+})
 
 export const fetchTweets = () => dispatch => (
   getTweets()
