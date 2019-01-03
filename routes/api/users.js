@@ -18,20 +18,20 @@ router.get('/current', passport.authenticate('jwt', { session: false }), (req, r
   });
 })
 
-// router.get('/current', passport.authenticate('jwt', { session: false }), (req, res) => {
-//   res.json({
-//     id: req.user.id,
-//     handle: req.user.handle,
-//     email: req.user.email
-//   });
-// });
+router.get('/current', passport.authenticate('jwt', { session: false }), (req, res) => {
+  res.json({
+    id: req.user.id,
+    // handle: req.user.handle,
+    email: req.user.email
+  });
+});
 
 router.post('/register', (req, res) => {
   const { errors, isValid } = validateRegisterInput(req.body);
 
-  // if (!isValid) {
-  //   return res.status(400).json(errors);
-  // }
+  if (!isValid) {
+    return res.status(400).json(errors);
+  }
 
   User.findOne({ email: req.body.email })
     .then(user => {
