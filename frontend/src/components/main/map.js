@@ -1,6 +1,6 @@
 import React from 'react';
 import mapboxgl from 'mapbox-gl';
-mapboxgl.accessToken = 'pk.eyJ1IjoiZW1tYWRlYXMiLCJhIjoiY2pxZmlqemU2MjVycjN4cW9mYmh1ZWl2cCJ9.z-IDAJYR6Am8oyctbpvfhw';
+mapboxgl.accessToken = 'pk.eyJ1IjoiZW1tYWRlYXMiLCJhIjoiY2pxY2pidXM0MWZieDQ5b2czZGp1azF1aSJ9.vAlafNdCqofi8OdqKUGr5g';
 class Map extends React.Component {
     constructor(props) {
         super(props);
@@ -8,7 +8,7 @@ class Map extends React.Component {
     componentDidMount() {
         const map = new mapboxgl.Map({
             container: this.mapContainer,
-            style: 'mapbox://styles/mapbox/light-v9',
+            style: 'mapbox://styles/emmadeas/cjqgxj0j6lcuz2smyu9mmve85',
             zoom: 12,
             center: [-122.431297, 37.773972],
             pitch: 45,
