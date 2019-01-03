@@ -18,7 +18,6 @@ const mongoose = require("mongoose");
 const db = require('./config/keys').mongoURI;
 
 const users = require("./routes/api/users");
-const tweets = require("./routes/api/tweets");
 
 mongoose
   .connect(db, { useNewUrlParser: true })
@@ -31,7 +30,6 @@ app.use(passport.initialize());
 require('./config/passport')(passport);
 
 app.use("/api/users", users);
-app.use("/api/tweets", tweets);
 
 const port = process.env.PORT || 5000;
 
