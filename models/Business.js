@@ -7,7 +7,7 @@ const BusinessSchema = new Schema({
     required: true
   },
   description: {
-    type: Text
+    type: String
   },
   address: {
     type: String,
@@ -15,7 +15,8 @@ const BusinessSchema = new Schema({
   },
   vibe: {
     type: String,
-    required: true,
+    enum: ["Red", "Black", "White"],
+    required: true
   }
 })
 
