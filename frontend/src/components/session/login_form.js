@@ -13,6 +13,8 @@ class LoginForm extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
+    this.demoHandleSubmit = this.demoHandleSubmit.bind(this);
+
   }
 
   componentWillReceiveProps(nextProps) {
@@ -37,6 +39,12 @@ class LoginForm extends React.Component {
     };
 
     this.props.login(user);
+  }
+
+  demoHandleSubmit(e) {
+    e.preventDefault();
+    const user2 = Object.assign({ email: 'jamal@ballislife.com', password: 'password' });
+    this.props.login(user2);
   }
 
   renderErrors() {
@@ -77,6 +85,7 @@ class LoginForm extends React.Component {
             {this.renderErrors()}
           </div>
         </form>
+        <button className="demo-button" onClick={this.demoHandleSubmit}>Demo</button>
       </div>
     );
   }

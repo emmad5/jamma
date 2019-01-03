@@ -15,11 +15,13 @@ class SignupForm extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.clearedErrors = false;
+    this.demoHandleSubmit = this.demoHandleSubmit.bind(this);
+
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.signedIn === true) {
-      this.props.history.push('/login');
+      this.props.history.push('/profile');
     }
 
     this.setState({ errors: nextProps.errors });
@@ -41,6 +43,14 @@ class SignupForm extends React.Component {
     };
 
     this.props.signup(user, this.props.history);
+    this.props.login(user);
+
+  }
+
+  demoHandleSubmit(e) {
+    e.preventDefault();
+    const user2 = Object.assign({ email: 'jamal@ballislife.com', password: 'password' });
+    this.props.login(user2);
   }
 
   renderErrors() {
@@ -89,6 +99,8 @@ class SignupForm extends React.Component {
             {this.renderErrors()}
           </div>
         </form>
+        <button className="demo-button" onClick={this.demoHandleSubmit}>Demo</button>
+
       </div>
     );
   }
