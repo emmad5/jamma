@@ -7,7 +7,6 @@ class MainPage extends React.Component {
       <div>
         <h1>JAMAL</h1>
         <div>
-
           <Map/>
         </div>
         <footer>

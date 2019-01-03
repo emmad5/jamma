@@ -1,7 +1,7 @@
 {
-  "name": "merntwitter",
+  "name": "JAMMA",
   "version": "1.0.0",
-  "description": "Twitter clone built with MERN stack",
+  "description": "JAMMA",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",

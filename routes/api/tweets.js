@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const passport = require('passport');
 
-const Tweet = require('../../models/Tweet');
+
 const validateTweetInput = require('../../validation/tweets');
 
 router.get('/', (req, res) => {
