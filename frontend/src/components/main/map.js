@@ -2,9 +2,9 @@ import React from 'react';
 import mapboxgl from 'mapbox-gl';
 mapboxgl.accessToken = 'pk.eyJ1IjoiZW1tYWRlYXMiLCJhIjoiY2pxY2pidXM0MWZieDQ5b2czZGp1azF1aSJ9.vAlafNdCqofi8OdqKUGr5g';
 class Map extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+    // constructor(props) {
+    //     super(props);
+    // }
     componentDidMount() {
         const map = new mapboxgl.Map({
             container: this.mapContainer,

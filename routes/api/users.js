@@ -13,18 +13,18 @@ router.get("/test", (req, res) => res.json({ msg: "This is the users route" }));
 router.get('/current', passport.authenticate('jwt', { session: false }), (req, res) => {
   res.json({
     id: req.user.id,
-    handle: req.user.handle,
+    // handle: req.user.handle,
     email: req.user.email
   });
 })
 
-// router.get('/current', passport.authenticate('jwt', { session: false }), (req, res) => {
-//   res.json({
-//     id: req.user.id,
-//     handle: req.user.handle,
-//     email: req.user.email
-//   });
-// });
+router.get('/current', passport.authenticate('jwt', { session: false }), (req, res) => {
+  res.json({
+    id: req.user.id,
+    // handle: req.user.handle,
+    email: req.user.email
+  });
+});
 
 router.post('/register', (req, res) => {
   const { errors, isValid } = validateRegisterInput(req.body);
@@ -40,7 +40,7 @@ router.post('/register', (req, res) => {
         return res.status(400).json(errors);
       } else {
         const newUser = new User({
-          handle: req.body.handle,
+          // handle: req.body.handle,
           email: req.body.email,
           password: req.body.password
         });
@@ -53,7 +53,7 @@ router.post('/register', (req, res) => {
               .then(user => {
                 const payload = {
                   id: user.id,
-                  handle: user.handle,
+                  // handle: user.handle,
                   email: user.email
                 };
 
@@ -93,7 +93,7 @@ router.post('/login', (req, res) => {
           if (isMatch) {
             const payload = {
               id: user.id,
-              handle: user.handle,
+              // handle: user.handle,
               email: user.email
             };
 
