@@ -7,7 +7,6 @@ class SignupForm extends React.Component {
 
     this.state = {
       email: '',
-      // handle: '',
       password: '',
       password2: '',
       errors: {}
@@ -16,7 +15,6 @@ class SignupForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.clearedErrors = false;
     this.demoHandleSubmit = this.demoHandleSubmit.bind(this);
-
   }
 
   componentWillReceiveProps(nextProps) {
@@ -37,7 +35,6 @@ class SignupForm extends React.Component {
     e.preventDefault();
     let user = {
       email: this.state.email,
-      // handle: this.state.handle,
       password: this.state.password,
       password2: this.state.password2
     };
