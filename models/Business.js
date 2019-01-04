@@ -17,6 +17,10 @@ const BusinessSchema = new Schema({
     type: String,
     enum: ["Red", "Black", "White"],
     required: true
+  },
+  longLat: {
+    type: Array,
+    required: true
   }
 })
 

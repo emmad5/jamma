@@ -9,13 +9,14 @@ const go = async () => {
         // .then(() => console.log("Connected to MongoDB successfully"))
         // .catch(err => console.log(err));
 
-    const b1 = new Business({
-        name: "seed1",
-        description: "description1",
-        address: "123 Battery St.",
+    const HarperAndRye = new Business({
+        name: "Harper & Rye",
+        description: "Bi-level bar with a piano & a pool table offers a host of drinks including beer, cocktails & punch.",
+        address: "1695 Polk St, San Francisco, CA 94109",
+        longLat: [-122.421410, 37.794140],
         vibe: "Red"
     })
-    b1.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
+    HarperAndRye.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
 }
 
 go();
