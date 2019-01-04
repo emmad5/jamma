@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const TipsSchema = new Schema({
+const TipSchema = new Schema({
     business: {
         type: Schema.Types.ObjectId,
         ref: 'businesses',
@@ -18,4 +18,4 @@ const TipsSchema = new Schema({
     }
 })
 
-module.exports = Tips = mongoose.model('tips', TipsSchema);
+module.exports = Tip = mongoose.model('tips', TipSchema);
