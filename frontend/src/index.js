@@ -5,6 +5,8 @@ import configureStore from './store/store';
 import jwt_decode from 'jwt-decode';
 import { setAuthToken } from './util/session_api_util';
 import { logout } from './actions/session_actions';
+import { getBusinesses } from './actions/business_actions';
+//testing
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
@@ -25,6 +27,11 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     store = configureStore({});
   }
+
+  window.testFunction = () => {
+    store.dispatch(getBusinesses())
+  } 
+  //testing
 
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
