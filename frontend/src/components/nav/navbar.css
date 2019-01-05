@@ -1,11 +1,98 @@
 .headings {
-  margin-top: 32px;
+  /* margin-top: 32px; */
     font-size: 20px;
 }
 .navbar {
     display: flex;
-    justify-content: space-evenly;
-    background-color: rgba(22, 192, 204, 0.842);
+    justify-content: space-between;
+    /* background-color: rgba(22, 192, 204, 0.842); */
+    background-color: #8FB5B7; 
     font-family: 'Lucida Sans', sans-serif;
     color: white;
+    height: 60px; 
 }
+
+.login-form-container {
+  display: flex; 
+  flex-direction: row; 
+  margin-top: 10%; 
+  margin-left: 40%; 
+  /* justify-content: center;  */
+  /* align-content: center;  */
+}
+
+.demo-button {
+  /* width: 60px;  */
+}
+
+.lama-logo {
+  margin-left: 80px;  
+  padding-right: 30px; 
+  /* background: image_url('/Users/Kuma/Desktop/jamma/app/assets/images/lama_no_bg.png');  */
+    /* position: absolute;  */
+  background-size: contain; 
+  background-repeat: no-repeat; 
+  /* margin-bottom: 200px;  */
+
+}
+
+.session-buttons {
+  display: flex; 
+  margin-right: 100px; 
+  /* margin-top: 15px;  */
+}
+
+.navbar h1{
+  font-family: Symbol;
+  font-size: 30px; 
+  letter-spacing: 3px;
+}
+
+.login-btn {
+  margin-top: 14px; 
+  color: white; 
+  background-color: #8FB5B7;
+  /* margin-right: 15px;  */
+  padding: 5px 15px 5px 15px; 
+  border-radius: 10px; 
+  border: 1px solid white; 
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.09);
+  height: 30px; 
+}
+
+.or {
+  padding: 10px 10px 10px 10px; 
+  margin-top: 11px;
+  font-size: 16px;  
+}
+
+.signup-btn {
+  margin-top: 14px; 
+
+  color: white; 
+  background-color: #8FB5B7;
+  margin-right: 120px; 
+  padding: 5px 15px 5px 15px; 
+  border-radius: 10px; 
+  border: 1px solid white; 
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.09);
+  height: 30px; 
+
+}
+
+.logo-flex {
+  display: flex;
+  /* margin-top: 17px;  */
+  
+}
+
+.logo-flex img {
+  margin-top: 10px; 
+  margin-left: 200px; 
+  padding-right: 30px; 
+}
+
+.logo-flex h1 {
+  margin-top: 18px; 
+}
+
