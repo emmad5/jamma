@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.css';
+import logo from './lama_no_bg.png';
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -35,8 +36,26 @@ class NavBar extends React.Component {
   render() {
     return (
       <div className='navbar'>
-        <h1>Jamma</h1>
-        {this.getLinks()}
+
+
+        <div className="logo-flex">
+
+         
+            <img className="logo-img" src={logo} width="30px" height="40px" />
+       
+          <h1>JAMMA</h1>
+        </div>
+
+        {/* {this.getLinks()} */}
+        <div className="session-buttons">
+          <Link to={'/login'}>
+            <button className="login-btn">Log In</button>
+          </Link>
+          <h4 className="or">or</h4>
+          <Link to={'/signup'}>
+            <button className="signup-btn">Sign Up</button>
+          </Link>
+        </div>
       </div>
     );
   }

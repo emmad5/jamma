@@ -1,5 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 class SignupForm extends React.Component {
   constructor(props) {
@@ -64,7 +66,7 @@ class SignupForm extends React.Component {
 
   render() {
     return (
-      <div className="login-form-container">
+      <div className="signup-form-container">
         <form onSubmit={this.handleSubmit}>
           <div className="login-form">
             <br />
@@ -98,6 +100,10 @@ class SignupForm extends React.Component {
         </form>
         <button className="demo-button" onClick={this.demoHandleSubmit}>Demo</button>
 
+        <div className='login'>
+          {/* <Link to={'/signup'}>New to Jamma? Signup</Link> */}
+          <Link to={'/login'}>Login</Link>
+        </div>
       </div>
     );
   }
