@@ -1,4 +1,5 @@
 import React from 'react';
+import  MapContainer from './map_container';
 import  Map from './map';
 
 class MainPage extends React.Component {

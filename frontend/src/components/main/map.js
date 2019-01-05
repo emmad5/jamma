@@ -1,86 +1,26 @@
 import React from 'react';
-import mapboxgl from 'mapbox-gl';
-mapboxgl.accessToken = 'pk.eyJ1IjoiZW1tYWRlYXMiLCJhIjoiY2pxY2pidXM0MWZieDQ5b2czZGp1azF1aSJ9.vAlafNdCqofi8OdqKUGr5g';
+import ReactDOM  from 'react-dom';
+import {withRouter} from 'react-router-dom';
+import './map.css';
+
 class Map extends React.Component {
-    // constructor(props) {
-    //     super(props);
-    // }
-    componentDidMount() {
-        const map = new mapboxgl.Map({
-            container: this.mapContainer,
-            style: 'mapbox://styles/emmadeas/cjqgxj0j6lcuz2smyu9mmve85',
-            zoom: 12,
-            center: [-122.431297, 37.773972],
-            pitch: 45,
-            bearing: -17.6
-        });
-        map.on('load', function () {
-            var layers = map.getStyle().layers;
-            var labelLayerId;
-            for (var i = 0; i < layers.length; i++) {
-                if (layers[i].type === 'symbol' && layers[i].layout['text-field']) {
-                    labelLayerId = layers[i].id;
-                    break;
-                }
-            }
-
-            map.addLayer({
-                'id': '3d-buildings',
-                'source': 'composite',
-                'source-layer': 'building',
-                'filter': ['==', 'extrude', 'true'],
-                'type': 'fill-extrusion',
-                'minzoom': 15,
-                'paint': {
-                    'fill-extrusion-color': '#aaa',
-                    'fill-extrusion-height': [
-                        "interpolate", ["linear"], ["zoom"],
-                        15, 0,
-                        15.05, ["get", "height"]
-                    ],
-                    'fill-extrusion-base': [
-                        "interpolate", ["linear"], ["zoom"],
-                        15, 0,
-                        15.05, ["get", "min_height"]
-                    ],
-                    'fill-extrusion-opacity': .6
-                }
-            }, labelLayerId);
-        });
-        map.on('click', function (e) {
-            var features = map.queryRenderedFeatures(e.point, {
-                layers: ['businesses'] // replace this with the name of the layer
-            });
-
-            if (!features.length) {
-                return;
-            }
-
-            var feature = features[0];
-
-            var popup = new mapboxgl.Popup({ offset: [0, -15] })
-                .setLngLat(feature.geometry.coordinates)
-                .setHTML('<h3>' + feature.properties.title + '</h3><p>' + feature.properties.description + '</p>')
-                .setLngLat(feature.geometry.coordinates)
-                .addTo(map);
-        });
-        
+    constructor(props) {
+        super(props);
+       
     }
 
-    componentWillUnmount() {
-        // map.remove();
+    componentDidMount(){
+       
+        const mapOptions = {
+            center: { lat: 37.7758, lng: -122.435 },
+            zoom: 13
+        }
+        this.map = new window.google.maps.Map(this.mapNode, mapOptions);
     }
+
 
     render() {
-        
-        const style = {
-            position: 'absolute',
-            top: 300,
-            bottom: 0,
-            width: '100%'
-    };
-
-        return <div style={style} ref={el => this.mapContainer = el} />;
+        return (< div className="map" ref = { map => this.mapNode = map }></div>)
     }
 }
 
