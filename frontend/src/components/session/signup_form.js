@@ -1,5 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 class SignupForm extends React.Component {
   constructor(props) {
@@ -7,7 +9,6 @@ class SignupForm extends React.Component {
 
     this.state = {
       email: '',
-      // handle: '',
       password: '',
       password2: '',
       errors: {}
@@ -16,7 +17,6 @@ class SignupForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.clearedErrors = false;
     this.demoHandleSubmit = this.demoHandleSubmit.bind(this);
-
   }
 
   componentWillReceiveProps(nextProps) {
@@ -37,7 +37,6 @@ class SignupForm extends React.Component {
     e.preventDefault();
     let user = {
       email: this.state.email,
-      // handle: this.state.handle,
       password: this.state.password,
       password2: this.state.password2
     };
@@ -67,7 +66,7 @@ class SignupForm extends React.Component {
 
   render() {
     return (
-      <div className="login-form-container">
+      <div className="signup-form-container">
         <form onSubmit={this.handleSubmit}>
           <div className="login-form">
             <br />
@@ -101,6 +100,10 @@ class SignupForm extends React.Component {
         </form>
         <button className="demo-button" onClick={this.demoHandleSubmit}>Demo</button>
 
+        <div className='login'>
+          {/* <Link to={'/signup'}>New to Jamma? Signup</Link> */}
+          <Link to={'/login'}>Login</Link>
+        </div>
       </div>
     );
   }
