@@ -73,42 +73,44 @@ class LoginForm extends React.Component {
         {/* <div className="session-title-center">
           <h1>Enjoy Happy Hours Near You</h1>
         </div> */}
-      <div className="session-form-container">
-        <form onSubmit={this.handleSubmit}>
-          <div className="inputs">
-            <input
-              type="text"
-              value={this.state.email}
-              onChange={this.update('email')}
-              placeholder="Email"
-            />
+        <div className = "session-form" >
+          <div className="session-form-container">
+            <form onSubmit={this.handleSubmit}>
+              <div className="inputs">
+                <input
+                  type="text"
+                  value={this.state.email}
+                  onChange={this.update('email')}
+                  placeholder="Email"
+                />
+                <br />
+                <br />
+                <input
+                  type="password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  placeholder="Password"
+                />
+                <br />
+                <br />
+                <br />
+                <input className="submit-btn"
+                  type="submit"
+                  value="Submit"
+                />
+                {this.renderErrors()}
+              </div>
+            </form>
             <br />
-            <br />
-            <input
-              type="password"
-              value={this.state.password}
-              onChange={this.update('password')}
-              placeholder="Password"
-            />
-            <br />
-            <br />
-            <br />
-            <input className="submit-btn"
-              type="submit"
-              value="Submit"
-            />
-            {this.renderErrors()}
+            <button className="demo-button" onClick={this.demoHandleSubmit}>Demo</button>
+            <br /> 
+            <br /> 
+            <div className='signup'>
+              <Link to={'/signup'}>New to Jamma? Signup</Link>
+              {/* <Link to={'/login'}>Login</Link> */}
+            </div>
           </div>
-        </form>
-        <br />
-        <button className="demo-button" onClick={this.demoHandleSubmit}>Demo</button>
-        <br /> 
-        <br /> 
-        <div className='signup'>
-          <Link to={'/signup'}>New to Jamma? Signup</Link>
-          {/* <Link to={'/login'}>Login</Link> */}
         </div>
-      </div>
       </div>
     );
   }

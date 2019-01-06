@@ -63,3 +63,7 @@
   min-width: 700px;
   margin-top: 200px;
 }
+
+.login .singup {
+  font-family: inherit;
+}
