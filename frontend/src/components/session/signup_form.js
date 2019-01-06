@@ -1,6 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import './session.css';
+
 
 
 class SignupForm extends React.Component {
@@ -66,10 +68,9 @@ class SignupForm extends React.Component {
 
   render() {
     return (
-      <div className="signup-form-container">
+      <div className="session-form-container">
         <form onSubmit={this.handleSubmit}>
-          <div className="login-form">
-            <br />
+          <div className="inputs">
             <input
               type="text"
               value={this.state.email}
@@ -77,7 +78,8 @@ class SignupForm extends React.Component {
               placeholder="Email"
             />
             <br />
-            <input
+            <br />
+            <input className="password-input"
               type="password"
               value={this.state.password}
               onChange={this.update('password')}
@@ -91,6 +93,8 @@ class SignupForm extends React.Component {
               placeholder="Confirm Password"
             />
             <br />
+            <br />
+            <br />
             <input
               type="submit"
               value="Submit"
@@ -98,11 +102,14 @@ class SignupForm extends React.Component {
             {this.renderErrors()}
           </div>
         </form>
+        <br /> 
         <button className="demo-button" onClick={this.demoHandleSubmit}>Demo</button>
+        <br /> 
+        <br /> 
 
         <div className='login'>
           {/* <Link to={'/signup'}>New to Jamma? Signup</Link> */}
-          <Link to={'/login'}>Login</Link>
+          <Link to={'/login'}>Already a User? Login</Link>
         </div>
       </div>
     );
