@@ -68,6 +68,12 @@ class SignupForm extends React.Component {
 
   render() {
     return (
+      <div> 
+        <div className="session-title">
+          <h1>Enjoy Happy Hours Near You</h1>
+          {/* <h1>Enjoy Happy Hours Near You</h1> */}
+          {/* <h1>ENJOY HAPPY HOURS NEAR YOU</h1> */}
+        </div>
       <div className="session-form-container">
         <form onSubmit={this.handleSubmit}>
           <div className="inputs">
@@ -95,7 +101,7 @@ class SignupForm extends React.Component {
             <br />
             <br />
             <br />
-            <input
+              <input className="submit-btn"
               type="submit"
               value="Submit"
             />
@@ -111,6 +117,7 @@ class SignupForm extends React.Component {
           {/* <Link to={'/signup'}>New to Jamma? Signup</Link> */}
           <Link to={'/login'}>Already a User? Login</Link>
         </div>
+      </div>
       </div>
     );
   }
