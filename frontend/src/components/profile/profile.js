@@ -7,7 +7,7 @@ class Profile extends React.Component {
             <div>
                 <h1>JAMAL</h1>
                 <div>
-                    <Map />
+              
                 </div>
                 <footer>
                     Copyright &copy; 2019 JAMMA
