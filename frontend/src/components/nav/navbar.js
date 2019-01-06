@@ -34,6 +34,28 @@ class NavBar extends React.Component {
     }
   }
 
+  renderSessionButtons() {
+    return(
+      <label className="left-buttons">
+        <Link to={'/login'}>
+          <button className="login-btn">Log In</button>
+        </Link>
+        <h4 className="or">or</h4>
+        <Link to={'/signup'}>
+          <button className="signup-btn">Sign Up</button>
+        </Link>
+      </label>
+    )
+  }
+
+  renderLogoutButton() {
+    return (
+      <label className="right-buttons">
+        <button className="logout-button" onClick={this.logoutUser}>Logout</button>
+      </label>
+    )
+  }
+
   render() {
     return (
       <div className='navbar'>
@@ -46,18 +68,7 @@ class NavBar extends React.Component {
 
         {/* {this.getLinks()} */}
         <div className="session-buttons">
-          <label className="left-buttons">
-            <Link to={'/login'}>
-              <button className="login-btn">Log In</button>
-            </Link>
-            <h4 className="or">or</h4>
-            <Link to={'/signup'}>
-              <button className="signup-btn">Sign Up</button>
-            </Link>
-          </label>
-          <label className="right-buttons">
-            <button className="logout-button" onClick={this.logoutUser}>Logout</button>
-          </label>
+          { this.props.loggedIn ? this.renderLogoutButton() : this.renderSessionButtons() }
         </div>
       </div>
     );
