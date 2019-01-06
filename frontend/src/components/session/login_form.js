@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import './session.css';
 
 
 class LoginForm extends React.Component {
@@ -63,15 +64,25 @@ class LoginForm extends React.Component {
 
   render() {
     return (
-      <div className="login-form-container">
+      <div> 
+        <div className="session-title">
+          <h1>Enjoy Happy Hours Near You</h1>
+          {/* <h1>Enjoy Happy Hours Near You</h1> */}
+          {/* <h1>ENJOY HAPPY HOURS NEAR YOU</h1> */}
+        </div>
+        {/* <div className="session-title-center">
+          <h1>Enjoy Happy Hours Near You</h1>
+        </div> */}
+      <div className="session-form-container">
         <form onSubmit={this.handleSubmit}>
-          <div>
+          <div className="inputs">
             <input
               type="text"
               value={this.state.email}
               onChange={this.update('email')}
               placeholder="Email"
             />
+            <br />
             <br />
             <input
               type="password"
@@ -80,19 +91,24 @@ class LoginForm extends React.Component {
               placeholder="Password"
             />
             <br />
-            <input
+            <br />
+            <br />
+            <input className="submit-btn"
               type="submit"
               value="Submit"
             />
             {this.renderErrors()}
           </div>
         </form>
+        <br />
         <button className="demo-button" onClick={this.demoHandleSubmit}>Demo</button>
-
+        <br /> 
+        <br /> 
         <div className='signup'>
           <Link to={'/signup'}>New to Jamma? Signup</Link>
           {/* <Link to={'/login'}>Login</Link> */}
         </div>
+      </div>
       </div>
     );
   }

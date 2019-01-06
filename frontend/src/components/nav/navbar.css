@@ -12,18 +12,9 @@
     height: 60px; 
 }
 
-.login-form-container {
-  display: flex; 
-  flex-direction: row; 
-  margin-top: 10%; 
-  margin-left: 40%; 
-  /* justify-content: center;  */
-  /* align-content: center;  */
-}
 
-.demo-button {
-  /* width: 60px;  */
-}
+
+
 
 .lama-logo {
   margin-left: 80px;  

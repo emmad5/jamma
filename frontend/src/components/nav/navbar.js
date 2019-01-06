@@ -55,6 +55,8 @@ class NavBar extends React.Component {
           <Link to={'/signup'}>
             <button className="signup-btn">Sign Up</button>
           </Link>
+          <button onClick={this.logoutUser}>Logout</button>
+
         </div>
       </div>
     );
