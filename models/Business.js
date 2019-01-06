@@ -37,6 +37,10 @@ const BusinessSchema = new Schema({
   menu: {
     type: Object,
     required: true,
+  },
+  imageUrl: {
+    type: String,
+    required: true
   }
 })
 
