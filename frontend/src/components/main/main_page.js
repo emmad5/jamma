@@ -1,14 +1,14 @@
 import React from 'react';
 import  MapContainer from './map_container';
-import  Map from './map';
+
 
 class MainPage extends React.Component {
   render() {
     return (
       <div>
-        <h1>JAMAL</h1>
+      
         <div>
-          <Map/>
+          <MapContainer/>
         </div>
         <footer>
           Copyright &copy; 2019 JAMMA
