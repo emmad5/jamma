@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.css';
-import logo from './lama_no_bg.png';
+// import logo from './lama_no_bg.png';
+import logo from './lamalogo_nobg_emma.png';
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -42,6 +43,7 @@ class NavBar extends React.Component {
 
          
             <img className="logo-img" src={logo} width="30px" height="40px" />
+            {/* <img className="logo-img" src={logo} width="30px" height="40px" /> */}
        
           <h1 className="jamma-title">JAMMA</h1>
         </div>
