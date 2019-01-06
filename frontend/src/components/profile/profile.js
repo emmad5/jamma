@@ -1,13 +1,13 @@
 import React from 'react';
-import Map from '../main/map';
+import MapContainer from '../main/map_container';
 
 class Profile extends React.Component {
     render() {
         return (
             <div>
-                <h1>JAMAL</h1>
+                <h1>PROFILE PAGE</h1>
                 <div>
-              
+              <MapContainer />
                 </div>
                 <footer>
                     Copyright &copy; 2019 JAMMA
