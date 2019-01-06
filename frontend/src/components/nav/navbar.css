@@ -4,12 +4,13 @@
 }
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     /* background-color: rgba(22, 192, 204, 0.842); */
     background-color: #8FB5B7; 
     font-family: 'Lucida Sans', sans-serif;
     color: white;
     height: 60px; 
+    min-width: 800px;
 }
 
 
@@ -24,12 +25,11 @@
   background-size: contain; 
   background-repeat: no-repeat; 
   /* margin-bottom: 200px;  */
-
 }
 
 .session-buttons {
   display: flex; 
-  margin-right: 100px; 
+  /* margin-right: 100px;  */
   /* margin-top: 15px;  */
 }
 
@@ -40,7 +40,7 @@
 }
 
 .login-btn {
-  margin-top: 14px; 
+  /* margin-top: 14px;  */
   color: white; 
   background-color: #8FB5B7;
   /* margin-right: 15px;  */
@@ -49,41 +49,60 @@
   border: 1px solid white; 
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.09);
   height: 30px; 
+  cursor: pointer;
 }
 
 .or {
   padding: 10px 10px 10px 10px; 
-  margin-top: 11px;
+  /* margin-top: 11px; */
   font-size: 16px;  
 }
 
 .signup-btn {
-  margin-top: 14px; 
+  /* margin-top: 14px;  */
 
   color: white; 
   background-color: #8FB5B7;
-  margin-right: 120px; 
+  /* margin-right: 120px;  */
   padding: 5px 15px 5px 15px; 
   border-radius: 10px; 
   border: 1px solid white; 
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.09);
   height: 30px; 
-
+  cursor: pointer;
 }
 
 .logo-flex {
   display: flex;
   /* margin-top: 17px;  */
-  
 }
 
 .logo-flex img {
   margin-top: 10px; 
-  margin-left: 200px; 
+  /* margin-left: 200px;  */
   padding-right: 30px; 
+  cursor: pointer;
 }
 
 .logo-flex h1 {
   margin-top: 18px; 
 }
 
+.jamma-title {
+  cursor: pointer
+}
+
+.logout-button {
+  cursor: pointer;
+}
+
+.left-buttons {
+  display: flex;
+  align-items: center;
+  margin-right: 60px;
+}
+
+.right-buttons {
+  display: flex;
+  font-family: inherit;
+}

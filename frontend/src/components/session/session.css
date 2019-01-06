@@ -1,6 +1,4 @@
 .session-form-container {
-  margin-top: 200px; 
-  margin-left: 625px; 
   padding-top: 50px; 
   border: 2px solid white; 
   width: 270px; 
@@ -49,9 +47,36 @@
   /* left: 600px;  */
 }
 .session-title {
+  width: 100%;
+  min-width: 800px;
+  display: flex;
+  justify-content: center;
   position: absolute; 
   color: #96B4B6; 
   top: 120px; 
-  left: 400px;
   font-size: 64px;  
+}
+
+.session-form {
+  display: flex;
+  justify-content: center;
+  min-width: 800px;
+  margin-top: 200px;
+}
+
+.signup {
+  font-family: arial;
+}
+
+.login {
+  font-family: arial;
+}
+
+.already-text {
+  text-decoration: none;
+  color: grey;
+}
+
+.already-text:hover {
+  text-decoration: underline;
 }

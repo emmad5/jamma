@@ -68,56 +68,58 @@ class SignupForm extends React.Component {
 
   render() {
     return (
-      <div> 
+      <div className="signup-div"> 
         <div className="session-title">
           <h1>Enjoy Happy Hours Near You</h1>
           {/* <h1>Enjoy Happy Hours Near You</h1> */}
           {/* <h1>ENJOY HAPPY HOURS NEAR YOU</h1> */}
         </div>
-      <div className="session-form-container">
-        <form onSubmit={this.handleSubmit}>
-          <div className="inputs">
-            <input
-              type="text"
-              value={this.state.email}
-              onChange={this.update('email')}
-              placeholder="Email"
-            />
-            <br />
-            <br />
-            <input className="password-input"
-              type="password"
-              value={this.state.password}
-              onChange={this.update('password')}
-              placeholder="Password"
-            />
-            <br />
-            <input
-              type="password"
-              value={this.state.password2}
-              onChange={this.update('password2')}
-              placeholder="Confirm Password"
-            />
-            <br />
-            <br />
-            <br />
-              <input className="submit-btn"
-              type="submit"
-              value="Submit"
-            />
-            {this.renderErrors()}
-          </div>
-        </form>
-        <br /> 
-        <button className="demo-button" onClick={this.demoHandleSubmit}>Demo</button>
-        <br /> 
-        <br /> 
+        <div className="session-form">
+          <div className="session-form-container">
+            <form onSubmit={this.handleSubmit}>
+              <div className="inputs">
+                <input
+                  type="text"
+                  value={this.state.email}
+                  onChange={this.update('email')}
+                  placeholder="Email"
+                />
+                <br />
+                <br />
+                <input className="password-input"
+                  type="password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  placeholder="Password"
+                />
+                <br />
+                <input
+                  type="password"
+                  value={this.state.password2}
+                  onChange={this.update('password2')}
+                  placeholder="Confirm Password"
+                />
+                <br />
+                <br />
+                <br />
+                  <input className="submit-btn"
+                  type="submit"
+                  value="Submit"
+                />
+                {this.renderErrors()}
+              </div>
+            </form>
+            <br /> 
+            <button className="demo-button" onClick={this.demoHandleSubmit}>Demo</button>
+            <br /> 
+            <br /> 
 
-        <div className='login'>
-          {/* <Link to={'/signup'}>New to Jamma? Signup</Link> */}
-          <Link to={'/login'}>Already a User? Login</Link>
+            <div className='login'>
+              {/* <Link to={'/signup'}>New to Jamma? Signup</Link> */}
+              <Link className="already-text" to={'/login'}>Already a User? Login</Link>
+            </div>
+          </div>
         </div>
-      </div>
       </div>
     );
   }

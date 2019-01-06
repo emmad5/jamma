@@ -45,20 +45,23 @@ class NavBar extends React.Component {
             <img className="logo-img" src={logo} width="30px" height="40px" />
             {/* <img className="logo-img" src={logo} width="30px" height="40px" /> */}
        
-          <h1>JAMMA</h1>
+          <h1 className="jamma-title">JAMMA</h1>
         </div>
 
         {/* {this.getLinks()} */}
         <div className="session-buttons">
-          <Link to={'/login'}>
-            <button className="login-btn">Log In</button>
-          </Link>
-          <h4 className="or">or</h4>
-          <Link to={'/signup'}>
-            <button className="signup-btn">Sign Up</button>
-          </Link>
-          <button onClick={this.logoutUser}>Logout</button>
-
+          <label className="left-buttons">
+            <Link to={'/login'}>
+              <button className="login-btn">Log In</button>
+            </Link>
+            <h4 className="or">or</h4>
+            <Link to={'/signup'}>
+              <button className="signup-btn">Sign Up</button>
+            </Link>
+          </label>
+          <label className="right-buttons">
+            <button className="logout-button" onClick={this.logoutUser}>Logout</button>
+          </label>
         </div>
       </div>
     );
