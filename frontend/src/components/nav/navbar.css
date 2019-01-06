@@ -52,6 +52,14 @@
   cursor: pointer;
 }
 
+.login-btn:hover {
+  box-shadow: none;
+}
+
+.signup-btn:hover {
+  box-shadow: none;
+}
+
 .or {
   padding: 10px 10px 10px 10px; 
   /* margin-top: 11px; */
@@ -105,4 +113,9 @@
 .right-buttons {
   display: flex;
   font-family: inherit;
+}
+
+.jamma-title-link {
+  text-decoration: none;
+  color: white;
 }
