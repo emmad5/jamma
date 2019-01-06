@@ -106,7 +106,7 @@ class LoginForm extends React.Component {
             <br /> 
             <br /> 
             <div className='signup'>
-              <Link to={'/signup'}>New to Jamma? Signup</Link>
+              <Link className="already-text" to={'/signup'}>New to Jamma? Signup</Link>
               {/* <Link to={'/login'}>Login</Link> */}
             </div>
           </div>

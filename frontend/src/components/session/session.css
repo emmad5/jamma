@@ -60,10 +60,23 @@
 .session-form {
   display: flex;
   justify-content: center;
-  min-width: 700px;
+  min-width: 800px;
   margin-top: 200px;
 }
 
-.login .singup {
-  font-family: inherit;
+.signup {
+  font-family: arial;
+}
+
+.login {
+  font-family: arial;
+}
+
+.already-text {
+  text-decoration: none;
+  color: grey;
+}
+
+.already-text:hover {
+  text-decoration: underline;
 }
