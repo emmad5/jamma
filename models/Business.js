@@ -13,14 +13,30 @@ const BusinessSchema = new Schema({
     type: String,
     required: true
   },
+  longLat: {
+    type: Array,
+    required: true
+  },
   vibe: {
     type: String,
     enum: ["Red", "Black", "White"],
     required: true
   },
-  longLat: {
-    type: Array,
+  days: {
+      type: Array,
+      required: true
+    },
+  startTime: {
+    type: number,
     required: true
+  },
+  endTime: {
+    type: number,
+    required: true
+  },
+  menu: {
+    type: Object,
+    required: true,
   }
 })
 
