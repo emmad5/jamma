@@ -1,86 +1,337 @@
 import React from 'react';
-import mapboxgl from 'mapbox-gl';
-mapboxgl.accessToken = 'pk.eyJ1IjoiZW1tYWRlYXMiLCJhIjoiY2pxY2pidXM0MWZieDQ5b2czZGp1azF1aSJ9.vAlafNdCqofi8OdqKUGr5g';
+import ReactDOM  from 'react-dom';
+import {withRouter} from 'react-router-dom';
+import './map.css';
+import MarkerManager from '../../util/marker_manager';
+import {styleOptions} from './mapstyle'
+
+
 class Map extends React.Component {
-    // constructor(props) {
-    //     super(props);
-    // }
-    componentDidMount() {
-        const map = new mapboxgl.Map({
-            container: this.mapContainer,
-            style: 'mapbox://styles/emmadeas/cjqgxj0j6lcuz2smyu9mmve85',
-            zoom: 12,
-            center: [-122.431297, 37.773972],
-            pitch: 45,
-            bearing: -17.6
-        });
-        map.on('load', function () {
-            var layers = map.getStyle().layers;
-            var labelLayerId;
-            for (var i = 0; i < layers.length; i++) {
-                if (layers[i].type === 'symbol' && layers[i].layout['text-field']) {
-                    labelLayerId = layers[i].id;
-                    break;
+    constructor(props) {
+        super(props);
+        this.addHappyHour = this.addHappyHour.bind(this);
+    }
+
+    componentDidMount(){
+      
+        const mapOptions = {
+            center: { lat: 37.7758, lng: -122.435 },
+            zoom: 13,
+            styles: [
+            {
+                elementType: 'geometry',
+                stylers: [
+                {
+                    color: '#ebe3cd'
                 }
-            }
-
-            map.addLayer({
-                'id': '3d-buildings',
-                'source': 'composite',
-                'source-layer': 'building',
-                'filter': ['==', 'extrude', 'true'],
-                'type': 'fill-extrusion',
-                'minzoom': 15,
-                'paint': {
-                    'fill-extrusion-color': '#aaa',
-                    'fill-extrusion-height': [
-                        "interpolate", ["linear"], ["zoom"],
-                        15, 0,
-                        15.05, ["get", "height"]
-                    ],
-                    'fill-extrusion-base': [
-                        "interpolate", ["linear"], ["zoom"],
-                        15, 0,
-                        15.05, ["get", "min_height"]
-                    ],
-                    'fill-extrusion-opacity': .6
+                ]
+            },
+            {
+                elementType: 'labels',
+                stylers: [
+                {
+                    visibility: 'off'
                 }
-            }, labelLayerId);
-        });
-        map.on('click', function (e) {
-            var features = map.queryRenderedFeatures(e.point, {
-                layers: ['businesses'] // replace this with the name of the layer
-            });
-
-            if (!features.length) {
-                return;
+            ]
+            },
+            {
+                elementType: 'labels.text.fill',
+                stylers: [
+                    {
+                        color: '#523735'
+                    }
+                ]
+            },
+            {
+                elementType: 'labels.text.stroke',
+                stylers: [
+                    {
+                        color: '#f5f1e6'
+                        }
+                ]
+            },
+            {
+                featureType: 'administrative',
+                elementType: 'geometry',
+                stylers: [
+                    {
+                        visibility: 'off'
+                    }
+                ]
+            },
+            {
+                featureType: 'administrative',
+                elementType: 'geometry.stroke',
+                stylers: [
+                    {
+                        color: '#c9b2a6'
+                        }
+                ]
+            },
+            {
+                featureType: 'administrative.land_parcel',
+                elementType: 'geometry.stroke',
+                stylers: [
+                    {
+                        color: '#dcd2be'
+                    }
+                ]
+            },
+            {
+                featureType: 'administrative.land_parcel',
+                elementType: 'labels.text.fill',
+                stylers: [
+                    {
+                        color: '#ae9e90'
+                        }
+                ]
+            },
+            {
+                featureType: 'administrative.neighborhood',
+                stylers: [
+                    {
+                        visibility: 'off'
+                    }
+                ]
+            },
+            {
+                featureType: 'landscape.natural',
+                elementType: 'geometry',
+                stylers: [
+                    {
+                        color: '#dfd2ae'
+                    }
+                ]
+            },
+            {
+                featureType: 'poi',
+                stylers: [
+                    {
+                        visibility: 'off'
+                    }
+                ]
+            },
+            {
+                featureType: 'poi',
+                elementType: 'geometry',
+                stylers: [
+                    {
+                        color: '#dfd2ae'
+                    }
+                ]
+            },
+            {
+                featureType: 'poi',
+                elementType: 'labels.text.fill',
+                stylers: [
+                    {
+                        color: '#93817c'
+                    }
+                ]
+            },
+            {
+                featureType: 'poi.park',
+                elementType: 'geometry.fill',
+                stylers: [
+                    {
+                        color: '#a5b076'
+                        }
+                ]
+            },
+            {
+                featureType: 'poi.park',
+                elementType: 'labels.text.fill',
+                stylers: [
+                    {
+                        color: '#447530'
+                    }
+                ]
+            },
+            {
+                featureType: 'road',
+                elementType: 'geometry',
+                stylers: [
+                    {
+                        color: '#f5f1e6'
+                        }
+                ]
+            },
+            {
+                featureType: 'road',
+                elementType: 'labels.icon',
+                stylers: [
+                    {
+                        visibility: 'off'
+                    }
+                ]
+            },
+            {
+                featureType: 'road.arterial',
+                elementType: 'geometry',
+                stylers: [
+                    {
+                        color: '#fdfcf8'
+                        }
+                ]
+            },
+            {
+                featureType: 'road.highway',
+                elementType: 'geometry',
+                stylers: [
+                    {
+                        'color': '#f8c967'
+                    }
+                ]
+            },
+            {
+                featureType: 'road.highway',
+                elementType: 'geometry.stroke',
+                stylers: [
+                    {
+                        color: '#e9bc62'
+                        }
+                ]
+            },
+            {
+                featureType: 'road.highway.controlled_access',
+                elementType: 'geometry',
+                stylers: [
+                    {
+                        color: '#e98d58'
+                    }
+                ]
+            },
+            {
+                featureType: 'road.highway.controlled_access',
+                elementType: 'geometry.stroke',
+                stylers: [
+                    {
+                        color: '#db8555'
+                        }
+                ]
+            },
+            {
+                featureType: 'road.local',
+                elementType: 'labels.text.fill',
+                stylers: [
+                    {
+                        color: '#806b63'
+                    }
+                ]
+            },
+            {
+                featureType: 'transit',
+                stylers: [
+                    {
+                        'visibility': 'off'
+                    }
+                ]
+            },
+            {
+                featureType: 'transit.line',
+                elementType: 'geometry',
+                stylers: [
+                    {
+                        color: '#dfd2ae'
+                    }
+                ]
+            },
+            {
+                featureType: 'transit.line',
+                elementType: 'labels.text.fill',
+                stylers: [
+                    {
+                        color: '#8f7d77'
+                        }
+                ]
+            },
+            {
+                featureType: 'transit.line',
+                elementType: 'labels.text.stroke',
+                stylers: [
+                    {
+                        color: '#ebe3cd'
+                    }
+                ]
+            },
+            {
+                featureType: 'transit.station',
+                elementType: 'geometry',
+                stylers: [
+                    {
+                        color: '#dfd2ae'
+                    }
+                ]
+            },
+            {
+                featureType: 'water',
+                stylers: [
+                    {
+                        color: '#4f86ec'
+                    }
+                ]
+            },
+            {
+                featureType: 'water',
+                elementType: 'geometry.fill',
+                stylers: [
+                    {
+                        color: '#96b4b6'
+                        }
+                ]
+            },
+            {
+                featureType: 'water',
+                elementType: 'labels.text.fill',
+                stylers: [
+                    {
+                        color: '#92998d'
+                    }
+                ]
             }
+            ]
+        }
+        this.map = new window.google.maps.Map(this.mapNode, mapOptions);
+        this.MarkerManager = new MarkerManager(this.map)
 
-            var feature = features[0];
+        this.listenForMove();
+        this.props.happyHours.forEach(this.addHappyHour);
+    }
 
-            var popup = new mapboxgl.Popup({ offset: [0, -15] })
-                .setLngLat(feature.geometry.coordinates)
-                .setHTML('<h3>' + feature.properties.title + '</h3><p>' + feature.properties.description + '</p>')
-                .setLngLat(feature.geometry.coordinates)
-                .addTo(map);
+    componentDidUpdate() {
+        this.MarkerManager.updateMarkers(this.props.bussinesses);
+    }
+    addHappyHour(happyHour) {
+        const pos = new window.google.maps.LatLng(happyHour.lat, happyHour.lng);
+        const marker = new window.google.maps.Marker({
+            position: pos,
+            map: this.map
         });
+        marker.addListener('click', () => {
+            alert(`clicked on: ${happyHour.name}`);
+        });
+    }
+
+    listenForMove() {
+        window.google.maps.event.addListener(this.map, 'idle', () => {
+            const bounds = this.map.getBounds();
         
+
+            console.log('center',
+                bounds.getCenter().lat(),
+                bounds.getCenter().lng());
+            console.log("north east",
+                bounds.getNorthEast().lat(),
+                bounds.getNorthEast().lng());
+            console.log("south west",
+                bounds.getSouthWest().lat(),
+                bounds.getSouthWest().lng());
+        });
     }
 
-    componentWillUnmount() {
-        // map.remove();
-    }
 
     render() {
-        
-        const style = {
-            position: 'absolute',
-            top: 300,
-            bottom: 0,
-            width: '100%'
-    };
-
-        return <div style={style} ref={el => this.mapContainer = el} />;
+        return (< div className="map" ref = { map => this.mapNode = map }></div>)
     }
 }
 
