@@ -6,12 +6,14 @@ import MainPage from './main/main_page';
 import LoginFormContainer from './session/login_form_container';
 import Profile from './profile/profile'
 import SignupFormContainer from './session/signup_form_container';
+import Modal from './modal'
 import './reset.scss'; 
 
 
 const App = () => (
   <div>
     <NavBarContainer />
+    <Modal />
     <Switch>
       <AuthRoute exact path="/" component={MainPage} />
       <ProtectedRoute exact path="/profile" component={Profile} />
