@@ -1,10 +1,15 @@
-import { RECEIVE_ALL_BUSINESSES } from '../actions/business_actions';
+import {
+    RECEIVE_ALL_BUSINESSES,
+    RECEIVE_ONE_BUSINESSES,
+    EDIT_ONE_BUSINESS
+} from '../actions/business_actions';
+import merge from 'loadash/merge';
 
 export default function (prevState = {}, action) {
-    Object.freeze(prevState);
+    let nextState = merge({}, prevState);
     switch (action.type) {
         case RECEIVE_ALL_BUSINESSES:
-            return action.businesses.data;
+            return action.businesses;
         default:
             return prevState;
     }
