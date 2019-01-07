@@ -32,12 +32,13 @@ class AddHappyHour extends React.Component {
                 error => {
                     console.error(error);
                 }
-                );
-            }
-            return e => this.setState({
-                [field]: e.currentTarget.value
-            });
+            );
         }
+        return e => this.setState({
+            [field]: e.currentTarget.value
+        });
+    }
+
 
     updateDays() {
         return e => this.setState({
@@ -216,6 +217,12 @@ class AddHappyHour extends React.Component {
                    
                 </div>
                 <div className="add-menu-form-container">
+                    <input
+                        type="text"
+                        value={this.state.menu}
+                        onChange={this.update('menu')}
+                        placeholder="menu"
+                    />
                     <input
                         type="text"
                         value={this.state.menu}
