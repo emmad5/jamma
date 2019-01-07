@@ -4,3 +4,41 @@
   color: white; 
   z-index: 100;
 } */
+
+
+/* .business-days {
+  color: black; 
+  padding: 10px; 
+} */
+
+.business-info {
+  padding: 10px; 
+}
+
+.business-info h2{
+  padding: 5px; 
+}
+
+.business-name {
+  font-size: 24px;
+  text-align: center; 
+  
+}
+.business-address {
+  /* margin-top: 8px;  */
+}
+
+.business-header {
+  text-decoration: underline; 
+}
+
+.business-time-container {
+ display: flex;
+}
+.business-menu-container {
+ display: flex;
+}
+
+.menu-item-space {
+  padding: 5px; 
+}
