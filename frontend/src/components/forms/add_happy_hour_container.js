@@ -9,7 +9,7 @@ const mstp = state => {
 };
 const mdtp = dispatch => {
     return {
-        addBusiness: () => dispatch(addBusiness()),
+        addBusiness: businessData => dispatch(addBusiness(businessData)),
     };
 };
 

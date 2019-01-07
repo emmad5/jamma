@@ -1,0 +1,140 @@
+.add-form-container {
+    padding-top: 50px;
+    border: 2px solid white;
+    border-radius: 5px;
+    width: 270px;
+    height: 460px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.09);
+    align-items: center
+}
+
+.add-menu-form-container {
+    padding-top: 50px;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin-left: 50px;
+    width: 270px;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.05),
+    0 6px 20px 0 rgba(0, 0, 0, 0.09);
+    align-items: center
+}
+
+.inputs {
+    /* padding: 100px;  */
+}
+
+.inputs input {
+    width: 200px;
+    height: 30px;
+    padding-left: 5px;
+    border-radius: 5px;
+    border: 1px solid white;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.02), 0 6px 20px 0 rgba(0, 0, 0, 0.02);
+
+}
+
+.checks {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 20px !important;
+}
+
+.checks-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-inputs {
+    display: flex;
+    justify-content: space-around;
+    font-family: arial;
+    font-size: 13px;
+}
+
+.demo-button {
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid white;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.02), 0 6px 20px 0 rgba(0, 0, 0, 0.02);
+
+}
+
+.demo-button:hover {
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.02), 0 6px 20px 0 rgba(0, 0, 0, 0.02);
+    color: rgb(99, 122, 124);
+    cursor: pointer;
+
+}
+
+.password-input {
+    margin-bottom: 10px;
+}
+
+.submit-btn {
+    margin-left: 2px;
+}
+
+.submit-btn:hover {
+    color: rgb(99, 122, 124);
+    margin-left: 2px;
+    /* background-color: #F4F4F4; */
+    cursor: pointer;
+    border: 1px solid lightgrey;
+
+}
+
+.session-title-center {
+    display: flex;
+    /* position: absolute;  */
+    justify-content: center;
+    /* position: absolute;  */
+    top: 100px;
+    /* left: 600px;  */
+}
+
+.form-title {
+    width: 100%;
+    min-width: 800px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    color: #96B4B6;
+    top: 120px;
+    font-size: 64px;
+}
+
+.add-form {
+    display: flex;
+    justify-content: center;
+    min-width: 800px;
+    margin-top: 200px;
+}
+
+.signup {
+    font-family: arial;
+}
+
+.login {
+    font-family: arial;
+}
+
+.already-text {
+    text-decoration: none;
+    color: grey;
+}
+
+.already-text:hover {
+    text-decoration: underline;
+}
