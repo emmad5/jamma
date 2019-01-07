@@ -1,10 +1,16 @@
 import React from 'react';
+import './module.css';
+
 
 class HappyHourShow extends React.Component {
     render() {
         return (
             <div>
-                <h1>HAPPY HOUR Show page</h1>
+                <div className="flex-container-map">
+                    <h1>Name of Restaurant</h1>
+                    <h3>Days and Times</h3>
+                    <p>Monday - Friday</p>
+                </div>
             </div>
         )
     }
