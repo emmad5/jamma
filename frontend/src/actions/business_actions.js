@@ -4,6 +4,7 @@ export const RECEIVE_ALL_BUSINESSES = "RECEIVE_ALL_BUSINESSES";
 export const RECEIVE_BUSINESS_ERRORS = "RECEIVE_BUSINESS_ERRORS";
 export const RECEIVE_ONE_BUSINESSES = "RECEIVE_ONE_BUSINESS";
 export const EDIT_ONE_BUSINESS = "EDIT_ONE_BUSINESS";
+import merge from 'lodash/merge';
 
 
 export const receiveAllBusinesses = businesses => ({

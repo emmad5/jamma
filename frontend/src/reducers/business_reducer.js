@@ -1,4 +1,8 @@
-import { RECEIVE_ALL_BUSINESSES } from '../actions/business_actions';
+import { 
+    RECEIVE_ALL_BUSINESSES,
+    RECEIVE_ONE_BUSINESSES,
+    EDIT_ONE_BUSINESS 
+} from '../actions/business_actions';
 
 export default function (prevState = {}, action) {
     switch (action.type) {
