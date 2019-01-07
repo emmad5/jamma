@@ -22,6 +22,9 @@ class HappyHourShow extends React.Component {
           )
         })
 
+      let startTime = this.props.options.business.startTime === 12 ? 12 : (this.props.options.business.startTime) % 12; 
+      let endTime = this.props.options.business.endTime === 12 ? 12 : (this.props.options.business.endTime) % 12; 
+
         return (
 
             <div className="business-info">
@@ -42,9 +45,9 @@ class HappyHourShow extends React.Component {
                 <h2 className="business-header">Days and Time: </h2>
                 <div className="business-time-container">
                   <h2>{days}:</h2>
-                  <h2>{(this.props.options.business.startTime) % 12}</h2>
+                  <h2>{startTime}</h2>
                   <h2>-</h2>
-                  <h2>{(this.props.options.business.endTime) % 12}pm</h2>
+                  <h2>{endTime}pm</h2>
                 </div>
 
                 {/* menu */}
