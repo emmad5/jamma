@@ -1,15 +1,11 @@
 import React from 'react';
-
 import './map.css';
-import MarkerManager from '../../util/marker_manager';
 import {styleOptions} from './mapstyle';
 
 class Map extends React.Component {
     constructor(props) {
         super(props);
         this.addHappyHour = this.addHappyHour.bind(this);
-
-    
     }
 
     componentDidMount(){
@@ -21,7 +17,6 @@ class Map extends React.Component {
             styles: styleOptions
         }
         this.map = new window.google.maps.Map(this.mapNode, mapOptions);
-        this.MarkerManager = new MarkerManager(this.map)
         this.listenForMove();
        
     }
@@ -36,7 +31,7 @@ class Map extends React.Component {
                     map: this.map
                 });
                 marker.addListener('click', () => {
-                    this.props.openModal('happyhour');
+                    this.props.openModal({ business: this.props.businesses[i]});
                 });
             }
         } 
@@ -50,7 +45,7 @@ class Map extends React.Component {
 
 
     render() {
-        this.props.happyHours.forEach(this.addHappyHour);
+        this.addHappyHour();
         return (< div className="map" ref = { map => this.mapNode = map }></div>)
     }
 }
