@@ -8,6 +8,6 @@ export const editBusiness = businessData => {
     return axios.post('/api/businesses');
 };
 
-export const addBusiness = () => {
+export const addBusiness = businessData => {
     return axios.patch('/api/businesses');
 };
