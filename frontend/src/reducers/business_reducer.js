@@ -3,6 +3,7 @@ import {
     RECEIVE_ONE_BUSINESSES,
     EDIT_ONE_BUSINESS 
 } from '../actions/business_actions';
+import merge from 'lodash/merge';
 
 export default function (prevState = {}, action) {
     switch (action.type) {
