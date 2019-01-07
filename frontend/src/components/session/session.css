@@ -10,6 +10,19 @@
   align-items: center  
 }
 
+.session-form-container-add {
+  padding-top: 50px; 
+  border: 2px solid white; 
+  border-radius: 5px;
+  width: 270px; 
+  /* height: 320px;  */
+  height: 490px; 
+  display: flex; 
+  flex-direction: column; 
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.09);
+  align-items: center  
+}
+
 .inputs {
   /* padding: 100px;  */
 }
