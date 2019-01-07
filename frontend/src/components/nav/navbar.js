@@ -18,7 +18,7 @@ class NavBar extends React.Component {
 
   renderSessionButtons() {
     return(
-      <label className="left-buttons">
+      <div className="left-buttons">
         <Link to={'/login'}>
           <button className="login-btn">Log In</button>
         </Link>
@@ -26,7 +26,7 @@ class NavBar extends React.Component {
         <Link to={'/signup'}>
           <button className="signup-btn">Sign Up</button>
         </Link>
-      </label>
+      </div>
     )
   }
 
