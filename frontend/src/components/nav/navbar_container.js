@@ -3,9 +3,11 @@ import { logout } from '../../actions/session_actions';
 
 import NavBar from './navbar';
 
-const mstp = state => ({
-  loggedIn: state.session.isAuthenticated
-});
+const mstp = state => {
+  return {
+    loggedIn: state.session.isAuthenticated
+  }
+};
 
 export default connect(
   mstp,
