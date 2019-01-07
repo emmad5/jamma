@@ -9,7 +9,7 @@ export default function (prevState = {}, action) {
     let nextState = merge({}, prevState);
     switch (action.type) {
         case RECEIVE_ALL_BUSINESSES:
-            return action.businesses;
+            return action.businesses.data;
         default:
             return prevState;
     }
