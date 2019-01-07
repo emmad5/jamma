@@ -19,11 +19,11 @@ const BusinessSchema = new Schema({
   },
   vibe: {
     type: String,
-    enum: ["Red", "Black", "White"],
+    enum: ["Grey", "Red", "Black", "White"],
     required: true
   },
   days: {
-      type: Array,
+      type: Array
       required: true
     },
   startTime: {
@@ -37,6 +37,10 @@ const BusinessSchema = new Schema({
   menu: {
     type: Object,
     required: true,
+  },
+  imageUrl: {
+    type: String,
+    required: true
   }
 })
 
