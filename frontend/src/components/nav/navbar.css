@@ -47,7 +47,7 @@
   padding: 5px 15px 5px 15px; 
   border-radius: 10px; 
   border: 1px solid white; 
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.09);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.02), 0 6px 20px 0 rgba(0,0,0,0.02);
   height: 30px; 
   cursor: pointer;
 }
@@ -67,7 +67,7 @@
   padding: 5px 15px 5px 15px; 
   border-radius: 10px; 
   border: 1px solid white; 
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.09);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.02), 0 6px 20px 0 rgba(0,0,0,0.02);
   height: 30px; 
   cursor: pointer;
 }
@@ -100,12 +100,12 @@
 .logout-button {
   color: white;
   background-color: #8FB5B7;
-  /* margin-right: 120px;  */
+  margin-right: 160px; 
   padding: 5px 15px 5px 15px;
   border-radius: 10px;
   border: 1px solid white;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.05),
-  0 6px 20px 0 rgba(0, 0, 0, 0.09);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.02),
+  0 6px 20px 0 rgba(0, 0, 0, 0.02);
   height: 30px;
   cursor: pointer;
 }
