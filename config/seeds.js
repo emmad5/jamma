@@ -11,7 +11,6 @@ const go = async () => {
 
     const HarperAndRye = new Business({
         name: "Harper & Rye",
-        description: "Bi-level bar with a piano & a pool table offers a host of drinks including beer, cocktails & punch.",
         address: "1695 Polk St, San Francisco, CA 94109",
         longLat: [-122.421410, 37.794140],
         vibe: "Grey",
@@ -34,7 +33,6 @@ const go = async () => {
     })
     const EZ5 = new Business ({
         name: "EZ5",
-        description: "We at EZ5 believe that happy hour is crucial to healthy, everyday living. That's why we offer happy hour from 4pm to 8pm five days a week, Monday through Friday.",
         address: "684 Commercial St, San Francisco, CA 94111",
         longLat: [-122.401430, 37.794430],
         vibe: "Red",
@@ -60,7 +58,6 @@ const go = async () => {
     })
     const TheOffice = new Business({
         name: "The Office",
-        description: "The Office boldly combines class and sophistication in a laid-back atmosphere.",
         address: "194 Church St, Churchill, San Francisco, CA 94114",
         longLat: [-122.429180, 37.767940],
         vibe: "Grey",
@@ -80,7 +77,27 @@ const go = async () => {
         },
         imageUrl: "https://s3-media2.fl.yelpcdn.com/bphoto/nBn4bODcYt-kKrUcrhPXAw/o.jpg"
     })
-
+    const NativesBar = new Business({
+        name: "NativesBar",
+        address: "194 Church St, Churchill, San Francisco, CA 94114",
+        longLat: [-122.429180, 37.767940],
+        vibe: "Grey",
+        days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
+        startTime: 16,
+        endTime: 20,
+        menu: {
+            4: [
+                "Old Fashioned",
+                "Summer Lover",
+                "Democrat"
+            ],
+            6: [
+                "BLANC de BLANCS BRUT",
+                "Charles Armand"
+            ]
+        },
+        imageUrl: "https://s3-media2.fl.yelpcdn.com/bphoto/nBn4bODcYt-kKrUcrhPXAw/o.jpg"
+    })
 
     HarperAndRye.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     EZ5.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
