@@ -19,6 +19,7 @@
   padding: 5px; 
 }
 
+
 .business-name {
   font-size: 24px;
   text-align: center; 
@@ -37,6 +38,12 @@
 }
 .business-menu-container {
  display: flex;
+ flex-direction: column; 
+ padding: 5px 0px;  
+}
+
+.business-menu-container div {
+ padding: 5px;  
 }
 
 .menu-item-space {
