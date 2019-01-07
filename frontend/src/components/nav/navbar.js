@@ -51,6 +51,7 @@ class NavBar extends React.Component {
   renderLogoutButton() {
     return (
       <label className="right-buttons">
+        <Link className="logout-button" to={'/add'}>Add Happy Hour</Link>
         <button className="logout-button" onClick={this.logoutUser}>Logout</button>
       </label>
     )
