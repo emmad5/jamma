@@ -1,7 +1,9 @@
 import * as APIUtil from '../util/business_api_util';
 
 export const RECEIVE_ALL_BUSINESSES = "RECEIVE_ALL_BUSINESSES";
-export const RECEIVE_BUSINESS_ERRORS = "RECEIVE_BUSINESS_ERRORS"
+export const RECEIVE_BUSINESS_ERRORS = "RECEIVE_BUSINESS_ERRORS";
+export const RECEIVE_ONE_BUSINESSES = "RECEIVE_ONE_BUSINESS";
+export const EDIT_ONE_BUSINESS = "EDIT_ONE_BUSINESS";
 
 
 export const receiveAllBusinesses = businesses => ({
@@ -14,16 +16,10 @@ export const receiveOneBusiness = business => ({
     business
 });
 
-export const editBusiness = business => ({
-    type: EDIT_BUSINESS,
+export const editOneBusiness = business => ({
+    type: EDIT_ONE_BUSINESS,
     business
 })
-
-export const receiveErrors = errors => ({
-    type: RECEIVE_BUSINESS_ERRORS,
-    errors
-});
-
 
 export const receiveErrors = errors => ({
     type: RECEIVE_BUSINESS_ERRORS,
@@ -49,7 +45,7 @@ export const addBusiness = businessData => dispatch => (
 
 export const editBusiness = businessData => dispatch => (
     APIUtil.editBusiness(businessData).then(business => (
-        dispatch(editBusiness(business)), err => (
+        dispatch(editOneBusiness(business)), err => (
             dispatch(receiveErrors(err.response.data))
         )
     ))
