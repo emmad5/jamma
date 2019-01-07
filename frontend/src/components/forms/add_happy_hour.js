@@ -1,4 +1,7 @@
 import React from 'react';
+import Geocode from "react-geocode";
+
+Geocode.setApiKey("AIzaSyBqwVIzzxEVM3LVo-wrdv9So1P1SB857H8");
 
 
 class AddHappyHour extends React.Component {
@@ -12,17 +15,29 @@ class AddHappyHour extends React.Component {
             startTime: '',
             endTime: '',
             menu: {},
+            longLat: [],
             errors: {}
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.renderErrors = this.renderErrors.bind(this);
     }
     update(field) {
-        return e => this.setState({
-            [field]: e.currentTarget.value
-        });
-    }
-    updateDays(field) {
+        if (field === 'address' && this.state.address.length > 1) {
+            Geocode.fromAddress(this.state.address).then(
+                response => {
+                    const { lat, lng } = response.results[0].geometry.location;
+                    this.setState({lngLat: [lng, lat]})
+                },
+                error => {
+                    console.error(error);
+                }
+                );
+            }
+            return e => this.setState({
+                [field]: e.currentTarget.value
+            });
+        }
+    updateDays() {
         return e => this.setState({
             days: this.state.days += (e.currentTarget.value)
         });
