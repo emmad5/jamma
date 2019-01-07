@@ -13,10 +13,6 @@
     min-width: 800px;
 }
 
-
-
-
-
 .lama-logo {
   margin-left: 80px;  
   padding-right: 30px; 
@@ -51,6 +47,20 @@
   height: 30px; 
   cursor: pointer;
 }
+.login-btn:hover {
+  /* margin-top: 14px;  */
+  color: white; 
+  background-color: #8FB5B7;
+  /* margin-right: 15px;  */
+  padding: 5px 15px 5px 15px; 
+  border-radius: 10px; 
+  border: 1px solid white; 
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.02), 0 6px 20px 0 rgba(0,0,0,0.02);
+  height: 30px; 
+  cursor: pointer;
+  border: 1px solid lightgrey; 
+
+}
 
 .or {
   padding: 10px 10px 10px 10px; 
@@ -60,7 +70,6 @@
 
 .signup-btn {
   /* margin-top: 14px;  */
-
   color: white; 
   background-color: #8FB5B7;
   /* margin-right: 120px;  */
@@ -72,9 +81,29 @@
   cursor: pointer;
 }
 
+
+.signup-btn:hover {
+  /* margin-top: 14px;  */
+  color: white; 
+  background-color: #8FB5B7;
+  /* margin-right: 120px;  */
+  padding: 5px 15px 5px 15px; 
+  border-radius: 10px; 
+  /* border: 1px solid black;  */
+  border: 1px solid lightgrey; 
+
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.02), 0 6px 20px 0 rgba(0,0,0,0.02);
+  height: 30px; 
+  cursor: pointer;
+}
+
 .logo-flex {
   display: flex;
   /* margin-top: 17px;  */
+}
+
+.jamma-title-link {
+  
 }
 
 .logo-flex img {
@@ -100,7 +129,9 @@
 .logout-button {
   color: white;
   background-color: #8FB5B7;
-  margin-right: 160px; 
+  /* margin-right: 90px;  */
+  margin-right: 165px; 
+
   padding: 5px 15px 5px 15px;
   border-radius: 10px;
   border: 1px solid white;
@@ -108,6 +139,23 @@
   0 6px 20px 0 rgba(0, 0, 0, 0.02);
   height: 30px;
   cursor: pointer;
+}
+.logout-button:hover {
+  color: white;
+  background-color: #8FB5B7;
+  /* margin-right: 70px;  */
+  
+  margin-right: 165px; 
+  
+  padding: 5px 15px 5px 15px;
+  border-radius: 10px;
+  border: 1px solid white;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.02),
+  0 6px 20px 0 rgba(0, 0, 0, 0.02);
+  height: 30px;
+  cursor: pointer;
+  border: 1px solid lightgrey; 
+
 }
 
 .left-buttons {
