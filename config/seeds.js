@@ -213,6 +213,16 @@ const go = async () => {
         },
         imageUrl: "https://s3-media3.fl.yelpcdn.com/bphoto/PLhUITXN7zM64KoBm00MBw/o.jpg"
     })
+    const FiresideBar = new Business({
+        name: "Fireside Bar",
+        address: "603 Irving St San Francisco, CA 94122",
+        longLat: [-122.489990, 37.762980],
+        vibe: "Red",
+        days: ["Sun", "Mon", "Tues", "Weds", "Thurs", "Fri", "Sat"],
+        startTime: 13,
+        endTime: 19,
+        imageUrl: "https://s3-media4.fl.yelpcdn.com/bphoto/z32SaxOMCYuOgnq9plzqDg/o.jpg"
+    })
     HarperAndRye.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     EZ5.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     TheOffice.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
@@ -222,6 +232,7 @@ const go = async () => {
     LastCallBar.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     ThePinkElephantAlibi.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     LastDropTavern.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
+    FiresideBar.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
 }
 
 go();
