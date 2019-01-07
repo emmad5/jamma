@@ -17,7 +17,7 @@ class HappyHourShow extends React.Component {
           return (
             <div> 
               {/* <div className="menu-item-space" />  */}
-              ${price} {menu[price]}
+              ${price} {menu[price].join(",  ")}
             </div>
           )
         })
