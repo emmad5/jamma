@@ -26,15 +26,18 @@ const BusinessSchema = new Schema({
     },
   startTime: {
     type: Number,
-    required: true
+    required: true,
+    min: 0,
+    max: 24
   },
   endTime: {
     type: Number,
-    required: true
+    required: true,
+    min: 0,
+    max: 24
   },
   menu: {
-    type: Object,
-    required: true,
+    type: Object
   },
   imageUrl: {
     type: String,
