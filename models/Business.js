@@ -23,15 +23,15 @@ const BusinessSchema = new Schema({
     required: true
   },
   days: {
-      type: Array
+      type: Array,
       required: true
     },
   startTime: {
-    type: number,
+    type: Number,
     required: true
   },
   endTime: {
-    type: number,
+    type: Number,
     required: true
   },
   menu: {
