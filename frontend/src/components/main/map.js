@@ -22,12 +22,15 @@ class Map extends React.Component {
 
     
     addHappyHour() {
+    
         if (this.props.businesses.length) {
             for (let i = 0; i < this.props.businesses.length; i++) {
                 let pos = new window.google.maps.LatLng(this.props.businesses[i].longLat[1], this.props.businesses[i].longLat[0]);
                 const marker = new window.google.maps.Marker({
                     position: pos,
-                    map: this.map
+                    map: this.map,
+        
+                
                 });
                 marker.addListener('click', () => {
                     this.props.openModal({ business: this.props.businesses[i]});
