@@ -38,7 +38,8 @@ const BusinessSchema = new Schema({
   },
   imageUrl: {
     type: String,
-    required: true
+    required: true,
+    default: "https://img.icons8.com/metro/1600/bar.png"
   }
 })
 
