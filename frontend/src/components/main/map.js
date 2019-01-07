@@ -18,7 +18,6 @@ class Map extends React.Component {
         }
         this.map = new window.google.maps.Map(this.mapNode, mapOptions);
         this.listenForMove();
-       
     }
 
     
