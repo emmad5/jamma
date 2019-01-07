@@ -5,7 +5,7 @@ import {openModal} from '../../actions/modal_actions';
 const mstp = state => {
     let businesses = [];
     if (state.business) {
-        businesses = state.business;
+        businesses = Object.values(state.business);
     }
     return {
         errors: state.errors.session,

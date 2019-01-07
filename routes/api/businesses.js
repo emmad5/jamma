@@ -9,14 +9,15 @@ router.get('/', (req, res) => {
 })
 
 router.post('/add', (req, res) => {
-  Business.create(business).then(business => {
+  console.log(req)
+  Business.create(req.body).then(business => {
     res.save(business)
   }, err => {
     res.status(404).send(err)
   })
 })
 
-router.patch('/patch', (req, res) => {
+router.patch('/edit', (req, res) => {
   Business.find({id: req.body._id}).then(business => {
     if (req.body.title) {
       business.title = req.body.title
