@@ -16,7 +16,7 @@ router.post('/add', (req, res) => {
   })
 })
 
-router.patch('/patch', (req, res) => {
+router.patch('/edit', (req, res) => {
   Business.find({id: req.body._id}).then(business => {
     if (req.body.title) {
       business.title = req.body.title

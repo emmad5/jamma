@@ -10,6 +10,10 @@ export default function (prevState = {}, action) {
     switch (action.type) {
         case RECEIVE_ALL_BUSINESSES:
             return action.businesses.data;
+        case RECEIVE_ONE_BUSINESSES:
+            debugger;
+        case EDIT_ONE_BUSINESS:
+            debugger;
         default:
             return prevState;
     }
