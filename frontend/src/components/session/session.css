@@ -33,12 +33,31 @@
 
 }
 
+.demo-button:hover {
+  width: 200px; 
+  height: 30px; 
+  border-radius: 5px;
+  border: 1px solid lightgrey; 
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.02), 0 6px 20px 0 rgba(0,0,0,0.02);
+  color: rgb(99, 122, 124); 
+  cursor: pointer;
+
+}
+
 .password-input {
   margin-bottom: 10px; 
 }
 
 .submit-btn {
   margin-left: 2px; 
+}
+.submit-btn:hover {
+  color: rgb(99, 122, 124); 
+  margin-left: 2px; 
+  /* background-color: #F4F4F4; */
+  cursor: pointer; 
+  border: 1px solid lightgrey; 
+
 }
 
 .session-title-center {
