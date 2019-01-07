@@ -22,14 +22,8 @@ class HappyHourShow extends React.Component {
           )
         })
 
-        let menuItems = Object.values(this.props.options.business.menu).map(item => {
-          return (
-            <ul>
-              <li>{`${item}`} </li>
-              <div className="menu-item-space"/> 
-            </ul>
-          ); 
-        })
+      let startTime = this.props.options.business.startTime === 12 ? 12 : (this.props.options.business.startTime) % 12; 
+      let endTime = this.props.options.business.endTime === 12 ? 12 : (this.props.options.business.endTime) % 12; 
 
         return (
 
@@ -51,9 +45,9 @@ class HappyHourShow extends React.Component {
                 <h2 className="business-header">Days and Time: </h2>
                 <div className="business-time-container">
                   <h2>{days}:</h2>
-                  <h2>{this.props.options.business.startTime}</h2>
+                  <h2>{startTime}</h2>
                   <h2>-</h2>
-                  <h2>{this.props.options.business.endTime}</h2>
+                  <h2>{endTime}pm</h2>
                 </div>
 
                 {/* menu */}
