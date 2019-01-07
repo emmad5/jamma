@@ -18,12 +18,12 @@ const go = async () => {
         startTime: 14,
         endTime: 17,
         menu: {
-            2: [
+            "2": [
                 "French Fries",
                 "Boulevard Tank 7 Saison",
                 "Manny’s Pale Al"
             ],
-            6: [
+            "6": [
                "Brit & Kel",
                "Tom & Christie",
                "Banshee Pinot Noir"
@@ -40,16 +40,16 @@ const go = async () => {
         startTime: 16,
         endTime: 20,
         menu: {
-            1: [
+            "1": [
                 "Jello Shots"
             ],
-            3: [
+            "3": [
                 "Sapporo"
             ],
-            4: [
+            "4": [
                 "Wine"
             ],
-            8: [
+            "8": [
                 "Bottled Beer",
                 "Selected Shots"
             ]
@@ -65,12 +65,12 @@ const go = async () => {
         startTime: 16,
         endTime: 20,
         menu: {
-            4: [
+            "4": [
                 "Old Fashioned",
                 "Summer Lover",
                 "Democrat"
             ],
-            6: [
+            "6": [
                 "BLANC de BLANCS BRUT",
                 "Charles Armand"
             ]
@@ -86,10 +86,10 @@ const go = async () => {
         startTime: 16,
         endTime: 20,
         menu: {
-            8: [
+            "8": [
                 "Moscow Mule",
             ],
-            10: [
+            "10": [
                 "Rose Manhattan",
                 "Old Fashion"
             ]
@@ -105,13 +105,13 @@ const go = async () => {
         startTime: 16,
         endTime: 18,
         menu: {
-            7: [
+            "7": [
                 "Select California Wine"
             ],
-            8: [
+            "8": [
                 "Select Sparkling Wine"
             ],
-            10: [
+            "10": [
                 "Paloma",
                 "Mojito",
                 "Margarita",
@@ -122,11 +122,106 @@ const go = async () => {
         },
         imageUrl: "https://cdn.vox-cdn.com/thumbor/YGVG2Y1Cx-70Dcj9eteds2sbMUk=/0x0:2000x1333/1200x0/filters:focal(0x0:2000x1333):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/12054911/Laureate_PChang_1318.jpg"
     })
+    const ScarletLounge = new Business({
+        name: "Scarlet Lounge",
+        address: "408 Clement St. San Francisco, CA 94118",
+        longLat: [-122.476310, 37.782410],
+        vibe: "Grey",
+        days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
+        startTime: 16,
+        endTime: 18,
+        menu: {
+            "5" : [
+                "Select Cocktail"
+            ]
+        },
+        imageUrl: "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/23031150_290635674778785_7322929934004221257_n.jpg?_nc_cat=100&_nc_ht=scontent-sjc3-1.xx&oh=e44c719f3e5b7383b010224b26a7370d&oe=5CC744FA"
+    })
+    const LastCallBar = new Business({
+        name: "Last Call Bar",
+        address: "3988 18th St. San Francisco, CA 94114",
+        longLat: [-122.435500, 37.760860],
+        vibe: "Red",
+        days: ["Sun", "Mon", "Tues", "Weds", "Thurs", "Fri", "Sat"],
+        startTime: 12,
+        endTime: 19,
+        menu: {
+            "3": [
+                "Well Drinks"
+            ]
+        },
+        imageUrl: "https://s3-media4.fl.yelpcdn.com/bphoto/-uXts-n88mGfQy8zOmbPEg/o.jpg"
+    })
+    const ThePinkElephantAlibi = new Business({
+        name: "The Pink Elephant Alibi",
+        address: "142 Minna St. San Francisco, CA 94105",
+        longLat: [-122.400490, 37.786819],
+        vibe: "Red",
+        days: ["Mon", "Tues", "Weds", "Thurs", "Fri", "Sat"],
+        startTime: 16,
+        endTime: 19,
+        menu: {
+            "5": [
+                "Well Drinks",
+                "Champagne"
+            ],
+            "7": [
+                "House Wine"
+            ]
+        },
+        imageUrl: "https://static.wixstatic.com/media/3f8fbf_3dfa49356f8d432eb8c431a558bd667b~mv2.jpg"
+    })
+    const LastDropTavern = new Business({
+        name: "Last Drop Tavern",
+        address: "550 Powell St San Francisco, CA 94108" ,
+        longLat: [-122.408560, 37.790000],
+        vibe: "Grey",
+        days: ["Sun", "Mon", "Tues", "Weds", "Thurs", "Fri", "Sat"],
+        startTime: 16,
+        endTime: 19,
+        menu: {
+            "4": [
+                "Hand Cut Fries"
+            ],
+            "5": [
+                "Guac and Chips",
+                "Mojito",
+                "Old Fashioned",
+                "Margarita",
+                "Manhattan",
+                "Sangria",
+                "Well Cocktails",
+                "Draft Beers",
+                "Wine By The Glass"
+            ],
+            "7": [
+                "Spinach and Artichoke Dip",
+                "Bacon Deviled Eggs"
+            ],
+            "8": [
+                "Buffalo Wings"
+            ],
+            "9": [
+                "Baja Fish Tacos"
+            ],
+            "10": [
+                "Salt and Pepper Calamari"
+            ],
+            "11": [
+                "Bourbon BBQ Ribs"
+            ]
+        },
+        imageUrl: "https://s3-media3.fl.yelpcdn.com/bphoto/PLhUITXN7zM64KoBm00MBw/o.jpg"
+    })
     HarperAndRye.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     EZ5.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     TheOffice.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     NativesBar.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     Laureate.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
+    ScarletLounge.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
+    LastCallBar.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
+    ThePinkElephantAlibi.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
+    LastDropTavern.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
 }
 
 go();
