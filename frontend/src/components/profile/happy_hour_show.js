@@ -21,6 +21,7 @@ class HappyHourShow extends React.Component {
         })
 
         return (
+
             <div className="business-info">
                 {/* Name */}
                 <h2 className="business-name">{this.props.options.business.name.toUpperCase()}</h2>
@@ -48,6 +49,7 @@ class HappyHourShow extends React.Component {
                 <div className="business-menu-container">
                   <h2>{menuItems}</h2>
                 </div>
+
             </div>
         )
     }

@@ -5,8 +5,9 @@ import NavBarContainer from './nav/navbar_container';
 import LoginFormContainer from './session/login_form_container';
 import Profile from './profile/profile'
 import SignupFormContainer from './session/signup_form_container';
-import Modal from './modal'
+import Modal from './modal';
 import './reset.scss'; 
+import AddHappyHour from './forms/add_happy_hour';
 
 
 const App = () => (
@@ -16,6 +17,7 @@ const App = () => (
     <Switch>
       <AuthRoute exact path="/" component={LoginFormContainer} />
       <ProtectedRoute exact path="/profile" component={Profile} />
+      <ProtectedRoute exact path="/add" component={AddHappyHour} />
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
       <Redirect to='/' />

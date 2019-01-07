@@ -4,8 +4,8 @@ import { getBusinesses } from '../../actions/business_actions';
 import {openModal} from '../../actions/modal_actions';
 const mstp = state => {
     let businesses = [];
-    if (state.business.data) {
-        businesses = state.business.data;
+    if (state.business) {
+        businesses = state.business;
     }
     return {
         errors: state.errors.session,
