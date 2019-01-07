@@ -17,11 +17,15 @@ class AddHappyHour extends React.Component {
             endTime: '',
             menu: {},
             longLat: [],
-            errors: {}
+            errors: {},
+            menuPriceWithId: [],
+            menuItemWithId: [],
+            menuId: 0
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.renderErrors = this.renderErrors.bind(this);
     }
+    
     update(field) {
         if (field === 'address' && this.state.address.length > 1) {
             Geocode.fromAddress(this.state.address).then(
@@ -34,6 +38,7 @@ class AddHappyHour extends React.Component {
                 }
             );
         }
+
         return e => this.setState({
             [field]: e.currentTarget.value
         });
@@ -59,7 +64,7 @@ class AddHappyHour extends React.Component {
             imageUrl: this.state.imageUrl,
         };
     
-        this.props.addBusiness(business);
+        this.props.addBusiness(business)
     }
 
     renderErrors() {
@@ -72,6 +77,45 @@ class AddHappyHour extends React.Component {
                 ))}
             </ul>
         );
+    }
+
+    renderMenuOptions(menuId){
+        return (
+            <form 
+                onSubmit={this.handleMenuSubmit}
+                className="add-menu-form-container"
+            >
+                <input
+                    type="text"
+                    value={this.state.menu}
+                    onChange={this.update('menuPrice', menuId)}
+                    placeholder="menu"
+                />
+                <input
+                    type="text"
+                    value={this.state.menu}
+                    onChange={this.update('menuItem', menuId)}
+                    placeholder="menu"
+                />
+                <input className = "submit-btn"
+                    type = "submit"
+                    value = "Submit"
+                />
+            </form>
+        )
+    }
+
+    update(field, menuId) {
+        if (field === 'menuPrice') {
+        }
+
+        if (field === "menuItem") {
+
+        }
+    }
+
+    handleMenuSubmit(){
+        
     }
 
     render() {
@@ -216,24 +260,7 @@ class AddHappyHour extends React.Component {
                
                    
                 </div>
-                <div className="add-menu-form-container">
-                    <input
-                        type="text"
-                        value={this.state.menu}
-                        onChange={this.update('menu')}
-                        placeholder="menu"
-                    />
-                    <input
-                        type="text"
-                        value={this.state.menu}
-                        onChange={this.update('menu')}
-                        placeholder="menu"
-                    />
-                    <input className = "submit-btn"
-                        type = "submit"
-                        value = "Submit"
-                    />
-                </div>
+                {this.renderMenuOptions(this.state.menuId)}
             </div>
         </div>) 
     }
