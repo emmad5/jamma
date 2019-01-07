@@ -1,15 +1,11 @@
 import React from 'react';
-
 import './map.css';
-import MarkerManager from '../../util/marker_manager';
 import {styleOptions} from './mapstyle';
 
 class Map extends React.Component {
     constructor(props) {
         super(props);
         this.addHappyHour = this.addHappyHour.bind(this);
-
-    
     }
 
     componentDidMount(){
@@ -21,36 +17,34 @@ class Map extends React.Component {
             styles: styleOptions
         }
         this.map = new window.google.maps.Map(this.mapNode, mapOptions);
-        this.MarkerManager = new MarkerManager(this.map)
         this.listenForMove();
     }
 
     
     addHappyHour() {
         if (this.props.businesses.length) {
-            let pos = new window.google.maps.LatLng(this.props.businesses[0].longLat[1], this.props.businesses[0].longLat[0]);
-            const marker = new window.google.maps.Marker({
-                position: pos,
-                map: this.map
-            });
-            marker.addListener('click', () => {
-                this.props.openModal('happyhour')
-            });
+            for (let i = 0; i < this.props.businesses.length; i++) {
+                let pos = new window.google.maps.LatLng(this.props.businesses[i].longLat[1], this.props.businesses[i].longLat[0]);
+                const marker = new window.google.maps.Marker({
+                    position: pos,
+                    map: this.map
+                });
+                marker.addListener('click', () => {
+                    this.props.openModal({ business: this.props.businesses[i]});
+                });
+            }
         } 
     }
 
     listenForMove() {
         window.google.maps.event.addListener(this.map, 'idle', () => {
             const bounds = this.map.getBounds();
-        
-
-       
         });
     }
 
 
     render() {
-        this.props.happyHours.forEach(this.addHappyHour);
+        this.addHappyHour();
         return (< div className="map" ref = { map => this.mapNode = map }></div>)
     }
 }

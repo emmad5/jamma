@@ -3,14 +3,15 @@ import './module.css';
 
 
 class HappyHourShow extends React.Component {
+    
     render() {
+        console.log(this.props.options)
         return (
             <div>
-                <div className="flex-container-map">
-                    <h1>Name of Restaurant</h1>
-                    <h3>Days and Times</h3>
-                    <p>Monday - Friday</p>
-                </div>
+
+                <h2>{this.props.options.business.name}</h2>
+                <h2>{this.props.options.business.address}</h2>
+                <h2>{this.props.options.business.days}</h2>
             </div>
         )
     }
