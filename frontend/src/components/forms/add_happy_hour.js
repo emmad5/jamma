@@ -22,6 +22,11 @@ class AddHappyHour extends React.Component {
             [field]: e.currentTarget.value
         });
     }
+    updateDays(field) {
+        return e => this.setState({
+            days: this.state.days += (e.currentTarget.value)
+        });
+    }
 
     handleSubmit(e) {
         e.preventDefault();
@@ -84,14 +89,74 @@ class AddHappyHour extends React.Component {
                             />
                             <br />
                             <br />
+                            <div style={{display: 'flex', width: '10px'}}>
+                            <label>
+                                Mon
                             <input
-                                type="text"
-                                value={this.state.days}
-                                onChange={this.update('days')}
-                                placeholder="days"
+                                style={{width: '20px' }}
+                                type="checkbox"
+                                onChange={this.updateDays('days')}
+                                value='Mon'
+
                             />
-                            <br />
-                            <br />
+                            </label>
+                            <label>
+                                Tues
+                            <input
+                                style={{ width: '20px' }}
+                                type="checkbox"
+                                onChange={this.updateDays('days')}
+                                value='Tues'
+
+                            />
+                            </label>
+                            <label>
+                                Wed
+                            <input
+                                style={{ width: '20px' }}
+                                type="checkbox"
+                                onChange={this.updateDays('days')}
+                                value='Wed'
+                            />
+                            </label>
+                            <label>
+                                Thurs
+                            <input
+                                style={{ width: '20px' }}
+                                type="checkbox"
+                                onChange={this.updateDays('days')}
+                                value='Thurs'
+                            />
+                            </label>
+                            <label>
+                                Fri
+                            <input
+                                style={{ width: '20px' }}
+                                type="checkbox"
+                                onChange={this.updateDays('days')}
+                                value='Fri'
+                            />
+                            </label>
+                            <label>
+                                Sat
+                            <input
+                                style={{ width: '20px' }}
+                                type="checkbox"
+                                onChange={this.updateDays('days')}
+                                value='Sat'
+                            />
+                            </label>
+                            <label>
+                                Sun
+                            <input
+                                style={{ width: '20px' }}
+                                type="checkbox"
+                                onChange={this.updateDays('days')}
+                                value='Sun'
+                            />
+                            </label>
+                            </div>
+             
                             <input
                                 type="text"
                                 value={this.state.startTime}
