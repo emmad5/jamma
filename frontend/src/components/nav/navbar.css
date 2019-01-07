@@ -130,7 +130,7 @@
   color: white;
   background-color: #8FB5B7;
   /* margin-right: 90px;  */
-  margin-right: 165px; 
+  margin-right: 150px; 
 
   padding: 5px 15px 5px 15px;
   border-radius: 10px;
@@ -140,22 +140,31 @@
   height: 30px;
   cursor: pointer;
 }
-.logout-button:hover {
+.add-button {
   color: white;
   background-color: #8FB5B7;
-  /* margin-right: 70px;  */
-  
-  margin-right: 165px; 
-  
-  padding: 5px 15px 5px 15px;
+
   border-radius: 10px;
   border: 1px solid white;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.02),
   0 6px 20px 0 rgba(0, 0, 0, 0.02);
-  height: 30px;
   cursor: pointer;
-  border: 1px solid lightgrey; 
+  text-decoration: none;
+  font-size: 10px;
+  margin-right: 20px;
+  height: 17px;
+  width: 70px;
+  text-align: center;
+  padding-top: 10.5px;
+  
+}
 
+.add-button:hover {
+  border: 1px solid lightgrey; 
+}
+
+.logout-button:hover {
+  border: 1px solid lightgrey; 
 }
 
 .left-buttons {

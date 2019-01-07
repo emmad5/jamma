@@ -8,7 +8,6 @@ class NavBar extends React.Component {
   constructor(props) {
     super(props);
     this.logoutUser = this.logoutUser.bind(this);
-    this.getLinks = this.getLinks.bind(this);
   }
 
   logoutUser(e) {
@@ -16,27 +15,10 @@ class NavBar extends React.Component {
     this.props.logout();
   }
 
-  getLinks() {
-    if (this.props.loggedIn) {
-      return (
-        <div>
-          <Link to={'/profile'}>Profile</Link>
-          <button onClick={this.logoutUser}>Logout</button>
-        </div>
-      );
-    } else {
-      return (
-        <div className='headings'>
-          <Link to={'/signup'}>Signup</Link>
-          <Link to={'/login'}>Login</Link>
-        </div>
-      );
-    }
-  }
 
   renderSessionButtons() {
     return(
-      <label className="left-buttons">
+      <div className="left-buttons">
         <Link to={'/login'}>
           <button className="login-btn">Log In</button>
         </Link>
@@ -44,16 +26,16 @@ class NavBar extends React.Component {
         <Link to={'/signup'}>
           <button className="signup-btn">Sign Up</button>
         </Link>
-      </label>
+      </div>
     )
   }
 
   renderLogoutButton() {
     return (
-      <label className="right-buttons">
-        <Link className="logout-button" to={'/add'}>Add Happy Hour</Link>
+      <div className="right-buttons">
+        <Link className="add-button" to={'/add'}>Add</Link>
         <button className="logout-button" onClick={this.logoutUser}>Logout</button>
-      </label>
+      </div>
     )
   }
 
@@ -67,7 +49,7 @@ class NavBar extends React.Component {
           <Link to={'/'} className="jamma-title-link"><h1 className="jamma-title">JAMMA</h1></Link>
         </div>
 
-        {/* {this.getLinks()} */}
+
         <div className="session-buttons">
           { this.props.loggedIn ? this.renderLogoutButton() : this.renderSessionButtons() }
         </div>

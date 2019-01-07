@@ -11,18 +11,24 @@ class HappyHourShow extends React.Component {
           return `${day} `; 
         })
 
-        let menuItems = Object.values(this.props.options.business.menu).map(item => {
+        let menu = this.props.options.business.menu 
+
+        let prices = Object.keys(this.props.options.business.menu).map(price => {
           return (
-            <ul>
-              <li>{`${item}`} </li>
-              <div className="menu-item-space"/> 
-            </ul>
-          ); 
+            <div> 
+              {/* <div className="menu-item-space" />  */}
+              ${price} {menu[price].join(",  ")}
+            </div>
+          )
         })
+
+      let startTime = this.props.options.business.startTime === 12 ? 12 : (this.props.options.business.startTime) % 12; 
+      let endTime = this.props.options.business.endTime === 12 ? 12 : (this.props.options.business.endTime) % 12; 
 
         return (
 
             <div className="business-info">
+
                 {/* Name */}
                 <h2 className="business-name">{this.props.options.business.name.toUpperCase()}</h2>
 
@@ -39,15 +45,15 @@ class HappyHourShow extends React.Component {
                 <h2 className="business-header">Days and Time: </h2>
                 <div className="business-time-container">
                   <h2>{days}:</h2>
-                  <h2>{this.props.options.business.startTime}</h2>
+                  <h2>{startTime}</h2>
                   <h2>-</h2>
-                  <h2>{this.props.options.business.endTime}</h2>
+                  <h2>{endTime}pm</h2>
                 </div>
 
                 {/* menu */}
                 <h2 className="business-header">Menu</h2>
                 <div className="business-menu-container">
-                  <h2>{menuItems}</h2>
+                    {prices}
                 </div>
 
             </div>
