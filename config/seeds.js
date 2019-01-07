@@ -14,7 +14,8 @@ const go = async () => {
         description: "Bi-level bar with a piano & a pool table offers a host of drinks including beer, cocktails & punch.",
         address: "1695 Polk St, San Francisco, CA 94109",
         longLat: [-122.421410, 37.794140],
-        vibe: "Red"
+        vibe: "Grey"
+        days:
     })
     HarperAndRye.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
 }
