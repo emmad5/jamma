@@ -5,9 +5,9 @@ export const getBusinesses = () => {
 };
 
 export const editBusiness = businessData => {
-    return axios.post('/api/businesses');
+    return axios.patch(`/api/businesses/${businessData._id}`, businessData);
 };
 
 export const addBusiness = businessData => {
-    return axios.patch('/api/businesses');
+    return axios.post('/api/businesses', businessData);
 };

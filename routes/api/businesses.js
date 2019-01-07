@@ -9,7 +9,8 @@ router.get('/', (req, res) => {
 })
 
 router.post('/add', (req, res) => {
-  Business.create(business).then(business => {
+  console.log(req)
+  Business.create(req.body).then(business => {
     res.save(business)
   }, err => {
     res.status(404).send(err)
