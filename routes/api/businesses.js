@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
 })
 
 router.post('/add', (req, res) => {
-  console.log(req)
+  console.log(req.query)
   Business.create(req.body).then(business => {
     res.save(business)
   }, err => {

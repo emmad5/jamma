@@ -1,5 +1,6 @@
 import React from 'react';
 import Geocode from "react-geocode";
+import './form.css';
 
 Geocode.setApiKey("AIzaSyBqwVIzzxEVM3LVo-wrdv9So1P1SB857H8");
 
@@ -37,6 +38,7 @@ class AddHappyHour extends React.Component {
                 [field]: e.currentTarget.value
             });
         }
+
     updateDays() {
         return e => this.setState({
             days: this.state.days += (e.currentTarget.value)
@@ -73,11 +75,11 @@ class AddHappyHour extends React.Component {
 
     render() {
         return (<div>
-            <div className="session-title">
+            <div className="form-title">
                 <h1>Add a Happy Hour Near You</h1>
             </div>
-            <div className="session-form" >
-                <div className="session-form-container">
+            <div className="add-form" >
+                <div className="add-form-container">
                     <form onSubmit={this.handleSubmit}>
                         <div className="inputs">
                             <input
@@ -104,70 +106,68 @@ class AddHappyHour extends React.Component {
                             />
                             <br />
                             <br />
-                            <div style={{display: 'flex', width: '10px'}}>
-                            <label>
-                                Mon
+                            <div className="add-inputs">
+                            <label className="checks-label">
+                                M
                             <input
-                                style={{width: '20px' }}
+                                className="checks"
                                 type="checkbox"
                                 onChange={this.updateDays('days')}
-                                value='Mon'
-
+                                value={['Mon']}
                             />
                             </label>
-                            <label>
-                                Tues
+                            <label className="checks-label">
+                                T
                             <input
-                                style={{ width: '20px' }}
+                                className="checks"
                                 type="checkbox"
                                 onChange={this.updateDays('days')}
-                                value='Tues'
-
+                                value={['Tues']}
                             />
                             </label>
-                            <label>
-                                Wed
+                            <label className="checks-label">
+                                W
                             <input
-                                style={{ width: '20px' }}
+                                className="checks"
                                 type="checkbox"
                                 onChange={this.updateDays('days')}
-                                value='Wed'
+                                value={['Wed']}
                             />
                             </label>
-                            <label>
-                                Thurs
+                            <label className="checks-label">
+                                T
                             <input
-                                style={{ width: '20px' }}
+                                className="checks"
                                 type="checkbox"
                                 onChange={this.updateDays('days')}
-                                value='Thurs'
+                                value={['Thurs']}
                             />
                             </label>
-                            <label>
-                                Fri
+                            <label className="checks-label">
+                                F
                             <input
-                                style={{ width: '20px' }}
+                                className="checks"
                                 type="checkbox"
                                 onChange={this.updateDays('days')}
-                                value='Fri'
+                                value={['Fri']}
                             />
                             </label>
-                            <label>
-                                Sat
+                            <label className="checks-label">
+                                S
                             <input
-                                style={{ width: '20px' }}
+                                className="checks"
                                 type="checkbox"
                                 onChange={this.updateDays('days')}
-                                value='Sat'
+                                value={['Sat']}
                             />
                             </label>
-                            <label>
-                                Sun
+                            <label className="checks-label">
+                                S
                             <input
-                                style={{ width: '20px' }}
+                                className="checks"
                                 type="checkbox"
                                 onChange={this.updateDays('days')}
-                                value='Sun'
+                                value={['Sun']}
                             />
                             </label>
                             </div>
@@ -214,6 +214,18 @@ class AddHappyHour extends React.Component {
                     <br />
                
                    
+                </div>
+                <div className="add-menu-form-container">
+                    <input
+                        type="text"
+                        value={this.state.menu}
+                        onChange={this.update('menu')}
+                        placeholder="menu"
+                    />
+                    <input className = "submit-btn"
+                        type = "submit"
+                        value = "Submit"
+                    />
                 </div>
             </div>
         </div>) 
