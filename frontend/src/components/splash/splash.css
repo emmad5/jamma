@@ -16,6 +16,7 @@
 }
 
 .join-splash-btn {
+    transition: all .75s ease;
   height: 60px; 
   width: 360px; 
   background-color: #8FB5B7; 
@@ -23,17 +24,24 @@
   border: 1px solid white; 
   color: white; 
   padding: 10px; 
-  left: 700px;
-  top: 600px; 
-  font-size: 20px;  
+  left: 550px;
+  top: 450px; 
+  font-size: 20px; 
+   border-radius: 3px; 
 }
 
+.join-splash-btn:hover {
+  background: rgba(255, 255, 255, 0.849);
+  color: #8FB5B7; 
+  cursor: pointer;
+ 
+}
 .splash-header {
-  font-size: 200px; 
+  font-size: 100px; 
   color: white; 
   font-family: Symbol;
   letter-spacing: 7px;
-  text-shadow: 2px 2px rgba(0, 0, 0, 0.315);
+  text-shadow: 2px 2px rgba(122, 122, 122, 0.315);
 
 }
 
@@ -46,12 +54,13 @@
 .fav-cities-splash {
   position: absolute;
   color: white; 
+  min-width: 500px;
   left: 550px; 
-  top: 380px; 
-  font-size: 40px; 
+  top: 300px; 
+  font-size: 30px; 
   /* font-family: Symbol;  */
-  line-height: 80px; 
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.315);
+  line-height: 50px; 
+  text-shadow: 2px 2px rgba(122, 122, 122, 0.315);
   letter-spacing: 3px;
 
 }
@@ -60,18 +69,3 @@
   margin-left: 170px; 
 }
 
-.join-splash {
-  position: absolute;
-  top: 690px; 
-  left: 550px; 
-  color: white; 
-  font-size: 30px; 
-}
-
-.join-splash a {
-  text-decoration: none; 
-  color: white;
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.315);
-  letter-spacing: 3px;
-
-}
