@@ -1,6 +1,5 @@
 import React from 'react';
 import './module.css';
-import { unlink } from 'fs';
 
 
 class HappyHourShow extends React.Component {
@@ -38,7 +37,7 @@ class HappyHourShow extends React.Component {
 
                 {/* image */}
                 <div className="img-container">
-                  <img className="img-show" src={this.props.options.business.imageUrl} />
+                  <img className="img-show" src={this.props.options.business.imageUrl} alt='happy-hour' />
               {/* <img src="http://villagevino.com/wp-content/uploads/2013/02/happy-hour-wine.jpg" alt=""/> */}
                 </div>
 
