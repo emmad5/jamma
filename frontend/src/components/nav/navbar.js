@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.css';
 // import logo from './lama_no_bg.png';
-import logo from './lamalogo_nobg_emma.png';
+import logo from './lamalogo_large_pupils_no_outline.png';
+// import logo from './lamalogo_nobg_emma.png';
 
 class NavBar extends React.Component {
   constructor(props) {
