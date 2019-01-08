@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
     },err => {res.status(404).send(err)})
 })
 
-router.post('/add', (req, res) => {
+router.post('/', (req, res) => {
   console.log(req.query)
   Business.create(req.body).then(business => {
     res.save(business)
@@ -17,7 +17,7 @@ router.post('/add', (req, res) => {
   })
 })
 
-router.patch('/edit', (req, res) => {
+router.patch('/', (req, res) => {
   Business.find({id: req.body._id}).then(business => {
     if (req.body.title) {
       business.title = req.body.title
