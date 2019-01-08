@@ -21,8 +21,6 @@
   position: absolute;
   left: 400px; 
   top: 250px; 
-  /* padding: 50px;  */
-  /* margin-bottom: 100px;  */
 }
 
 .splash-shift {
@@ -30,19 +28,19 @@
 }
 
 .join-splash-btn {
-    transition: all .75s ease;
+  transition: all .75s ease;
   height: 60px; 
-  width: 360px; 
+  width: 450px; 
   background-color: #8FB5B7; 
   position: absolute;
   border: 1px solid white; 
   color: white; 
-  /* padding: 10px;  */
   left: 750px;
   top: 550px; 
   font-size: 20px; 
-   border-radius: 3px; 
-
+  border-radius: 3px; 
+  font-family: Symbol;
+  letter-spacing: 3px;
 }
 
 .join-splash-btn:hover {
@@ -64,8 +62,6 @@
   left: 700px;
   top: 280px;  
   position: absolute;
- 
-
 }
 
 .fav-cities-splash {
@@ -75,13 +71,9 @@
   left: 750px; 
   top: 420px; 
   font-size: 30px; 
-  /* font-family: Symbol;  */
   line-height: 50px; 
   text-shadow: 2px 2px rgba(122, 122, 122, 0.315);
   letter-spacing: 3px;
-  /* margin-top: 50px;  */
-
-
 }
 
 .fav-cities-splash h3 {
