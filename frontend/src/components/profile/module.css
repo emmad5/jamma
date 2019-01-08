@@ -80,3 +80,20 @@
   text-align: left;
 }
 
+.remove-btn {
+  color: #8FB5B7;
+  background-color: white;
+  border: 1px #8FB5B7 solid;
+  position: absolute;
+  right: 25px;
+  bottom: 15px;
+  border-radius: 3px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.02), 0 6px 20px 0 rgba(0,0,0,0.02);
+
+}
+
+.remove-btn:hover {
+  cursor: pointer;
+
+  background: rgb(255, 252, 252);
+}
