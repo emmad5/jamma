@@ -58,7 +58,7 @@ class HappyHourShow extends React.Component {
                 <div className="business-menu-container">
                     {prices}
                 </div>
-            <button onClick={this.remove}>Remove Happy Hour</button>
+            <button className="remove-btn" onClick={this.remove}>Remove</button>
             </div>
         )
     }
