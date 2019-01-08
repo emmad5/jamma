@@ -3,7 +3,7 @@ import AddHappyHour from './add_happy_hour';
 import { addBusiness } from '../../actions/business_actions';
 
 
-const mstp = state => {
+const mstp = (state, ownProps) => {;
     return {  
     }
 };

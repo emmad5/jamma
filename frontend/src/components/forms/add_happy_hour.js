@@ -1,6 +1,7 @@
 import React from 'react';
 import Geocode from "react-geocode";
 import './form.css';
+import {Redirect} from 'react-router-dom'
 
 Geocode.setApiKey("AIzaSyBqwVIzzxEVM3LVo-wrdv9So1P1SB857H8");
 
@@ -16,7 +17,7 @@ class AddHappyHour extends React.Component {
             startTime: '',
             endTime: '',
             menu: {},
-            longLat: [],
+            lngLat: [],
             errors: {},
             menuItem: "",
             menuPrice: "",
@@ -32,10 +33,14 @@ class AddHappyHour extends React.Component {
     
     update(field) {
         if (field === 'address' && this.state.address.length > 1) {
+            
             Geocode.fromAddress(this.state.address).then(
                 response => {
                     const { lat, lng } = response.results[0].geometry.location;
-                    this.setState({lngLat: [lng, lat]})
+                    console.log([lat, lng])
+                    this.setState({
+                        lngLat: [lng, lat]
+                    });
                 },
                 error => {
                     console.error(error);
@@ -51,23 +56,25 @@ class AddHappyHour extends React.Component {
 
     updateDays() {
         return e => this.setState({
-            days: this.state.days += (e.currentTarget.value)
+            days: this.state.days.concat(e.currentTarget.value)
         });
     }
 
     handleSubmit(e) {
         e.preventDefault();
+        
         let business = {
             name: this.state.name,
             address: this.state.address,
             days: this.state.days,
             vibe: this.state.vibe,
+            longLat: this.state.lngLat,
             startTime: this.state.startTime,
             endTime: this.state.endTime,
             menu: this.state.menu,
             imageUrl: this.state.imageUrl,
         };
-        this.props.addBusiness(business);
+        this.props.addBusiness(business)
     }
 
     renderErrors() {
@@ -194,7 +201,7 @@ class AddHappyHour extends React.Component {
                                 className="checks"
                                 type="checkbox"
                                 onChange={this.updateDays('days')}
-                                value={['Wed']}
+                                value={['Weds']}
                             />
                             </label>
                             <label className="checks-label">
