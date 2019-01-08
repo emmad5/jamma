@@ -178,14 +178,6 @@ class AddHappyHour extends React.Component {
                             />
                             <br />
                             <br />
-                            <input
-                                type="text"
-                                value={this.state.vibe}
-                                onChange={this.update('vibe')}
-                                placeholder="vibe"
-                            />
-                            <br />
-                            <br />
                             <div className="add-inputs">
                             <label className="checks-label">
                                 M
