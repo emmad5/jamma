@@ -11,6 +11,10 @@ class HappyHourShow extends React.Component {
           return `${day} `; 
         })
 
+        if (!this.props.options.business.menu) {
+       this.props.options.business.menu = {}
+     }
+
         let menu = this.props.options.business.menu 
 
         let prices = Object.keys(this.props.options.business.menu).map(price => {
@@ -33,8 +37,9 @@ class HappyHourShow extends React.Component {
                 <h2 className="business-name">{this.props.options.business.name.toUpperCase()}</h2>
 
                 {/* image */}
-                <div>
-                  {/* <img src={"{this.props.options.business.imageUrl}"} /> */}
+                <div className="img-container">
+                  <img className="img-show" src={this.props.options.business.imageUrl} />
+              {/* <img src="http://villagevino.com/wp-content/uploads/2013/02/happy-hour-wine.jpg" alt=""/> */}
                 </div>
 
                 {/* Address */}

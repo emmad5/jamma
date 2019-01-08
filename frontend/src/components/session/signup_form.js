@@ -3,8 +3,6 @@ import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import './session.css';
 
-
-
 class SignupForm extends React.Component {
   constructor(props) {
     super(props);
@@ -22,10 +20,6 @@ class SignupForm extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.signedIn === true) {
-      this.props.history.push('/profile');
-    }
-
     this.setState({ errors: nextProps.errors });
   }
 
@@ -43,8 +37,7 @@ class SignupForm extends React.Component {
       password2: this.state.password2
     };
 
-    this.props.signup(user, this.props.history);
-    this.props.login(user);
+    this.props.signup(user, this.props.history)
 
   }
 
@@ -56,7 +49,7 @@ class SignupForm extends React.Component {
 
   renderErrors() {
     return (
-      <ul>
+      <ul className='errors'>
         {Object.keys(this.state.errors).map((error, i) => (
           <li key={`error-${i}`}>
             {this.state.errors[error]}
@@ -71,8 +64,7 @@ class SignupForm extends React.Component {
       <div className="signup-div"> 
         <div className="session-title">
           <h1>Enjoy Happy Hours Near You</h1>
-          {/* <h1>Enjoy Happy Hours Near You</h1> */}
-          {/* <h1>ENJOY HAPPY HOURS NEAR YOU</h1> */}
+ 
         </div>
         <div className="session-form">
           <div className="session-form-container">
@@ -101,23 +93,25 @@ class SignupForm extends React.Component {
                 />
                 <br />
                 <br />
-                <br />
+           
                   <input className="submit-btn"
                   type="submit"
                   value="Submit"
                 />
-                {this.renderErrors()}
+                
               </div>
             </form>
             <br /> 
+           
             <button className="demo-button" onClick={this.demoHandleSubmit}>Demo</button>
-            <br /> 
             <br /> 
 
             <div className='login'>
-              {/* <Link to={'/signup'}>New to Jamma? Signup</Link> */}
               <Link className="already-text" to={'/login'}>Already a User? Login</Link>
             </div>
+            <br />
+            {this.renderErrors()}
+            <br /> 
           </div>
         </div>
       </div>

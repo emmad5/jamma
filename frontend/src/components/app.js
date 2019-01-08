@@ -8,18 +8,18 @@ import SignupFormContainer from './session/signup_form_container';
 import Modal from './modal';
 import './reset.scss'; 
 import AddHappyHour from './forms/add_happy_hour';
+import Splash from './splash/splash'
 
 
 const App = () => (
   <div>
-    <NavBarContainer />
     <Modal />
     <Switch>
-      <AuthRoute exact path="/" component={LoginFormContainer} />
-      <ProtectedRoute exact path="/profile" component={Profile} />
-      <ProtectedRoute exact path="/add" component={AddHappyHour} />
-      <AuthRoute exact path="/login" component={LoginFormContainer} />
-      <AuthRoute exact path="/signup" component={SignupFormContainer} />
+      <AuthRoute exact path="/" component={Splash} />
+      <ProtectedRoute exact path="/profile" component={() => (<div><NavBarContainer/><Profile/></div>)} />
+      <ProtectedRoute exact path="/add" component={() => (<div><NavBarContainer/><AddHappyHour/></div>)} />
+      <AuthRoute exact path="/login" component={() => (<div><NavBarContainer/><LoginFormContainer/></div>)}/>
+      <AuthRoute exact path="/signup" component={() => (<div><NavBarContainer/><SignupFormContainer/></div>)} />
       <Redirect to='/' />
     </Switch>
   </div>
