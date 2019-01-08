@@ -10,6 +10,12 @@
   align-items: center  
 }
 
+
+.errors {
+  font-family: arial;
+  color: #BE4D4D;
+  text-align: center;
+}
 .session-form-container-add {
   padding-top: 50px; 
   border: 2px solid white; 
@@ -23,9 +29,6 @@
   align-items: center  
 }
 
-.inputs {
-  /* padding: 100px;  */
-}
 
 .inputs input {
   width: 200px; 
