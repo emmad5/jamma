@@ -83,10 +83,7 @@ class AddHappyHour extends React.Component {
         };
         
         this.props.addBusiness(business)
-       
-        this.setState({redirect: true})
-     
-      
+        this.setState({redirect: true}) 
     }
 
     renderErrors() {
