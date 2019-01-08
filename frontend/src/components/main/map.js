@@ -38,7 +38,7 @@ class Map extends React.Component {
 
     listenForMove() {
         window.google.maps.event.addListener(this.map, 'idle', () => {
-            const bounds = this.map.getBounds();
+            this.map.getBounds();
         });
     }
 
