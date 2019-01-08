@@ -79,8 +79,10 @@ class AddHappyHour extends React.Component {
             <div className="form-title">
                 <h1>Add a Happy Hour Near You</h1>
             </div>
+
             <div className="add-form" >
                 <div className="add-form-container">
+
                     <form onSubmit={this.handleSubmit}>
                         <div className="inputs">
                             <input
