@@ -32,7 +32,7 @@ class Splash extends React.Component {
               <div>
             </div>
              
-              <Link to='/signup'><button className="join-splash-btn">Join Millions of Happy Users Today</button></Link>
+              <Link className="link-to-session-form" to='/signup'><button className="join-splash-btn">Join Millions of Happy Users Today</button></Link>
 
             </div>
             </div>
