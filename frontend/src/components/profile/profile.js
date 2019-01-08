@@ -1,15 +1,15 @@
 import React from 'react';
 import MapContainer from '../main/map_container';
+import './module.css'; 
 
 class Profile extends React.Component {
     render() {
         return (
             <div>
-                {/* <h1>PROFILE PAGE</h1> */}
-                <div>
-              <MapContainer />
-                </div>
-                <footer>
+              <div>
+                <MapContainer />
+              </div>
+                <footer className="footer">
                     Copyright &copy; 2019 JAMMA
                 </footer>
             </div>
