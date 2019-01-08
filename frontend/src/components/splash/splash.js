@@ -21,14 +21,14 @@ class Splash extends React.Component {
             </div>
 
             <div className="fav-cities-splash">
-                <h2>Explore your Favorite Cities</h2> 
+                <h2>explore your favorite cities'</h2> 
                 
-                <h3>Favorite Happy Hours!!!</h3>
+                <h3>favorite happy hours</h3>
             </div>
 
             <div>
                 {/* <Link to='/signup'>Join Millions of Happy Users Today!!!</Link> */}
-              <Link to='/signup'><button className="join-splash-btn">Join Millions of Happy Users Today!!!</button></Link>
+              <Link to='/signup'><button className="join-splash-btn">Join Millions of Happy Users Today</button></Link>
 
             </div>
 
