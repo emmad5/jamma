@@ -11,6 +11,7 @@ export default function (prevState = {}, action) {
         case RECEIVE_ALL_BUSINESSES:
             return merge({}, action.businesses.data);
         case RECEIVE_ONE_BUSINESS:
+            debugger;
         default:
             return prevState;
     }

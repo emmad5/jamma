@@ -38,7 +38,6 @@ class AddHappyHour extends React.Component {
             Geocode.fromAddress(this.state.address).then(
                 response => {
                     const { lat, lng } = response.results[0].geometry.location;
-                    console.log([lat, lng])
                     this.setState({
                         lngLat: [lng, lat]
                     });
