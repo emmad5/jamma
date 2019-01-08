@@ -26,6 +26,7 @@ class AddHappyHour extends React.Component {
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleMenuSubmit = this.handleMenuSubmit.bind(this);
+        this.updateMenu = this.updateMenu.bind(this);
         this.renderErrors = this.renderErrors.bind(this);
     }
     
@@ -108,34 +109,40 @@ class AddHappyHour extends React.Component {
         )
     }
 
-    updateMenu(field, menuId) {
+    updateMenu(field) {
         if (field === 'menuPrice') {
             return e => {
                 this.setState({menuPrice: e.currentTarget.value})
-                this.setState({menuPriceWithId: this.menuPriceWithId.concat([menuId, e.currentTarget.value])})
             }
         }
 
         if (field === "menuItem") {
             return e => {
                 this.setState({menuItem: e.currentTarget.value})
-                this.setState({menuItemWithId: this.menuItemWithId.concat([menuId, e.currentTarget.value])})
             }
         }
-        return null
     }
 
     handleMenuSubmit(e){
         e.preventDefault(); 
+        // this.setState({menuItemWithId: this.state.menuItemWithId.push([this.state.menuId, this.state.menuItem])})
+        // debugger;
+        // this.setState({menuPriceWithId: this.state.menuPriceWithId.push([this.state.menuId, this.state.menuPrice])})
+        // this.setState({menuId: this.state.menuId += 1})
 
-        for (let i = 0; i < this.state.menuPriceWithId.length; i++) {
-            let price = this.state.menuPriceWithId[i];
-            if (Object.keys(this.state.menu).includes(price[1])) {
-                this.setState({menu: this.menu[price[1]].id.push(price[0])})
-            } else {
-                this.setState({menu: this.menu[price[1]] = {id: price[0]}})
-            }
-        } 
+        // for (let i = 0; i < this.state.menuPriceWithId.length; i++) {
+        //     let price = this.state.menuPriceWithId[i];
+        //     if (Object.keys(this.state.menu).includes(price[1])) {
+        //         this.setState({menu: this.state.menu[price[1]].id.push(price[0])})
+        //     } else {
+        //         this.setState({menu: this.state.menu[price[1]] = {id: price[0]}})
+        //     }
+        // } 
+        if (this.state.menu[this.state.menuPrice]) {
+            this.setState({menu: this.state.menu[this.state.menuPrice].push(this.state.menuItem)})
+        } else {
+            this.setState({menu: this.state.menu[this.state.menuPrice] = [this.state.menuItem]})
+        }
     }
 
     render() {
