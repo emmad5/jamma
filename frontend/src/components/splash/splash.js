@@ -10,11 +10,19 @@ import logo from './lamalogo_large_pupils_no_outline.png';
 class Splash extends React.Component {
     render() {
         return(
-            <div className='splash-div'>
+
+          <div className='splash-div'>
+
+            
+
+
+          
             <div className="logo-lama-splash">
               <Link to={'/'}><img className="logo-img" src={logo} alt="" width="290px" height="390px" /></Link>
             </div>
-            
+
+            <div className="flex-text">
+
             <div className="splash-header-pos">
                 <h1 className="splash-header">JAMMA</h1>
             </div>
@@ -30,8 +38,11 @@ class Splash extends React.Component {
               <Link to='/signup'><button className="join-splash-btn">Join Millions of Happy Users Today</button></Link>
 
             </div>
-
             </div>
+
+           
+          </div>
+
         )
     }
 }
