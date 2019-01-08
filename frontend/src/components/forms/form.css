@@ -3,7 +3,7 @@
     border: 2px solid white;
     border-radius: 5px;
     width: 270px;
-    height: 427px;
+    height: 385px;
     margin-right: 50px;
     display: flex;
     flex-direction: column;
@@ -17,7 +17,7 @@
     border-radius: 5px;
     margin-left: 50px;
     width: 270px;
-    height: 427px;
+    height: 385px;
     display: flex;
     flex-direction: column;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.05),
@@ -147,4 +147,27 @@
     border: 1px solid white;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.02),
     0 6px 20px 0 rgba(0, 0, 0, 0.02);
+}
+
+.menu-items {
+    font-family: arial;
+    color: grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px 0 5px 0;
+    text-align: center;
+}
+
+.menu-price {
+    margin-bottom: 1px;
+    text-decoration: underline;
+}
+
+.menu-items-div {
+    display: flex;
+    width: 80%;
+    height: 61%;
+    flex-direction: column;
+    overflow-y: auto;
 }

@@ -122,9 +122,12 @@ class AddHappyHour extends React.Component {
                 <input 
                     className = "menu-inputs"
                     type = "submit"
-                    value = "Submit"
+                    value = "Add Menu Item"
                 />
-                {this.renderEnteredMenu()}
+                <br/>
+                <div className="menu-items-div">
+                    {this.renderEnteredMenu()}
+                </div>
             </form>
         )
     }
@@ -132,8 +135,13 @@ class AddHappyHour extends React.Component {
     renderEnteredMenu(){
         let prices = Object.keys(this.state.menu).map(price => {
           return (
-            <label> 
-              ${price} {this.state.menu[price].join(",  ")}
+            <label className="menu-items"> 
+                <label className="menu-price">
+                    ${price}
+                </label>
+                <label className="menu-item">
+                    {this.state.menu[price].join(",  ")}
+                </label>
             </label>
           )
         })
