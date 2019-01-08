@@ -10,8 +10,11 @@
   align-items: center  
 }
 
-.inputs {
-  /* padding: 100px;  */
+
+.errors {
+  font-family: arial;
+  color: #BE4D4D;
+  text-align: center;
 }
 
 .inputs input {
