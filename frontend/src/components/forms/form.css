@@ -92,7 +92,6 @@
     /* background-color: #F4F4F4; */
     cursor: pointer;
     border: 1px solid lightgrey;
-
 }
 
 .session-title-center {
@@ -166,7 +165,39 @@
 .menu-items-div {
     display: flex;
     width: 198px;
-    height: 220px;
+    height: 190px;
     flex-direction: column;
     overflow-y: overlay;
+}
+
+.menu-submit-btn:hover {
+    color: rgb(99, 122, 124);
+    cursor: pointer;
+    border: 1px solid lightgrey;
+}
+
+.menu-submit-btn {
+    width: 200px;
+    height: 30px;
+    padding-left: 5px;
+    border-radius: 5px;
+    border: 1px solid white;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.02),
+    0 6px 20px 0 rgba(0, 0, 0, 0.02);
+}
+
+.happy-hour-errors {
+    margin: 13px;
+    font-family: arial;
+    font-size: 13px;
+    color: red;
+}
+
+.form-errors-div {
+    display: flex;
+    margin: 26px 0 26px 0;
+    font-family: arial;
+    font-size: 13px;
+    color: red;
+    justify-content: center;
 }

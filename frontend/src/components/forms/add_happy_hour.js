@@ -17,7 +17,8 @@ class AddHappyHour extends React.Component {
             endTime: '',
             menu: {},
             lngLat: [],
-            errors: {},
+            menuErrors: [],
+            formErrors: [],
             menuItem: "",
             menuPrice: "",
             menuPriceWithId: [],
@@ -28,7 +29,7 @@ class AddHappyHour extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleMenuSubmit = this.handleMenuSubmit.bind(this);
         this.updateMenu = this.updateMenu.bind(this);
-        this.renderErrors = this.renderErrors.bind(this);
+        this.renderMenuErrors = this.renderMenuErrors.bind(this);
         this.updateDays = this.updateDays.bind(this);
     }
     
@@ -81,17 +82,42 @@ class AddHappyHour extends React.Component {
             menu: this.state.menu,
             imageUrl: this.state.imageUrl,
         };
-        
-        this.props.addBusiness(business)
-        this.setState({redirect: true}) 
+
+        if (this.state.name.length === 0) {
+            this.setState({formErrors: ["Name can't be blank"]})
+        } else if (this.state.address.length === 0){
+            this.setState({formErrors: ["Address can't be blank"]})
+        } else if (this.state.startTime.length === 0 || this.state.endTime.length === 0) {
+            this.setState({formErrors: ["Time can't be blank"]})
+        } else if (Number(this.state.startTime) > Number(this.state.endTime)) {
+            this.setState({formErrors: ["Start time can't be after end time"]})      
+        } else if (this.state.days.length === 0){
+            this.setState({formErrors: ["Days can't be blank"]})      
+        } else {
+            this.props.addBusiness(business)
+            this.setState({redirect: true}) 
+            this.setState({formErrors: []})
+        }
     }
 
-    renderErrors() {
+    renderFormErrors() {
         return (
             <ul>
-                {Object.keys(this.state.errors).map((error, i) => (
+                {Object.keys(this.state.formErrors).map((error, i) => (
                     <li key={`error-${i}`}>
-                        {this.state.errors[error]}
+                        {this.state.formErrors[error]}
+                    </li>
+                ))}
+            </ul>
+        );
+    }
+
+    renderMenuErrors() {
+        return (
+            <ul>
+                {Object.keys(this.state.menuErrors).map((error, i) => (
+                    <li key={`error-${i}`}>
+                        {this.state.menuErrors[error]}
                     </li>
                 ))}
             </ul>
@@ -121,7 +147,8 @@ class AddHappyHour extends React.Component {
                 />
                 <br/>
                 <input 
-                    className = "menu-inputs"
+                    className="menu-inputs"
+                    className="menu-submit-btn"
                     type = "submit"
                     value = "Add Menu Item"
                 />
@@ -129,14 +156,17 @@ class AddHappyHour extends React.Component {
                 <div className="menu-items-div">
                     {this.renderEnteredMenu()}
                 </div>
+                <div className="happy-hour-errors">
+                    {this.renderMenuErrors()}
+                </div>
             </form>
         )
     }
 
     renderEnteredMenu(){
-        let prices = Object.keys(this.state.menu).map(price => {
+        let prices = Object.keys(this.state.menu).map((price, i) => {
           return (
-            <label className="menu-items"> 
+            <label className="menu-items" key={`menu-${i}`}> 
                 <label className="menu-price">
                     ${price}
                 </label>
@@ -164,16 +194,26 @@ class AddHappyHour extends React.Component {
     }
 
     handleMenuSubmit(e){
-        e.preventDefault(); 
+        e.preventDefault();
 
         const { menu, menuPrice, menuItem } = this.state;
         const newMenu = menu
-        if (newMenu[menuPrice]) {
+
+        if (menuPrice.length === 0 || menuItem.length === 0) {
+            this.setState({menuErrors: ["Price/item can't be empty"]})
+        } else if (newMenu[menuPrice]) {
             newMenu[menuPrice].push(menuItem);
+            this.setState({ menu: newMenu });
+            this.setState({ menuPrice: "" });
+            this.setState({ menuItem: "" });
+            this.setState({menuErrors: []})
         } else {
             newMenu[menuPrice] = [menuItem];
+            this.setState({ menu: newMenu });
+            this.setState({ menuPrice: "" });
+            this.setState({ menuItem: "" });
+            this.setState({menuErrors: []})
         }
-        this.setState({ menu: newMenu });
     }
 
     render() {
@@ -297,7 +337,9 @@ class AddHappyHour extends React.Component {
                                 type="submit"
                                 value="Submit"
                             />
-                            {this.renderErrors()}
+                            <div className="form-errors-div">
+                                {this.renderFormErrors()}
+                            </div>
                         </div>
                     </form>
                     <br />
