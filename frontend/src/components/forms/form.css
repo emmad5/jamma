@@ -138,3 +138,13 @@
 .already-text:hover {
     text-decoration: underline;
 }
+
+.menu-inputs {
+    width: 200px;
+    height: 30px;
+    padding-left: 5px;
+    border-radius: 5px;
+    border: 1px solid white;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.02),
+    0 6px 20px 0 rgba(0, 0, 0, 0.02);
+}

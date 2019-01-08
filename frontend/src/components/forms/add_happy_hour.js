@@ -97,7 +97,7 @@ class AddHappyHour extends React.Component {
         );
     }
 
-    renderMenuOptions(menuId){
+    renderMenuOptions(){
         return (
             <form 
                 onSubmit={this.handleMenuSubmit}
@@ -105,22 +105,40 @@ class AddHappyHour extends React.Component {
             >
                 <input
                     type="text"
+                    className = "menu-inputs"
                     onChange={this.updateMenu('menuPrice')}
                     placeholder="price"
                     value={this.state.menuPrice}
                 />
+                <br/>
                 <input
                     type="text"
+                    className = "menu-inputs"
                     onChange={this.updateMenu('menuItem')}
                     placeholder="item"
                     value={this.state.menuItem}
                 />
-                <input className = "submit-btn"
+                <br/>
+                <input 
+                    className = "menu-inputs"
                     type = "submit"
                     value = "Submit"
                 />
+                {this.renderEnteredMenu()}
             </form>
         )
+    }
+
+    renderEnteredMenu(){
+        let prices = Object.keys(this.state.menu).map(price => {
+          return (
+            <label> 
+              ${price} {this.state.menu[price].join(",  ")}
+            </label>
+          )
+        })
+
+        return prices;
     }
 
     updateMenu(field) {
@@ -277,10 +295,8 @@ class AddHappyHour extends React.Component {
                
                    
                 </div>
-                {this.renderMenuOptions(this.state.menuId)}
-                
-            {this.renderRedirect()}
-        
+                {this.renderMenuOptions()}
+                {this.renderRedirect()}
             </div>
         </div>) 
     }
