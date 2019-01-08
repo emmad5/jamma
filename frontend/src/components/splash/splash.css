@@ -54,6 +54,7 @@
 .fav-cities-splash {
   position: absolute;
   color: white; 
+  min-width: 500px;
   left: 550px; 
   top: 300px; 
   font-size: 30px; 
