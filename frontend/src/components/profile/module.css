@@ -94,6 +94,6 @@
 
 .remove-btn:hover {
   cursor: pointer;
-
+ box-shadow: none;
   background: rgb(255, 252, 252);
 }
