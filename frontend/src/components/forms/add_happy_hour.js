@@ -1,7 +1,7 @@
 import React from 'react';
 import Geocode from "react-geocode";
 import './form.css';
-import {Redirect} from 'react-router-dom'
+import { Redirect } from 'react-router'
 
 Geocode.setApiKey("AIzaSyBqwVIzzxEVM3LVo-wrdv9So1P1SB857H8");
 
@@ -23,7 +23,8 @@ class AddHappyHour extends React.Component {
             menuPrice: "",
             menuPriceWithId: [],
             menuItemWithId: [],
-            menuId: 0
+            menuId: 0,
+            redirect: false
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleMenuSubmit = this.handleMenuSubmit.bind(this);
@@ -59,6 +60,11 @@ class AddHappyHour extends React.Component {
             days: this.state.days.concat(e.currentTarget.value)
         });
     }
+    renderRedirect() {
+        if (this.state.redirect) {
+            return (<Redirect to='/profile' />)
+        }
+    }
 
     handleSubmit(e) {
         e.preventDefault();
@@ -74,7 +80,12 @@ class AddHappyHour extends React.Component {
             menu: this.state.menu,
             imageUrl: this.state.imageUrl,
         };
+        
         this.props.addBusiness(business)
+       
+        this.setState({redirect: true})
+     
+      
     }
 
     renderErrors() {
@@ -278,6 +289,9 @@ class AddHappyHour extends React.Component {
                    
                 </div>
                 {this.renderMenuOptions(this.state.menuId)}
+                
+            {this.renderRedirect()}
+        
             </div>
         </div>) 
     }

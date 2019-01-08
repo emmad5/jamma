@@ -4,10 +4,10 @@ import { addBusiness } from '../../actions/business_actions';
 
 
 const mstp = (state, ownProps) => {;
-    return {  
+    return {
     }
 };
-const mdtp = dispatch => {
+const mdtp = (dispatch, ownProps) => {
     return {
         addBusiness: businessData => dispatch(addBusiness(businessData))
     };
