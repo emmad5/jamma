@@ -1,6 +1,15 @@
 .splash-div {
     height: 1000px;
     background: #8FB5B7; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+
+.flex-text {
+  display: flex; 
+  flex-direction: column; 
 }
 
 .jamma-the-lama-splash {
@@ -10,9 +19,14 @@
 
 .logo-lama-splash {
   position: absolute;
-  left: 200px; 
-  top: 230px; 
-  
+  left: 400px; 
+  top: 250px; 
+  /* padding: 50px;  */
+  /* margin-bottom: 100px;  */
+}
+
+.splash-shift {
+  margin-bottom: 0px; 
 }
 
 .join-splash-btn {
@@ -23,45 +37,50 @@
   position: absolute;
   border: 1px solid white; 
   color: white; 
-  padding: 10px; 
-  left: 550px;
-  top: 450px; 
+  /* padding: 10px;  */
+  left: 750px;
+  top: 550px; 
   font-size: 20px; 
    border-radius: 3px; 
+
 }
 
 .join-splash-btn:hover {
   background: rgba(255, 255, 255, 0.849);
   color: #8FB5B7; 
   cursor: pointer;
- 
+  
 }
 .splash-header {
-  font-size: 100px; 
+  font-size: 150px; 
   color: white; 
   font-family: Symbol;
   letter-spacing: 7px;
   text-shadow: 2px 2px rgba(122, 122, 122, 0.315);
-
+  
 }
 
 .splash-header-pos {
-  left: 500px;
-  top: 180px;  
+  left: 700px;
+  top: 280px;  
   position: absolute;
+ 
+
 }
 
 .fav-cities-splash {
   position: absolute;
   color: white; 
   min-width: 500px;
-  left: 550px; 
-  top: 300px; 
+  left: 750px; 
+  top: 420px; 
   font-size: 30px; 
   /* font-family: Symbol;  */
   line-height: 50px; 
   text-shadow: 2px 2px rgba(122, 122, 122, 0.315);
   letter-spacing: 3px;
+  /* margin-top: 50px;  */
+
 
 }
 
