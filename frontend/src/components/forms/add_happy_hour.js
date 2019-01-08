@@ -1,7 +1,6 @@
 import React from 'react';
 import Geocode from "react-geocode";
 import './form.css';
-import merge from 'lodash/merge';
 
 Geocode.setApiKey("AIzaSyBqwVIzzxEVM3LVo-wrdv9So1P1SB857H8");
 
@@ -68,8 +67,7 @@ class AddHappyHour extends React.Component {
             menu: this.state.menu,
             imageUrl: this.state.imageUrl,
         };
-    
-        this.props.addBusiness(business)
+        this.props.addBusiness(business);
     }
 
     renderErrors() {
