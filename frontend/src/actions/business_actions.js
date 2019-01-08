@@ -29,18 +29,13 @@ export const getBusinesses = () => dispatch => (
 );
 
 export const addBusiness = businessData => dispatch => (
-    APIUtil.addBusiness(businessData).then(business => (
-        dispatch(receiveOneBusiness(business)
-    ), err => (
-        dispatch(receiveErrors(err.response.data))
-    )
-    ))
+    APIUtil.addBusiness(businessData)
+    .then(business => (dispatch(receiveOneBusiness(business))))
+    .catch(err => (dispatch(receiveErrors(err.response.data))))
 );
 
 export const editBusiness = businessData => dispatch => (
-    APIUtil.editBusiness(businessData).then(business => (
-        dispatch(receiveOneBusiness(business)), err => (
-            dispatch(receiveErrors(err.response.data))
-        )
-    ))
+    APIUtil.editBusiness(businessData)
+    .then(business => (dispatch(receiveOneBusiness(business))))
+    .catch(err => (dispatch(receiveErrors(err.response.data))))
 );

@@ -1,7 +1,4 @@
-import {
-    RECEIVE_ALL_BUSINESSES,
-    RECEIVE_ONE_BUSINESS
-} from '../actions/business_actions';
+import { RECEIVE_ALL_BUSINESSES } from '../actions/business_actions';
 import merge from 'lodash/merge';
 
 export default function (prevState = {}, action) {
