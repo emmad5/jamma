@@ -26,3 +26,9 @@ export const addBusiness = businessData => dispatch => (
     APIUtil.addBusiness(businessData)
     .catch(err => (dispatch(receiveErrors(err.response.data))))
 );
+
+export const removeBusiness = businessData => dispatch => {
+    return (APIUtil.removeBusiness(businessData)
+    .catch(err => (dispatch(receiveErrors(err.response.data))))
+    )
+};

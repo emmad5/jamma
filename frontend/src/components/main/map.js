@@ -6,6 +6,7 @@ class Map extends React.Component {
     constructor(props) {
         super(props);
         this.addHappyHour = this.addHappyHour.bind(this);
+        this.handleLocationError = this.handleLocationError.bind(this)
     }
 
     componentDidMount(){
@@ -17,7 +18,36 @@ class Map extends React.Component {
             styles: styleOptions
         }
         this.map = new window.google.maps.Map(this.mapNode, mapOptions);
+        this.infoWindow = new window.google.maps.InfoWindow;
         this.listenForMove();
+        let that = this;
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                var pos = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+
+                that.infoWindow.setPosition(pos);
+                that.infoWindow.setContent('You are here!');
+                that.infoWindow.open(that.map);
+            
+            }, function () {
+                this.handleLocationError(true, that.infoWindow, that.map.getCenter());
+            });
+        } else {
+            this.handleLocationError(false, that.map.getCenter());
+        }
+    
+    }
+
+    
+    handleLocationError(browserHasGeolocation, pos) {
+        this.infoWindow.setPosition(pos);
+        this.infoWindow.setContent(browserHasGeolocation ?
+            'Error: The Geolocation service failed.' :
+            'Error: Your browser doesn\'t support geolocation.');
+        this.infoWindow.open(this.map);
     }
 
     
