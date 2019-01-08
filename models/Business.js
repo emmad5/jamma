@@ -37,7 +37,7 @@ const BusinessSchema = new Schema({
   imageUrl: {
     type: String,
     required: true,
-    default: "https://img.icons8.com/metro/1600/bar.png"
+    default: "https://drive.google.com/uc?id=1U9e8724aTIqe_81ckXVGWhh8G0BCYVD7"
   }
 })
 
