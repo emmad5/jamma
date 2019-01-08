@@ -45,7 +45,7 @@ class NavBar extends React.Component {
 
 
         <div className="logo-flex">
-          <Link to={'/'}><img className="logo-img" src={logo} width="30px" height="40px" /></Link>
+          <Link to={'/'}><img className="logo-img" src={logo} width="30px" height="40px" alt='logo' /></Link>
           <Link to={'/'} className="jamma-title-link"><h1 className="jamma-title">JAMMA</h1></Link>
         </div>
 
