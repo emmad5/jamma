@@ -33,10 +33,10 @@ class Map extends React.Component {
                 that.infoWindow.open(that.map);
             
             }, function () {
-                this.handleLocationError(true, that.infoWindow, that.map.getCenter());
+                that.handleLocationError(true, that.infoWindow, that.map.getCenter());
             });
         } else {
-            this.handleLocationError(false, that.map.getCenter());
+            that.handleLocationError(false, that.map.getCenter());
         }
     
     }
