@@ -12,10 +12,6 @@ class Splash extends React.Component {
         return(
 
           <div className='splash-div'>
-
-            
-
-
           
             <div className="logo-lama-splash">
               <Link to={'/'}><img className="logo-img" src={logo} alt="" width="290px" height="390px" /></Link>
