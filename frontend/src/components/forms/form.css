@@ -3,7 +3,7 @@
     border: 2px solid white;
     border-radius: 5px;
     width: 270px;
-    height: 460px;
+    height: 427px;
     margin-right: 50px;
     display: flex;
     flex-direction: column;
@@ -17,7 +17,7 @@
     border-radius: 5px;
     margin-left: 50px;
     width: 270px;
-    height: 460px;
+    height: 427px;
     display: flex;
     flex-direction: column;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.05),
