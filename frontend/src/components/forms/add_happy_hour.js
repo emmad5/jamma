@@ -1,6 +1,7 @@
 import React from 'react';
 import Geocode from "react-geocode";
 import './form.css';
+import { Redirect } from 'react-router'
 
 Geocode.setApiKey("AIzaSyBqwVIzzxEVM3LVo-wrdv9So1P1SB857H8");
 
@@ -16,24 +17,38 @@ class AddHappyHour extends React.Component {
             startTime: '',
             endTime: '',
             menu: {},
-            longLat: [],
-            errors: {}
+            lngLat: [],
+            errors: {},
+            menuItem: "",
+            menuPrice: "",
+            menuPriceWithId: [],
+            menuItemWithId: [],
+            menuId: 0,
+            redirect: false
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleMenuSubmit = this.handleMenuSubmit.bind(this);
+        this.updateMenu = this.updateMenu.bind(this);
         this.renderErrors = this.renderErrors.bind(this);
     }
+    
     update(field) {
         if (field === 'address' && this.state.address.length > 1) {
+            
             Geocode.fromAddress(this.state.address).then(
                 response => {
                     const { lat, lng } = response.results[0].geometry.location;
-                    this.setState({lngLat: [lng, lat]})
+                    console.log([lat, lng])
+                    this.setState({
+                        lngLat: [lng, lat]
+                    });
                 },
                 error => {
                     console.error(error);
                 }
             );
         }
+
         return e => this.setState({
             [field]: e.currentTarget.value
         });
@@ -42,24 +57,35 @@ class AddHappyHour extends React.Component {
 
     updateDays() {
         return e => this.setState({
-            days: this.state.days += (e.currentTarget.value)
+            days: this.state.days.concat(e.currentTarget.value)
         });
+    }
+    renderRedirect() {
+        if (this.state.redirect) {
+            return (<Redirect to='/profile' />)
+        }
     }
 
     handleSubmit(e) {
         e.preventDefault();
+        
         let business = {
             name: this.state.name,
             address: this.state.address,
             days: this.state.days,
             vibe: this.state.vibe,
+            longLat: this.state.lngLat,
             startTime: this.state.startTime,
             endTime: this.state.endTime,
             menu: this.state.menu,
             imageUrl: this.state.imageUrl,
         };
-    
-        this.props.addBusiness(business);
+        
+        this.props.addBusiness(business)
+       
+        this.setState({redirect: true})
+     
+      
     }
 
     renderErrors() {
@@ -72,6 +98,58 @@ class AddHappyHour extends React.Component {
                 ))}
             </ul>
         );
+    }
+
+    renderMenuOptions(menuId){
+        return (
+            <form 
+                onSubmit={this.handleMenuSubmit}
+                className="add-menu-form-container"
+            >
+                <input
+                    type="text"
+                    onChange={this.updateMenu('menuPrice')}
+                    placeholder="price"
+                    value={this.state.menuPrice}
+                />
+                <input
+                    type="text"
+                    onChange={this.updateMenu('menuItem')}
+                    placeholder="item"
+                    value={this.state.menuItem}
+                />
+                <input className = "submit-btn"
+                    type = "submit"
+                    value = "Submit"
+                />
+            </form>
+        )
+    }
+
+    updateMenu(field) {
+        if (field === 'menuPrice') {
+            return e => {
+                this.setState({menuPrice: e.currentTarget.value})
+            }
+        }
+        if (field === "menuItem") {
+            return e => {
+                this.setState({menuItem: e.currentTarget.value})
+            }
+        }
+    }
+
+    handleMenuSubmit(e){
+        e.preventDefault(); 
+
+        const { menu, menuPrice, menuItem } = this.state;
+        const newMenu = menu
+        if (newMenu[menuPrice]) {
+            newMenu[menuPrice].push(menuItem);
+        } else {
+            newMenu[menuPrice] = [menuItem];
+        }
+        this.setState({ menu: newMenu });
     }
 
     render() {
@@ -134,7 +212,7 @@ class AddHappyHour extends React.Component {
                                 className="checks"
                                 type="checkbox"
                                 onChange={this.updateDays('days')}
-                                value={['Wed']}
+                                value={['Weds']}
                             />
                             </label>
                             <label className="checks-label">
@@ -193,14 +271,6 @@ class AddHappyHour extends React.Component {
                             <br />
                             <input
                                 type="text"
-                                value={this.state.menu}
-                                onChange={this.update('menu')}
-                                placeholder="menu"
-                            />
-                            <br />
-                            <br />
-                            <input
-                                type="text"
                                 value={this.state.imageUrl}
                                 onChange={this.update('imageUrl')}
                                 placeholder="imageUrl"
@@ -218,24 +288,10 @@ class AddHappyHour extends React.Component {
                
                    
                 </div>
-                <div className="add-menu-form-container">
-                    <input
-                        type="text"
-                        value={this.state.menu}
-                        onChange={this.update('menu')}
-                        placeholder="menu"
-                    />
-                    <input
-                        type="text"
-                        value={this.state.menu}
-                        onChange={this.update('menu')}
-                        placeholder="menu"
-                    />
-                    <input className = "submit-btn"
-                        type = "submit"
-                        value = "Submit"
-                    />
-                </div>
+                {this.renderMenuOptions(this.state.menuId)}
+                
+            {this.renderRedirect()}
+        
             </div>
         </div>) 
     }

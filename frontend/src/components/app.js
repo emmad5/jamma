@@ -7,7 +7,7 @@ import Profile from './profile/profile'
 import SignupFormContainer from './session/signup_form_container';
 import Modal from './modal';
 import './reset.scss'; 
-import AddHappyHour from './forms/add_happy_hour';
+import AddHappyHour from './forms/add_happy_hour_container';
 import Splash from './splash/splash'
 
 
