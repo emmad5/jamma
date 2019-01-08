@@ -49,3 +49,25 @@
 .menu-item-space {
   padding: 5px; 
 }
+
+.img-show {
+
+  height: 300px; 
+  /* width: 100%; */
+  width: 600px; 
+  
+  background-repeat: no-repeat;  
+  /* background-size: cover;  */
+  object-fit: cover; 
+  padding-top: 15px; 
+  padding-bottom: 15px; 
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img-container {
+
+ 
+}
+

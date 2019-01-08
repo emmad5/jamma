@@ -32,12 +32,13 @@ class AddHappyHour extends React.Component {
                 error => {
                     console.error(error);
                 }
-                );
-            }
-            return e => this.setState({
-                [field]: e.currentTarget.value
-            });
+            );
         }
+        return e => this.setState({
+            [field]: e.currentTarget.value
+        });
+    }
+
 
     updateDays() {
         return e => this.setState({
@@ -78,8 +79,10 @@ class AddHappyHour extends React.Component {
             <div className="form-title">
                 <h1>Add a Happy Hour Near You</h1>
             </div>
+
             <div className="add-form" >
                 <div className="add-form-container">
+
                     <form onSubmit={this.handleSubmit}>
                         <div className="inputs">
                             <input
@@ -216,6 +219,12 @@ class AddHappyHour extends React.Component {
                    
                 </div>
                 <div className="add-menu-form-container">
+                    <input
+                        type="text"
+                        value={this.state.menu}
+                        onChange={this.update('menu')}
+                        placeholder="menu"
+                    />
                     <input
                         type="text"
                         value={this.state.menu}
