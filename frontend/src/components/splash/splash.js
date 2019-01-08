@@ -12,8 +12,7 @@ class Splash extends React.Component {
         return(
             <div className='splash-div'>
             <div className="logo-lama-splash">
-              {/* <Link to={'/'}><img className="logo-img" src={logo} width="330px" height="340px" /></Link> */}
-              <Link to={'/'}><img className="logo-img" src={logo} width="290px" height="390px" /></Link>
+              <Link to={'/'}><img className="logo-img" src={logo} alt="" width="290px" height="390px" /></Link>
             </div>
             
             <div className="splash-header-pos">
@@ -27,7 +26,7 @@ class Splash extends React.Component {
             </div>
 
             <div>
-                {/* <Link to='/signup'>Join Millions of Happy Users Today!!!</Link> */}
+             
               <Link to='/signup'><button className="join-splash-btn">Join Millions of Happy Users Today</button></Link>
 
             </div>
