@@ -18,11 +18,14 @@ class AddHappyHour extends React.Component {
             menu: {},
             longLat: [],
             errors: {},
+            menuItem: "",
+            menuPrice: "",
             menuPriceWithId: [],
             menuItemWithId: [],
             menuId: 0
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleMenuSubmit = this.handleMenuSubmit.bind(this);
         this.renderErrors = this.renderErrors.bind(this);
     }
     
@@ -87,15 +90,15 @@ class AddHappyHour extends React.Component {
             >
                 <input
                     type="text"
-                    value={this.state.menu}
-                    onChange={this.update('menuPrice', menuId)}
-                    placeholder="menu"
+                    onChange={this.updateMenu('menuPrice', menuId)}
+                    placeholder="price"
+                    value={this.state.menuPrice}
                 />
                 <input
                     type="text"
-                    value={this.state.menu}
-                    onChange={this.update('menuItem', menuId)}
-                    placeholder="menu"
+                    onChange={this.updateMenu('menuItem', menuId)}
+                    placeholder="item"
+                    value={this.state.menuItem}
                 />
                 <input className = "submit-btn"
                     type = "submit"
@@ -105,17 +108,34 @@ class AddHappyHour extends React.Component {
         )
     }
 
-    update(field, menuId) {
+    updateMenu(field, menuId) {
         if (field === 'menuPrice') {
+            return e => {
+                this.setState({menuPrice: e.currentTarget.value})
+                this.setState({menuPriceWithId: this.menuPriceWithId.concat([menuId, e.currentTarget.value])})
+            }
         }
 
         if (field === "menuItem") {
-
+            return e => {
+                this.setState({menuItem: e.currentTarget.value})
+                this.setState({menuItemWithId: this.menuItemWithId.concat([menuId, e.currentTarget.value])})
+            }
         }
+        return null
     }
 
-    handleMenuSubmit(){
-        
+    handleMenuSubmit(e){
+        e.preventDefault(); 
+
+        for (let i = 0; i < this.state.menuPriceWithId.length; i++) {
+            let price = this.state.menuPriceWithId[i];
+            if (Object.keys(this.state.menu).includes(price[1])) {
+                this.setState({menu: this.menu[price[1]].id.push(price[0])})
+            } else {
+                this.setState({menu: this.menu[price[1]] = {id: price[0]}})
+            }
+        } 
     }
 
     render() {
