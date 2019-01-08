@@ -1,6 +1,7 @@
 import React from 'react';
 import Geocode from "react-geocode";
 import './form.css';
+import merge from 'lodash/merge';
 
 Geocode.setApiKey("AIzaSyBqwVIzzxEVM3LVo-wrdv9So1P1SB857H8");
 
@@ -91,13 +92,13 @@ class AddHappyHour extends React.Component {
             >
                 <input
                     type="text"
-                    onChange={this.updateMenu('menuPrice', menuId)}
+                    onChange={this.updateMenu('menuPrice')}
                     placeholder="price"
                     value={this.state.menuPrice}
                 />
                 <input
                     type="text"
-                    onChange={this.updateMenu('menuItem', menuId)}
+                    onChange={this.updateMenu('menuItem')}
                     placeholder="item"
                     value={this.state.menuItem}
                 />
@@ -115,7 +116,6 @@ class AddHappyHour extends React.Component {
                 this.setState({menuPrice: e.currentTarget.value})
             }
         }
-
         if (field === "menuItem") {
             return e => {
                 this.setState({menuItem: e.currentTarget.value})
@@ -125,24 +125,15 @@ class AddHappyHour extends React.Component {
 
     handleMenuSubmit(e){
         e.preventDefault(); 
-        // this.setState({menuItemWithId: this.state.menuItemWithId.push([this.state.menuId, this.state.menuItem])})
-        // debugger;
-        // this.setState({menuPriceWithId: this.state.menuPriceWithId.push([this.state.menuId, this.state.menuPrice])})
-        // this.setState({menuId: this.state.menuId += 1})
 
-        // for (let i = 0; i < this.state.menuPriceWithId.length; i++) {
-        //     let price = this.state.menuPriceWithId[i];
-        //     if (Object.keys(this.state.menu).includes(price[1])) {
-        //         this.setState({menu: this.state.menu[price[1]].id.push(price[0])})
-        //     } else {
-        //         this.setState({menu: this.state.menu[price[1]] = {id: price[0]}})
-        //     }
-        // } 
-        if (this.state.menu[this.state.menuPrice]) {
-            this.setState({menu: this.state.menu[this.state.menuPrice].push(this.state.menuItem)})
+        const { menu, menuPrice, menuItem } = this.state;
+        const newMenu = menu
+        if (newMenu[menuPrice]) {
+            newMenu[menuPrice].push(menuItem);
         } else {
-            this.setState({menu: this.state.menu[this.state.menuPrice] = [this.state.menuItem]})
+            newMenu[menuPrice] = [menuItem];
         }
+        this.setState({ menu: newMenu });
     }
 
     render() {
@@ -257,14 +248,6 @@ class AddHappyHour extends React.Component {
                                 value={this.state.endTime}
                                 onChange={this.update('endTime')}
                                 placeholder="endTime"
-                            />
-                            <br />
-                            <br />
-                            <input
-                                type="text"
-                                value={this.state.menu}
-                                onChange={this.update('menu')}
-                                placeholder="menu"
                             />
                             <br />
                             <br />
