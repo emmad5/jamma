@@ -14,11 +14,6 @@ const BusinessSchema = new Schema({
     type: Array,
     required: true
   },
-  vibe: {
-    type: String,
-    enum: ["Grey", "Red"],
-    required: true
-  },
   days: {
       type: [String],
       enum: ["Sun", "Mon", "Tues", "Weds", "Thurs", "Fri", "Sat"],

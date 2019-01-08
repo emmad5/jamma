@@ -13,7 +13,6 @@ class AddHappyHour extends React.Component {
             name: '',
             address: '',
             days: [],
-            vibe: '',
             startTime: '',
             endTime: '',
             menu: {},
@@ -38,7 +37,6 @@ class AddHappyHour extends React.Component {
             Geocode.fromAddress(this.state.address).then(
                 response => {
                     const { lat, lng } = response.results[0].geometry.location;
-                    console.log([lat, lng])
                     this.setState({
                         lngLat: [lng, lat]
                     });
@@ -73,7 +71,6 @@ class AddHappyHour extends React.Component {
             name: this.state.name,
             address: this.state.address,
             days: this.state.days,
-            vibe: this.state.vibe,
             longLat: this.state.lngLat,
             startTime: this.state.startTime,
             endTime: this.state.endTime,
@@ -176,14 +173,6 @@ class AddHappyHour extends React.Component {
                                 value={this.state.address}
                                 onChange={this.update('address')}
                                 placeholder="Address"
-                            />
-                            <br />
-                            <br />
-                            <input
-                                type="text"
-                                value={this.state.vibe}
-                                onChange={this.update('vibe')}
-                                placeholder="vibe"
                             />
                             <br />
                             <br />
