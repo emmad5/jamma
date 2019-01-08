@@ -29,6 +29,7 @@ class AddHappyHour extends React.Component {
         this.handleMenuSubmit = this.handleMenuSubmit.bind(this);
         this.updateMenu = this.updateMenu.bind(this);
         this.renderErrors = this.renderErrors.bind(this);
+        this.updateDays = this.updateDays.bind(this);
     }
     
     update(field) {
@@ -53,10 +54,13 @@ class AddHappyHour extends React.Component {
     }
 
 
-    updateDays() {
-        return e => this.setState({
-            days: this.state.days.concat(e.currentTarget.value)
-        });
+    updateDays(e) {
+        e.preventDefault();
+        let day = e.currentTarget.value;
+
+        if (!this.state.days.includes(day)) {
+            this.setState({days: this.state.days.concat(e.currentTarget.value)});
+        }
     }
     renderRedirect() {
         if (this.state.redirect) {
@@ -208,7 +212,7 @@ class AddHappyHour extends React.Component {
                             <input
                                 className="checks"
                                 type="checkbox"
-                                onChange={this.updateDays('days')}
+                                onChange={this.updateDays}
                                 value={['Mon']}
                             />
                             </label>
@@ -217,7 +221,7 @@ class AddHappyHour extends React.Component {
                             <input
                                 className="checks"
                                 type="checkbox"
-                                onChange={this.updateDays('days')}
+                                onChange={this.updateDays}
                                 value={['Tues']}
                             />
                             </label>
@@ -226,7 +230,7 @@ class AddHappyHour extends React.Component {
                             <input
                                 className="checks"
                                 type="checkbox"
-                                onChange={this.updateDays('days')}
+                                onChange={this.updateDays}
                                 value={['Weds']}
                             />
                             </label>
@@ -235,7 +239,7 @@ class AddHappyHour extends React.Component {
                             <input
                                 className="checks"
                                 type="checkbox"
-                                onChange={this.updateDays('days')}
+                                onChange={this.updateDays}
                                 value={['Thurs']}
                             />
                             </label>
@@ -244,7 +248,7 @@ class AddHappyHour extends React.Component {
                             <input
                                 className="checks"
                                 type="checkbox"
-                                onChange={this.updateDays('days')}
+                                onChange={this.updateDays}
                                 value={['Fri']}
                             />
                             </label>
@@ -253,7 +257,7 @@ class AddHappyHour extends React.Component {
                             <input
                                 className="checks"
                                 type="checkbox"
-                                onChange={this.updateDays('days')}
+                                onChange={this.updateDays}
                                 value={['Sat']}
                             />
                             </label>
@@ -262,7 +266,7 @@ class AddHappyHour extends React.Component {
                             <input
                                 className="checks"
                                 type="checkbox"
-                                onChange={this.updateDays('days')}
+                                onChange={this.updateDays}
                                 value={['Sun']}
                             />
                             </label>

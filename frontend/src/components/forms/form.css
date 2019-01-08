@@ -153,21 +153,20 @@
     font-family: arial;
     color: grey;
     display: flex;
+    flex: none;
     flex-direction: column;
-    align-items: center;
     margin: 5px 0 5px 0;
-    text-align: center;
+    line-height: normal;
 }
 
 .menu-price {
-    margin-bottom: 1px;
-    text-decoration: underline;
+    margin-bottom: 5px;
 }
 
 .menu-items-div {
     display: flex;
-    width: 80%;
-    height: 61%;
+    width: 198px;
+    height: 220px;
     flex-direction: column;
-    overflow-y: auto;
+    overflow-y: overlay;
 }
