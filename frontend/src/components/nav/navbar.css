@@ -48,18 +48,9 @@
   cursor: pointer;
 }
 .login-btn:hover {
-  /* margin-top: 14px;  */
-  color: white; 
-  background-color: #8FB5B7;
-  /* margin-right: 15px;  */
-  padding: 5px 15px 5px 15px; 
-  border-radius: 10px; 
-  border: 1px solid white; 
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.02), 0 6px 20px 0 rgba(0,0,0,0.02);
   height: 30px; 
   cursor: pointer;
   border: 1px solid lightgrey; 
-
 }
 
 .or {
@@ -83,17 +74,8 @@
 
 
 .signup-btn:hover {
-  /* margin-top: 14px;  */
-  color: white; 
-  background-color: #8FB5B7;
-  /* margin-right: 120px;  */
-  padding: 5px 15px 5px 15px; 
-  border-radius: 10px; 
-  /* border: 1px solid black;  */
   border: 1px solid lightgrey; 
-
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.02), 0 6px 20px 0 rgba(0,0,0,0.02);
-  height: 30px; 
   cursor: pointer;
 }
 
@@ -151,10 +133,10 @@
   text-decoration: none;
   font-size: 10px;
   margin-right: 20px;
-  height: 17px;
+  height: 18.5px;
   width: 70px;
   text-align: center;
-  padding-top: 10.5px;
+  padding-top: 9.0px;
   
 }
 
