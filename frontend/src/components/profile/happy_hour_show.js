@@ -39,16 +39,24 @@ class HappyHourShow extends React.Component {
 
       let startHour = startTimeString.split(":")
       let startTime; 
-      if (Number(startHour[0]) < 12) {
+      if (Number(startHour[0]) === 0) {
+        startTime = "12:" + startHour[1] + "am"
+      } else if (Number(startHour[0]) < 12) {
         startTime = Number(startHour[0]) % 12 + ":" + startHour[1] + "am"
-      } else {
+      } else if (Number(startHour[0]) === 12) {
+        startTime = "12:" + startHour[1] + "pm"
+      } else {  
         startTime = Number(startHour[0]) % 12 + ":" + startHour[1] + "pm"        
       }
 
       let endHour = endTimeString.split(":")
       let endTime; 
-      if (Number(endHour[0]) < 12) { 
+      if (Number(endHour[0]) === 0) {
+        endTime = "12:" + endHour[1] + "am"
+      } else if (Number(endHour[0]) < 12) { 
         endTime = Number(endHour[0]) % 12 + ":" + endHour[1] + "am"
+      } else if (Number(endHour[0]) === 12) {
+        endTime = "12:" + endHour[1] + "pm"
       } else {
         endTime = Number(endHour[0]) % 12 + ":" + endHour[1] + "pm"
       }
