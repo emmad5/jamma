@@ -16,7 +16,7 @@ const App = () => (
     <Modal />
     <Switch>
       <AuthRoute exact path="/" component={Splash} />
-      <ProtectedRoute exact path="/profile" component={() => (<div><NavBarContainer/><Profile/></div>)} />
+      <ProtectedRoute exact path="/map" component={() => (<div><NavBarContainer/><Profile/></div>)} />
       <ProtectedRoute exact path="/add" component={() => (<div><NavBarContainer/><AddHappyHour/></div>)} />
       <AuthRoute exact path="/login" component={() => (<div><NavBarContainer/><LoginFormContainer/></div>)}/>
       <AuthRoute exact path="/signup" component={() => (<div><NavBarContainer/><SignupFormContainer/></div>)} />
