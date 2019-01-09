@@ -319,7 +319,7 @@ class AddHappyHour extends React.Component {
                             </div>
              
                             <input
-                                type="text"
+                                type="time"
                                 value={this.state.startTime}
                                 onChange={this.update('startTime')}
                                 placeholder="startTime"
@@ -327,7 +327,7 @@ class AddHappyHour extends React.Component {
                             <br />
                             <br />
                             <input
-                                type="text"
+                                type="time"
                                 value={this.state.endTime}
                                 onChange={this.update('endTime')}
                                 placeholder="endTime"
