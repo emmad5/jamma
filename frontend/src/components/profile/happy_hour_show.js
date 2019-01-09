@@ -29,14 +29,34 @@ class HappyHourShow extends React.Component {
         let prices = Object.keys(this.props.options.business.menu).map(price => {
           return (
             <div> 
-      
               ${price} {menu[price].join(",  ")}
             </div>
           )
         })
 
-      let startTime = this.props.options.business.startTime === 12 ? 12 : (this.props.options.business.startTime) % 12; 
-      let endTime = this.props.options.business.endTime === 12 ? 12 : (this.props.options.business.endTime) % 12; 
+      let startTimeString = this.props.options.business.startTime;
+      let endTimeString = this.props.options.business.endTime; 
+
+      let startHour = startTimeString.split(":")
+      let startTime; 
+      if (Number(startHour[0]) < 12) {
+        startTime = Number(startHour[0]) % 12 + ":" + startHour[1] + "am"
+      } else {
+        startTime = Number(startHour[0]) % 12 + ":" + startHour[1] + "pm"        
+      }
+
+      let endHour = endTimeString.split(":")
+      let endTime; 
+      if (Number(endHour[0]) < 12) { 
+        endTime = Number(endHour[0]) % 12 + ":" + endHour[1] + "am"
+      } else {
+        endTime = Number(endHour[0]) % 12 + ":" + endHour[1] + "pm"
+      }
+
+      
+      // let startTime = this.props.options.business.startTime === 12 ? 12 : (this.props.options.business.startTime) % 12; 
+      // let endTime = this.props.options.business.endTime === 12 ? 12 : (this.props.options.business.endTime) % 12; 
+      
 
         return (
 
@@ -52,7 +72,7 @@ class HappyHourShow extends React.Component {
                   <h2>{days}:</h2>
                   <h2>{startTime}</h2>
                   <h2>-</h2>
-                  <h2>{endTime}pm</h2>
+                  <h2>{endTime}</h2>
                 </div>
                 <h2 className="business-header">Menu</h2>
                 <div className="business-menu-container">
