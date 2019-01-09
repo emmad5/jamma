@@ -20,16 +20,12 @@ const BusinessSchema = new Schema({
       required: true
     },
   startTime: {
-    type: Number,
-    required: true,
-    min: 0,
-    max: 24
+    type: String,
+    required: true
   },
   endTime: {
-    type: Number,
-    required: true,
-    min: 0,
-    max: 24
+    type: String,
+    required: true
   },
   menu: {
     type: Object
