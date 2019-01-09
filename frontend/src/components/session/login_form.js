@@ -22,7 +22,7 @@ class LoginForm extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.currentUser === true) {
-      this.props.history.push('/profile');
+      this.props.history.push('/map');
     }
 
     this.setState({ errors: nextProps.errors });
