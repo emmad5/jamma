@@ -5,6 +5,7 @@ import {styleOptions} from './mapstyle';
 class Map extends React.Component {
     constructor(props) {
         super(props);
+
         this.addHappyHour = this.addHappyHour.bind(this);
         this.handleLocationError = this.handleLocationError.bind(this)
     }
@@ -41,6 +42,25 @@ class Map extends React.Component {
     
     }
 
+    componentDidUpdate(prevProps) {
+        if (prevProps.businesses.length > this.props.businesses.length) {
+            const mapOptions = {
+                center: {
+                    lat: 37.7758,
+                    lng: -122.435
+                },
+                zoom: 13,
+                styles: styleOptions
+            }
+            this.map = new window.google.maps.Map(this.mapNode, mapOptions);
+            this.infoWindow = new window.google.maps.InfoWindow;
+            this.listenForMove();
+            let that = this;
+
+            this.addHappyHour();
+        }
+    }
+
     
     handleLocationError(browserHasGeolocation, pos) {
         this.infoWindow.setPosition(pos);
@@ -65,7 +85,7 @@ class Map extends React.Component {
             }
         } 
     }
-
+   
     listenForMove() {
         window.google.maps.event.addListener(this.map, 'idle', () => {
             this.map.getBounds();

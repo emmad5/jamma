@@ -1,6 +1,5 @@
 import React from 'react';
 import './module.css';
-import { removeBusiness } from '../../actions/business_actions';
 
 
 class HappyHourShow extends React.Component {
@@ -11,7 +10,7 @@ class HappyHourShow extends React.Component {
 
   remove() {
     this.props.closeModal();
-    this.props.removeBusiness(this.props.options.business);
+    this.props.removeBusiness(this.props.options.business)
   }
     
     render() {
