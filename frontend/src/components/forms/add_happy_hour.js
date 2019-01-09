@@ -56,9 +56,14 @@ class AddHappyHour extends React.Component {
 
 
     updateDays(e) {
-        e.preventDefault();
+        let newDays = this.state.days;
+
         if (!this.state.days.includes(e.currentTarget.value)) {
-            this.setState({days: this.state.days.concat(e.currentTarget.value)});
+            newDays.push(e.currentTarget.value)
+            this.setState({days: newDays});
+        } else {
+            newDays = newDays.filter(day => day !== e.currentTarget.value)
+            this.setState({days: newDays})
         }
     }
     
