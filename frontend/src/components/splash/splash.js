@@ -3,7 +3,8 @@ import {Link} from 'react-router-dom';
 import './splash.css';
 // import logo from './lamalogo_large_vector_trace.png';
 // import logo from './lamalogo_large_vector_trace_2_no_outline.png';
-import logo from './lamalogo_large_pupils_no_outline.png';
+import logo from './lama_final.png';
+// import logo from './lamalogo_large_pupils_no_outline.png';
 // import logo from './lamalogo_large_vector.png';
 
 
