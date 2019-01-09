@@ -1,9 +1,11 @@
 .add-form-container {
-    padding-top: 50px;
+    /* padding-top: 50px; */
+    padding-top: 25px;
     border: 2px solid white;
     border-radius: 5px;
     width: 270px;
-    height: 385px;
+    /* height: 385px; */
+    height: 425px;
     margin-right: 50px;
     display: flex;
     flex-direction: column;
@@ -11,13 +13,21 @@
     align-items: center
 }
 
+.add-titles {
+  color: #96B4B6;
+  font-size: 22px; 
+  margin-bottom: 20px; 
+}
+
 .add-menu-form-container {
-    padding-top: 50px;
+    /* padding-top: 50px; */
+    padding-top: 25px;
     border: 2px solid white;
     border-radius: 5px;
     margin-left: 50px;
     width: 270px;
-    height: 385px;
+    /* height: 385px; */
+    height: 425px;
     display: flex;
     flex-direction: column;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.05),

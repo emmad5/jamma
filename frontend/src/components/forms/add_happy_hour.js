@@ -130,17 +130,21 @@ class AddHappyHour extends React.Component {
 
     renderMenuOptions(){
         return (
+          
             <form 
+            
                 onSubmit={this.handleMenuSubmit}
                 className="add-menu-form-container"
             >
-                <input
+                <h1 className="add-titles">Menu</h1>
+                <input 
                     type="text"
                     className = "menu-inputs"
                     onChange={this.updateMenu('menuPrice')}
                     placeholder="price"
                     value={this.state.menuPrice}
                 />
+
                 <br/>
                 <input
                     type="text"
@@ -228,6 +232,7 @@ class AddHappyHour extends React.Component {
 
             <div className="add-form" >
                 <div className="add-form-container">
+                <h1 className="add-titles">Days/Time</h1>
 
                     <form onSubmit={this.handleSubmit}>
                         <div className="inputs">
