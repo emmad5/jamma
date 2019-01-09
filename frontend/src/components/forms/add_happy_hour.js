@@ -57,12 +57,11 @@ class AddHappyHour extends React.Component {
 
     updateDays(e) {
         e.preventDefault();
-        let day = e.currentTarget.value;
-
-        if (!this.state.days.includes(day)) {
+        if (!this.state.days.includes(e.currentTarget.value)) {
             this.setState({days: this.state.days.concat(e.currentTarget.value)});
         }
     }
+    
     renderRedirect() {
         if (this.state.redirect) {
             return (<Redirect to='/profile' />)

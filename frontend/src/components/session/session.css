@@ -15,6 +15,10 @@
   font-family: arial;
   color: #BE4D4D;
   text-align: center;
+  overflow-y: overlay;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 .session-form-container-add {
   padding-top: 50px; 
