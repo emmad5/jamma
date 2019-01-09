@@ -10,7 +10,7 @@ export default function (prevState = {}, action) {
         case DELETE_ONE_BUSINESS:
             let deleteKey = Number(Object.keys(nextState).filter(key => nextState[key]._id === action.businessData._id)[0])
             delete nextState[deleteKey];
-            return merge({}, nextState);
+            return nextState
         default:
             return prevState;
     }

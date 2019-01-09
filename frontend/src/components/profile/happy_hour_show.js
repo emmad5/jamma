@@ -10,8 +10,8 @@ class HappyHourShow extends React.Component {
   }
 
   remove() {
-    this.props.removeBusiness(this.props.options.business)
-      .then(this.props.closeModal())
+    this.props.closeModal();
+    this.props.removeBusiness(this.props.options.business);
   }
     
     render() {
