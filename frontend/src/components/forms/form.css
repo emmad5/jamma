@@ -190,7 +190,7 @@
     margin: 13px;
     font-family: arial;
     font-size: 13px;
-    color: red;
+    color: #BE4D4D;
 }
 
 .form-errors-div {
@@ -198,6 +198,6 @@
     margin: 26px 0 26px 0;
     font-family: arial;
     font-size: 13px;
-    color: red;
+    color: #BE4D4D;
     justify-content: center;
 }
