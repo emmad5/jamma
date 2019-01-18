@@ -91,6 +91,8 @@ class AddHappyHour extends React.Component {
             this.setState({formErrors: ["Name can't be blank"]})
         } else if (this.state.address.length === 0){
             this.setState({formErrors: ["Address can't be blank"]})
+        } else if (!this.state.address.includes(".")) {
+            this.setState({formErrors: ["Please enter a valid address"]}) 
         } else if (this.state.startTime.length === 0 || this.state.endTime.length === 0) {
             this.setState({formErrors: ["Time can't be blank"]})
         } else if (Number(this.state.startTime) > Number(this.state.endTime)) {
