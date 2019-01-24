@@ -262,7 +262,7 @@ const go = async () => {
     })
     const Maybecks = new Business({
         name: "Maybeck's",
-        address: "3213 Scott St San Francisco, CA 94123",
+        address: "3213 Scott St. San Francisco",
         days: ["Tues", "Weds", "Thurs", "Fri", "Sat", "Sun"],
         startTime: "16:30",
         endTime: "18:00",
@@ -277,7 +277,7 @@ const go = async () => {
     })
     const FifthArrow = new Business({
         name: "Fifth Arrow",
-        address: "1706, 430 Mason St. San Francisco",
+        address: "430 Mason St. San Francisco",
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
         startTime: "16:00",
         endTime: "18:00",
@@ -294,7 +294,7 @@ const go = async () => {
     })
     const PiriPica = new Business({
         name: "Piri Pica",
-        address: "1706, 430 Mason St. San Francisco",
+        address: "590 Valencia St. San Francisco, CA 94110",
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
         startTime: "16:00",
         endTime: "18:00",
@@ -353,6 +353,7 @@ const go = async () => {
         imageUrl: "https://s3-media4.fl.yelpcdn.com/bphoto/8yHXVQCsi8SCv5ZMwBQUKg/o.jpg"
     })
     HarperAndRye.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
+    Maybecks.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     EZ5.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     TheOffice.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     NativesBar.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
@@ -369,7 +370,7 @@ const go = async () => {
     TheSaratoga.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     ThePigAndWhistle.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     ScopoDivino.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
-    Maybecks.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
+    
 }
 
 go();
