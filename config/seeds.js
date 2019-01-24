@@ -219,15 +219,123 @@ const go = async () => {
         days: ["Mon", "Tues", "Weds", "Thurs"],
         startTime: 15,
         endTime: 18,
+        menu: {
+            "2": [
+                "Oysters"
+            ],
+            "5": [
+                "Guac and Chips",
+                "Mojito",
+                "Old Fashioned",
+                "Margarita",
+                "Manhattan",
+                "Sangria",
+                "Well Cocktails",
+                "Draft Beers",
+                "Wine By The Glass"
+            ],
+            "5": [
+                "Beer",
+                "Bubbles",
+                "Rose"
+            ],
+            "7": [
+                "Gin and Tonic"
+            ]
+        },
         imageUrl: "http://violetfog.com/wp-content/uploads/2015/11/melissademataphoto-cyneats-belga-sf-7440.jpg"
     })
     const ComstockSaloon = new Business({
         name: "Comstock Saloon",
         address: "155 Columbus Ave, San Francisco, CA 94133",
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
+        startTime: 16,
+        endTime: 18,
+        menu: {
+            "8": [
+                "Shots",
+                "Small Beer",
+                "Scofflaw"
+            ]
+        },
+        imageUrl: "https://cdn.vox-cdn.com/thumbor/27HMeujtUKjHyPX661NrX2vgsL4=/0x0:5472x3648/1200x0/filters:focal(0x0:5472x3648):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/10178401/Comstock_interior.jpg"
+    })
+    const FifthArrow = new Business({
+        name: "Fifth Arrow",
+        address: "1706, 430 Mason St. San Francisco",
+        days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
+        startTime: 16,
+        endTime: 18,
+        menu: {
+            "5": [
+                "Wine",
+                "Beer"
+            ],
+            "10": [
+                "Pizza"
+            ]
+        },
+        imageUrl: "https://cdn.vox-cdn.com/thumbor/by_qCdZlMKJZG4FlUBMnj9EFjow=/0x0:2000x1333/1200x480/filters:focal(840x507:1160x827)/cdn.vox-cdn.com/uploads/chorus_image/image/59913695/FifthArrow_PChang_8982.0.jpg"
+    })
+    const PiriPica = new Business({
+        name: "Piri Pica",
+        address: "1706, 430 Mason St. San Francisco",
+        days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
+        startTime: 16,
+        endTime: 18,
+        menu: {
+            "1": [
+                "Wings"
+            ],
+            "3": [
+                "Beer"
+            ],
+            "5": [
+                "Wines",
+                "Chile Cheese Fries"
+            ]
+        },
+        imageUrl: "https://cdn.vox-cdn.com/thumbor/TwX2hOpJw3Y47OoXX99rebILkEc=/0x0:960x960/1200x800/filters:focal(307x160:459x312)/cdn.vox-cdn.com/uploads/chorus_image/image/60960781/37760077_2243852772511911_3756154268508225536_n_2.0.jpg"
+    })
+    const TheSaratoga = new Business({
+        name: "The Saratoga",
+        address: "1000 Larkin St. San Francisco",
+        days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
+        startTime: 17,
+        endTime: 18,
+        menu: {
+            "5": [
+                "Craft Cocktails",
+                "Bar Snacks"
+            ]
+        },
+        imageUrl: "https://cdn.vox-cdn.com/thumbor/lQ-RQmyLGQZnuKbzcUfy28RWClI=/0x0:2000x1333/1200x0/filters:focal(0x0:2000x1333):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/7415955/TheSaratoga_PChang-0628.0.jpg"
+    })
+    const ThePigAndWhistle = new Business({
+        name: "The Pig & Whistle",
+        address: "2801 Geary Blvd. San Francisco, CA 94118",
+        days: ["Mon", "Tues", "Weds", "Thurs", "Fri", "Sat", "Sun"],
+        startTime: 16,
+        endTime: 18,
+        menu: {
+            "3": [
+                "Pint"
+            ]
+        },
+        imageUrl: "http://www.pig-and-whistle.com/img/s_image3.png"
+    })
+    const ScopoDivino = new Business({
+        name: "Scopo Divino",
+        address: "2800 California St. San Francisco, CA 94115",
+        days: ["Mon", "Tues", "Weds", "Thurs", "Fri", "Sun"],
         startTime: 15,
         endTime: 18,
-        imageUrl: "http://violetfog.com/wp-content/uploads/2015/11/melissademataphoto-cyneats-belga-sf-7440.jpg"
+        menu: {
+            "1": [
+                "Oysters"
+            ]
+        },
+        imageUrl: "https://s3-media4.fl.yelpcdn.com/bphoto/8yHXVQCsi8SCv5ZMwBQUKg/o.jpg"
     })
     HarperAndRye.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     EZ5.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
@@ -241,6 +349,11 @@ const go = async () => {
     FiresideBar.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     Belga.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     ComstockSaloon.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
+    FifthArrow.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
+    PiriPica.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
+    TheSaratoga.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
+    ThePigAndWhistle.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
+    ScopoDivino.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
 }
 
 go();
