@@ -85,7 +85,7 @@ class HappyHourShow extends React.Component {
                 <div className="business-menu-container">
                     {prices}
                 </div>
-            {/* <button className="remove-btn" onClick={this.remove}>Remove</button> */}
+            {/* <button className="remove-btn" onClick={this.remove}>Remove</button>  */}
             </div>
         )
     }

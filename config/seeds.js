@@ -14,8 +14,8 @@ const go = async () => {
         address: "1695 Polk St. San Francisco, CA 94109",
         longLat: [-122.421410, 37.794140],
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
-        startTime: 14,
-        endTime: 17,
+        startTime: "14:00",
+        endTime: "17:00",
         menu: {
             "2": [
                 "French Fries",
@@ -35,8 +35,8 @@ const go = async () => {
         address: "684 Commercial St. San Francisco, CA 94111",
         longLat: [-122.401430, 37.794430],
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
-        startTime: 16,
-        endTime: 20,
+        startTime: "16:00",
+        endTime: "20:00",
         menu: {
             "1": [
                 "Jello Shots"
@@ -59,8 +59,8 @@ const go = async () => {
         address: "194 Church St. Churchill. San Francisco, CA 94114",
         longLat: [-122.429180, 37.767940],
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
-        startTime: 16,
-        endTime: 20,
+        startTime: "16:00",
+        endTime: "20:00",
         menu: {
             "4": [
                 "Old Fashioned",
@@ -79,8 +79,8 @@ const go = async () => {
         address: "5320 Geary Blvd. San Francisco, CA 94121",
         longLat: [-122.476640, 37.780840],
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
-        startTime: 16,
-        endTime: 20,
+        startTime: "16:00",
+        endTime: "20:00",
         menu: {
             "8": [
                 "Moscow Mule",
@@ -97,8 +97,8 @@ const go = async () => {
         address: "444 Presidio Ave. San Francisco, CA 94115",
         longLat: [-122.446579, 37.787590],
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
-        startTime: 16,
-        endTime: 18,
+        startTime: "16:00",
+        endTime: "18:00",
         menu: {
             "7": [
                 "Select California Wine"
@@ -122,8 +122,8 @@ const go = async () => {
         address: "408 Clement St. San Francisco, CA 94118",
         longLat: [-122.476310, 37.782410],
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
-        startTime: 16,
-        endTime: 18,
+        startTime: "16:00",
+        endTime: "18:00",
         menu: {
             "5" : [
                 "Select Cocktail"
@@ -136,8 +136,8 @@ const go = async () => {
         address: "3988 18th St. San Francisco, CA 94114",
         longLat: [-122.435500, 37.760860],
         days: ["Sun", "Mon", "Tues", "Weds", "Thurs", "Fri", "Sat"],
-        startTime: 12,
-        endTime: 19,
+        startTime: "12:00",
+        endTime: "19:00",
         menu: {
             "3": [
                 "Well Drinks"
@@ -150,8 +150,8 @@ const go = async () => {
         address: "142 Minna St. San Francisco, CA 94105",
         longLat: [-122.400490, 37.786819],
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri", "Sat"],
-        startTime: 16,
-        endTime: 19,
+        startTime: "16:00",
+        endTime: "19:00",
         menu: {
             "5": [
                 "Well Drinks",
@@ -168,8 +168,8 @@ const go = async () => {
         address: "550 Powell St San Francisco, CA 94108" ,
         longLat: [-122.408560, 37.790000],
         days: ["Sun", "Mon", "Tues", "Weds", "Thurs", "Fri", "Sat"],
-        startTime: 16,
-        endTime: 19,
+        startTime: "16:00",
+        endTime: "19:00",
         menu: {
             "4": [
                 "Hand Cut Fries"
@@ -209,16 +209,16 @@ const go = async () => {
         address: "603 Irving St San Francisco, CA 94122",
         longLat: [-122.489990, 37.762980],
         days: ["Sun", "Mon", "Tues", "Weds", "Thurs", "Fri", "Sat"],
-        startTime: 13,
-        endTime: 19,
+        startTime: "13:00",
+        endTime: "19:00",
         imageUrl: "https://s3-media4.fl.yelpcdn.com/bphoto/z32SaxOMCYuOgnq9plzqDg/o.jpg"
     })
     const Belga = new Business({
         name: "Belga",
         address: "2000 Union St. San Francisco",
         days: ["Mon", "Tues", "Weds", "Thurs"],
-        startTime: 15,
-        endTime: 18,
+        startTime: "15:00",
+        endTime: "18:00",
         menu: {
             "2": [
                 "Oysters"
@@ -249,8 +249,8 @@ const go = async () => {
         name: "Comstock Saloon",
         address: "155 Columbus Ave, San Francisco, CA 94133",
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
-        startTime: 16,
-        endTime: 18,
+        startTime: "16:00",
+        endTime: "18:00",
         menu: {
             "8": [
                 "Shots",
@@ -264,8 +264,8 @@ const go = async () => {
         name: "Fifth Arrow",
         address: "1706, 430 Mason St. San Francisco",
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
-        startTime: 16,
-        endTime: 18,
+        startTime: "16:00",
+        endTime: "18:00",
         menu: {
             "5": [
                 "Wine",
@@ -281,8 +281,8 @@ const go = async () => {
         name: "Piri Pica",
         address: "1706, 430 Mason St. San Francisco",
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
-        startTime: 16,
-        endTime: 18,
+        startTime: "16:00",
+        endTime: "18:00",
         menu: {
             "1": [
                 "Wings"
@@ -301,8 +301,8 @@ const go = async () => {
         name: "The Saratoga",
         address: "1000 Larkin St. San Francisco",
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
-        startTime: 17,
-        endTime: 18,
+        startTime: "17:00",
+        endTime: "18:00",
         menu: {
             "5": [
                 "Craft Cocktails",
@@ -315,8 +315,8 @@ const go = async () => {
         name: "The Pig & Whistle",
         address: "2801 Geary Blvd. San Francisco, CA 94118",
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri", "Sat", "Sun"],
-        startTime: 16,
-        endTime: 18,
+        startTime: "16:00",
+        endTime: "18:00",
         menu: {
             "3": [
                 "Pint"
@@ -328,8 +328,8 @@ const go = async () => {
         name: "Scopo Divino",
         address: "2800 California St. San Francisco, CA 94115",
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri", "Sun"],
-        startTime: 15,
-        endTime: 18,
+        startTime: "15:00",
+        endTime: "18:00",
         menu: {
             "1": [
                 "Oysters"
