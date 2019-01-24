@@ -13,7 +13,6 @@ const go = async () => {
         name: "Harper & Rye",
         address: "1695 Polk St. San Francisco, CA 94109",
         longLat: [-122.421410, 37.794140],
-        vibe: "Grey",
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
         startTime: 14,
         endTime: 17,
@@ -35,7 +34,6 @@ const go = async () => {
         name: "EZ5",
         address: "684 Commercial St. San Francisco, CA 94111",
         longLat: [-122.401430, 37.794430],
-        vibe: "Red",
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
         startTime: 16,
         endTime: 20,
@@ -60,7 +58,6 @@ const go = async () => {
         name: "The Office",
         address: "194 Church St. Churchill. San Francisco, CA 94114",
         longLat: [-122.429180, 37.767940],
-        vibe: "Grey",
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
         startTime: 16,
         endTime: 20,
@@ -81,7 +78,6 @@ const go = async () => {
         name: "NativesBar",
         address: "5320 Geary Blvd. San Francisco, CA 94121",
         longLat: [-122.476640, 37.780840],
-        vibe: "Grey",
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
         startTime: 16,
         endTime: 20,
@@ -100,7 +96,6 @@ const go = async () => {
         name: "Laureate",
         address: "444 Presidio Ave. San Francisco, CA 94115",
         longLat: [-122.446579, 37.787590],
-        vibe: "Grey",
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
         startTime: 16,
         endTime: 18,
@@ -126,7 +121,6 @@ const go = async () => {
         name: "Scarlet Lounge",
         address: "408 Clement St. San Francisco, CA 94118",
         longLat: [-122.476310, 37.782410],
-        vibe: "Grey",
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
         startTime: 16,
         endTime: 18,
@@ -141,7 +135,6 @@ const go = async () => {
         name: "Last Call Bar",
         address: "3988 18th St. San Francisco, CA 94114",
         longLat: [-122.435500, 37.760860],
-        vibe: "Red",
         days: ["Sun", "Mon", "Tues", "Weds", "Thurs", "Fri", "Sat"],
         startTime: 12,
         endTime: 19,
@@ -156,7 +149,6 @@ const go = async () => {
         name: "The Pink Elephant Alibi",
         address: "142 Minna St. San Francisco, CA 94105",
         longLat: [-122.400490, 37.786819],
-        vibe: "Red",
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri", "Sat"],
         startTime: 16,
         endTime: 19,
@@ -175,7 +167,6 @@ const go = async () => {
         name: "Last Drop Tavern",
         address: "550 Powell St San Francisco, CA 94108" ,
         longLat: [-122.408560, 37.790000],
-        vibe: "Grey",
         days: ["Sun", "Mon", "Tues", "Weds", "Thurs", "Fri", "Sat"],
         startTime: 16,
         endTime: 19,
@@ -217,11 +208,26 @@ const go = async () => {
         name: "Fireside Bar",
         address: "603 Irving St San Francisco, CA 94122",
         longLat: [-122.489990, 37.762980],
-        vibe: "Red",
         days: ["Sun", "Mon", "Tues", "Weds", "Thurs", "Fri", "Sat"],
         startTime: 13,
         endTime: 19,
         imageUrl: "https://s3-media4.fl.yelpcdn.com/bphoto/z32SaxOMCYuOgnq9plzqDg/o.jpg"
+    })
+    const Belga = new Business({
+        name: "Belga",
+        address: "2000 Union St. San Francisco",
+        days: ["Mon", "Tues", "Weds", "Thurs"],
+        startTime: 15,
+        endTime: 18,
+        imageUrl: "http://violetfog.com/wp-content/uploads/2015/11/melissademataphoto-cyneats-belga-sf-7440.jpg"
+    })
+    const ComstockSaloon = new Business({
+        name: "Comstock Saloon",
+        address: "155 Columbus Ave, San Francisco, CA 94133",
+        days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
+        startTime: 15,
+        endTime: 18,
+        imageUrl: "http://violetfog.com/wp-content/uploads/2015/11/melissademataphoto-cyneats-belga-sf-7440.jpg"
     })
     HarperAndRye.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     EZ5.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
@@ -233,6 +239,8 @@ const go = async () => {
     ThePinkElephantAlibi.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     LastDropTavern.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     FiresideBar.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
+    Belga.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
+    ComstockSaloon.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
 }
 
 go();
