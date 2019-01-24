@@ -217,6 +217,7 @@ const go = async () => {
         name: "Belga",
         address: "2000 Union St. San Francisco",
         days: ["Mon", "Tues", "Weds", "Thurs"],
+        longLat: [-122.430479, 37.797735],
         startTime: "15:00",
         endTime: "18:00",
         menu: {
@@ -249,6 +250,7 @@ const go = async () => {
         name: "Comstock Saloon",
         address: "155 Columbus Ave, San Francisco, CA 94133",
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
+        longLat: [-122.405643, 37.796964],
         startTime: "16:00",
         endTime: "18:00",
         menu: {
@@ -262,6 +264,7 @@ const go = async () => {
     })
     const Maybecks = new Business({
         name: "Maybeck's",
+        longLat: [- 122.441138, 37.799485],
         address: "3213 Scott St. San Francisco",
         days: ["Tues", "Weds", "Thurs", "Fri", "Sat", "Sun"],
         startTime: "16:30",
@@ -278,6 +281,7 @@ const go = async () => {
     const FifthArrow = new Business({
         name: "Fifth Arrow",
         address: "430 Mason St. San Francisco",
+        longLat: [-122.409875, 37.787682],
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
         startTime: "16:00",
         endTime: "18:00",
@@ -296,6 +300,7 @@ const go = async () => {
         name: "Piri Pica",
         address: "590 Valencia St. San Francisco, CA 94110",
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
+        longLat: [-122.420480, 37.750198],
         startTime: "16:00",
         endTime: "18:00",
         menu: {
@@ -316,6 +321,7 @@ const go = async () => {
         name: "The Saratoga",
         address: "1000 Larkin St. San Francisco",
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
+        longLat: [-122.418212, 37.787261],
         startTime: "17:00",
         endTime: "18:00",
         menu: {
@@ -330,6 +336,7 @@ const go = async () => {
         name: "The Pig & Whistle",
         address: "2801 Geary Blvd. San Francisco, CA 94118",
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri", "Sat", "Sun"],
+        longLat: [-122.449165, 37.782045],
         startTime: "16:00",
         endTime: "18:00",
         menu: {
@@ -343,6 +350,7 @@ const go = async () => {
         name: "Scopo Divino",
         address: "2800 California St. San Francisco, CA 94115",
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri", "Sun"],
+        longLat: [-122.440791, 37.788147],
         startTime: "15:00",
         endTime: "18:00",
         menu: {
