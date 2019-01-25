@@ -22,7 +22,30 @@ Users can share their own happy hour information and add a pin to the map.
 
 ### Removing Happy Hour
 
-Users can remove happy hours they've added.
+Users can remove happy hours they've added by clicking Remove button on the happy hour modal.
+
+For this feature, we made sure to reset the pins each time a happy hour is removed so that changes could be reflected in real time.
+
+```javascript
+componentDidUpdate(prevProps) {
+    if (prevProps.businesses.length > this.props.businesses.length) {
+        const mapOptions = {
+            center: {
+                lat: 37.7758,
+                lng: -122.435
+            },
+            zoom: 13,
+            styles: styleOptions
+        }
+        this.map = new window.google.maps.Map(this.mapNode, mapOptions);
+        this.infoWindow = new window.google.maps.InfoWindow;
+        this.listenForMove();
+        let that = this;
+
+        this.addHappyHour();
+    }
+}
+```
 
 ![RemoveGif](./app/assets/images/readme/remove_happyhour.gif)
 
