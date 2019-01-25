@@ -20,6 +20,12 @@ Users can share their own happy hour information and add a pin to the map.
 
 ![AddGif](./app/assets/images/readme/adding_happyhour.gif)
 
+### Removing Happy Hour
+
+Users can remove happy hours they've added.
+
+![RemoveGif](./app/assets/images/readme/remove_happyhour.gif)
+
 
 ## Technologies and Technical Challenges
 
