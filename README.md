@@ -11,7 +11,7 @@ Jamma is a single-page web application that displays happy hour pins on a map us
 
 Users can login and browse through the map to find/get information about different happy hours. 
 
-![ViewGif](./app/assets/images/readme/viewing_happy_hour.gif)
+![ViewGif](./app/assets/images/readme/viewing_happyhour.gif)
 
 
 ### Adding Happy Hour
