@@ -211,12 +211,13 @@ const go = async () => {
         days: ["Sun", "Mon", "Tues", "Weds", "Thurs", "Fri", "Sat"],
         startTime: "13:00",
         endTime: "19:00",
-        imageUrl: "https://s3-media4.fl.yelpcdn.com/bphoto/z32SaxOMCYuOgnq9plzqDg/o.jpg"
+        imageUrl: "https://www.totalhappyhour.com/preview/500-450/content/files/mod.happyhour/72979621425d4068bdadc79c4a441f30.jpg"
     })
     const Belga = new Business({
         name: "Belga",
         address: "2000 Union St. San Francisco",
         days: ["Mon", "Tues", "Weds", "Thurs"],
+        longLat: [-122.430479, 37.797735],
         startTime: "15:00",
         endTime: "18:00",
         menu: {
@@ -249,6 +250,7 @@ const go = async () => {
         name: "Comstock Saloon",
         address: "155 Columbus Ave, San Francisco, CA 94133",
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
+        longLat: [-122.405643, 37.796964],
         startTime: "16:00",
         endTime: "18:00",
         menu: {
@@ -260,9 +262,26 @@ const go = async () => {
         },
         imageUrl: "https://cdn.vox-cdn.com/thumbor/27HMeujtUKjHyPX661NrX2vgsL4=/0x0:5472x3648/1200x0/filters:focal(0x0:5472x3648):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/10178401/Comstock_interior.jpg"
     })
+    const Maybecks = new Business({
+        name: "Maybeck's",
+        longLat: [- 122.441138, 37.799485],
+        address: "3213 Scott St. San Francisco",
+        days: ["Tues", "Weds", "Thurs", "Fri", "Sat", "Sun"],
+        startTime: "16:30",
+        endTime: "18:00",
+        menu: {
+            "7": [
+                "Bar Bites",
+                "Well Drinks",
+                "Half Dozen Oysters"
+            ]
+        },
+        imageUrl: "https://cdn.vox-cdn.com/thumbor/0zJ09_dyzdi8-ZJHMiom84bbmRQ=/0x0:2000x1333/1870x1403/filters:focal(840x506:1160x826):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/62460434/SpaghettiBros_PChang-9274.0.0.0.0.0.jpg"
+    })
     const FifthArrow = new Business({
         name: "Fifth Arrow",
-        address: "1706, 430 Mason St. San Francisco",
+        address: "430 Mason St. San Francisco",
+        longLat: [-122.409875, 37.787682],
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
         startTime: "16:00",
         endTime: "18:00",
@@ -279,8 +298,9 @@ const go = async () => {
     })
     const PiriPica = new Business({
         name: "Piri Pica",
-        address: "1706, 430 Mason St. San Francisco",
+        address: "590 Valencia St. San Francisco, CA 94110",
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
+        longLat: [-122.420480, 37.750198],
         startTime: "16:00",
         endTime: "18:00",
         menu: {
@@ -301,6 +321,7 @@ const go = async () => {
         name: "The Saratoga",
         address: "1000 Larkin St. San Francisco",
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
+        longLat: [-122.418212, 37.787261],
         startTime: "17:00",
         endTime: "18:00",
         menu: {
@@ -315,6 +336,7 @@ const go = async () => {
         name: "The Pig & Whistle",
         address: "2801 Geary Blvd. San Francisco, CA 94118",
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri", "Sat", "Sun"],
+        longLat: [-122.449165, 37.782045],
         startTime: "16:00",
         endTime: "18:00",
         menu: {
@@ -328,6 +350,7 @@ const go = async () => {
         name: "Scopo Divino",
         address: "2800 California St. San Francisco, CA 94115",
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri", "Sun"],
+        longLat: [-122.440791, 37.788147],
         startTime: "15:00",
         endTime: "18:00",
         menu: {
@@ -338,6 +361,7 @@ const go = async () => {
         imageUrl: "https://s3-media4.fl.yelpcdn.com/bphoto/8yHXVQCsi8SCv5ZMwBQUKg/o.jpg"
     })
     HarperAndRye.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
+    Maybecks.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     EZ5.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     TheOffice.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     NativesBar.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
@@ -354,6 +378,7 @@ const go = async () => {
     TheSaratoga.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     ThePigAndWhistle.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     ScopoDivino.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
+    
 }
 
 go();
