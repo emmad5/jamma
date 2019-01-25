@@ -393,7 +393,7 @@ const go = async () => {
         name: "barvale",
         address: "661 Divisadero, San Francisco, CA 94117",
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
-        longLat: [-122.440791, 37.788147],
+        longLat: [-122.438298, 37.775751],
         startTime: "15:30",
         endTime: "18:30",
         menu: {
