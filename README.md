@@ -16,7 +16,7 @@ Users can login and browse through the map to find/get information about differe
 
 ### Adding Happy Hour
 
-Users can share their own happy hour information and add a pin to the map. 
+Users can share their own happy hour information and add a pin to the map.
 
 ![AddGif](./app/assets/images/readme/adding_happy_hour.gif)
 
