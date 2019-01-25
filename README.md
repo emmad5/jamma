@@ -6,24 +6,19 @@ Jamma is a single-page web application that displays happy hour pins on a map us
 
 ![IntroPng](./app/assets/images/readme/jamma_homepage.png)
 
-## Background and Overview
+# Feature and Implementation
+### Happy Hour viewing
 
-Jamma is a single page demo website that provides an interactive 3D map based on the user's location. With a black and white interface, nearby happy hour spots on Jamma are highlighted in colors based on the atmosphere i.e. purple for classy establishments, red for party scenes etc. 
+Users can login and browse through the map to find/get information about different happy hours. 
 
-Clicking on a business brings up a snippet of information about their happy hour deals including times, price ranges, comparisons to nearby happy hours, crowd sourced tips, and atmosphere. Within the app users can favorite their most frequented happy hour spots, leave tips for other Jamma users and change their location to view other areas. 
+![ViewGif](./app/assets/images/readme/viewing_happy_hour.gif)
 
 
-## Functionality and MVP
+### Adding Happy Hour
 
-- [ ] Users can sign up and log in to Jamma. 
-- [ ] Users can browse the nearby happy hours on an interactive 3D map 
-- [ ] Users can change their location to view happy hours in a different spot. 
-- [ ] Users can leave tips for happy hour spots 
-- [ ] Users can favorite happy hour spots 
+Users can share their own happy hour information and add a pin to the map. 
 
-Bonus
-- [ ] Filter for happy hours open now
-- [ ] Business accounts to claim the happy hour and add deals for Jamma users
+![AddGif](./app/assets/images/readme/adding_happy_hour.gif)
 
 
 ## Technologies and Technical Challenges
