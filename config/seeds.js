@@ -360,6 +360,35 @@ const go = async () => {
         },
         imageUrl: "https://s3-media4.fl.yelpcdn.com/bphoto/8yHXVQCsi8SCv5ZMwBQUKg/o.jpg"
     })
+    const SocialKitchenAndBrewery = new Business({
+        name: "Social Kitchen & Brewery",
+        address: "1326 9th Ave, San Francisco, CA 94122",
+        days: ["Mon", "Tues", "Weds", "Thurs", "Fri", "Sun"],
+        longLat: [-122.466066, 37.763504],
+        startTime: "16:00",
+        endTime: "18:00",
+        menu: {
+            "5": [
+                "House Cut Fries"
+            ],
+            "6": [
+                "Select House Beers",
+                "Garlic Parmesan Fries",
+                "Truffle Mac & Cheese"
+            ],
+            "7": [
+                "Crispy Brussel Sprouts",
+                "Social Wings"
+            ],
+            "9": [
+                "Arancini Risotto Balls"
+            ],
+            "10": [
+                "Cauliflower Tempura Bites"
+            ]
+        },
+        imageUrl: "https://s3-media4.fl.yelpcdn.com/bphoto/qN4CxT-Byt0pWzDpM-gq6Q/o.jpg"
+    })
     HarperAndRye.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     Maybecks.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     EZ5.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
@@ -378,7 +407,7 @@ const go = async () => {
     TheSaratoga.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     ThePigAndWhistle.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     ScopoDivino.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
-    
+    SocialKitchenAndBrewery.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
 }
 
 go();
