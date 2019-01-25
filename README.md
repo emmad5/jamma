@@ -2,7 +2,7 @@
 
 Live site: [Jamma](https://jamma-llama.herokuapp.com)
 
-Jamma is a single-page web application to display happy hours and relevant information using user’s location. It's built with MongoDB, Express.js, React.js, and Node.js. 
+Jamma is a single-page web application that displays happy hour pins on a map using Google Maps API. Clicking on pins bring happy hour information on a modal. It's built with MongoDB, Express.js, React.js, and Node.js. 
 
 ![IntroPng](./app/assets/images/readme/jamma_homepage.png)
 
