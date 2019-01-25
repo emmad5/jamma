@@ -393,7 +393,7 @@ const go = async () => {
         name: "barvale",
         address: "661 Divisadero, San Francisco, CA 94117",
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
-        longLat: [-122.438298, 37.775751],
+        longLat: [-122.438298, 37.775751b],
         startTime: "15:30",
         endTime: "18:30",
         menu: {
@@ -402,7 +402,7 @@ const go = async () => {
                 "Tapas"
             ]
         },
-        imageUrl: "https://s3-media4.fl.yelpcdn.com/bphoto/8yHXVQCsi8SCv5ZMwBQUKg/o.jpg"
+        imageUrl: "https://s3-media3.fl.yelpcdn.com/bphoto/-RHUp5OxbSgRqs4BJvqQ6g/o.jpg"
     })
     HarperAndRye.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     Maybecks.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
