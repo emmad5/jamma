@@ -9,8 +9,31 @@ Jamma is a single-page web application that displays happy hour pins on a map us
 # Feature and Implementation
 ### Happy Hour viewing
 
-Users can login and browse through the map to find/get information about different happy hours. 
-
+Users can login and browse through the map to find/get information about different happy hours. We utilized a modal to display individual happy hours in a clean and distinct fashion. 
+```javascript
+function Modal({ modal, closeModal }) {
+    if (!modal) {
+        return null;
+    }
+    let component;
+    let modal_class;
+    switch (modal.type) {
+        case 'happyhour':
+            modal_class = 'modal-background';
+            component = <HappyHourShowContainer options={modal.options}/>
+            break;
+        default:
+            return null;
+    }
+    return (
+        <div className={modal_class} onClick={closeModal}>
+            <div className="modal-child" onClick={e => e.stopPropagation()}>
+                {component}
+            </div>
+        </div>
+    );
+}
+```
 ![ViewGif](./app/assets/images/readme/viewing_happyhour.gif)
 
 
