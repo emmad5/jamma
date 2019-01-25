@@ -39,10 +39,31 @@ function Modal({ modal, closeModal }) {
 
 ### Adding Happy Hour
 
-Users can share their own happy hour information and add a pin to the map.
+Users can share their own happy hour information and add a pin to the map. We used Google's Geocode API to pull the GPS Coordinates from the user's input address to correctly display the happy hour location on the map. 
 
 ![AddGif](./app/assets/images/readme/adding_happyhour.gif)
+```javascript
+ update(field) {
+        if (field === 'address' && this.state.address.length > 1) {
+            
+            Geocode.fromAddress(this.state.address).then(
+                response => {
+                    const { lat, lng } = response.results[0].geometry.location;
+                    this.setState({
+                        lngLat: [lng, lat]
+                    });
+                },
+                error => {
+                    console.error(error);
+                }
+            );
+        }
 
+        return e => this.setState({
+            [field]: e.currentTarget.value
+        });
+    }
+```
 ### Removing Happy Hour
 
 Users can remove happy hours they've added by clicking Remove button on the happy hour modal.
