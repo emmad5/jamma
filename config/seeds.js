@@ -404,6 +404,37 @@ const go = async () => {
         },
         imageUrl: "https://s3-media3.fl.yelpcdn.com/bphoto/-RHUp5OxbSgRqs4BJvqQ6g/o.jpg"
     })
+    const ChaChaCha = new Business({
+        name: "Cha Cha Cha",
+        address: "1801 Haight St. San Francisco, CA 94117",
+        days: ["Mon", "Tues", "Weds", "Thurs"],
+        longLat: [-122.452030, 37.769120],
+        startTime: "16:30",
+        endTime: "19:30",
+        menu: {
+            "4": [
+                "Draft Beer"
+            ],
+            "6": [
+                "Fried New Potatoes",
+                "Sangria Glass"
+            ],
+            "8": [
+                "Fried Calamari"
+            ], 
+            "9": [
+                "BBQ, Chicken, or Pork Quesadilla",
+                "Marinated Chicken Wings"
+            ],
+            "16": [
+                "Sangria 1/2 Pitcher"
+            ],
+            "28": [
+                "Sangria Pitcher"
+            ]
+        },
+        imageUrl: "https://s3-media3.fl.yelpcdn.com/bphoto/PhQlJyK4_SCoRs4P7-6vzQ/o.jpg"
+    })
     HarperAndRye.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     Maybecks.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     EZ5.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
@@ -424,6 +455,7 @@ const go = async () => {
     ScopoDivino.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     SocialKitchenAndBrewery.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     barvale.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
+    ChaChaCha.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
 }
 
 go();
