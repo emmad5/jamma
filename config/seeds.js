@@ -462,6 +462,22 @@ const go = async () => {
         },
         imageUrl: "https://s3-media2.fl.yelpcdn.com/bphoto/woFrzcjmI7vBI3smuW1yog/o.jpg"
     })
+    const TheHearth = new Business({
+        name: "The Hearth",
+        address: "5625 Geary Blvd, San Francisco, CA 94121",
+        days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
+        longLat: [-122.476180, 37.780550],
+        startTime: "16:00",
+        endTime: "18:00",
+        menu: {
+            "5": [
+                "Jagers",
+                "Jameson",
+                "1800 Silver"
+            ]
+        },
+        imageUrl: "https://s3-media3.fl.yelpcdn.com/bphoto/J6khLpqfAF_-USZUZU7Muw/o.jpg"
+    })
     HarperAndRye.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     Maybecks.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     EZ5.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
@@ -484,6 +500,7 @@ const go = async () => {
     barvale.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     ChaChaCha.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     TheBlarneyStone.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
+    TheHearth.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
 }
 
 go();
