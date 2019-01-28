@@ -478,6 +478,26 @@ const go = async () => {
         },
         imageUrl: "https://s3-media3.fl.yelpcdn.com/bphoto/J6khLpqfAF_-USZUZU7Muw/o.jpg"
     })
+    const Lusk = new Business({
+        name: "25 Lusk",
+        address: "25 Lusk St, San Francisco, CA 9410",
+        days: ["Mon", "Tues", "Weds", "Thurs", "Fri", "Sat"],
+        longLat: [-122.394323, 37.778429],
+        startTime: "17:00",
+        endTime: "19:00",
+        menu: {
+            "4": [
+                "Select Beer"
+            ],
+            "5": [
+                "Select Wine"
+            ],
+            "6": [
+                "Well Drinks"
+            ]
+        },
+        imageUrl: "https://assets3.thrillist.com/v1/image/1887078/size/tl-horizontal_main_2x.jpg"
+    })    
     HarperAndRye.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     Maybecks.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     EZ5.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
@@ -501,6 +521,7 @@ const go = async () => {
     ChaChaCha.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     TheBlarneyStone.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     TheHearth.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
+    Lusk.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
 }
 
 go();
