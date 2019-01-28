@@ -497,7 +497,29 @@ const go = async () => {
             ]
         },
         imageUrl: "https://assets3.thrillist.com/v1/image/1887078/size/tl-horizontal_main_2x.jpg"
-    })    
+    })
+    const BarCrudo = new Business({
+        name: "Bar Crudo",
+        address: "1501, 655 Divisadero St, San Francisco, CA 94117",
+        days: ["Mon", "Tues", "Weds", "Thurs", "Fri", "Sat", "Sun"],
+        longLat: [-122.438240, 37.776852],
+        startTime: "17:00",
+        endTime: "18:30",
+        menu: {
+            "1": [
+                "Oysters",
+                "Herb and Jalapeño Marinated Mussels"
+            ],
+            "4": [
+                "Beer"
+            ],
+            "6": [
+                "Wine",
+                "Seafood Chowder"
+            ]
+        },
+        imageUrl: "https://d37219swed47g7.cloudfront.net/media/images/reviews/bar-crudo/banners/1512399791.15.jpg"
+    })
     HarperAndRye.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     Maybecks.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     EZ5.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
@@ -522,6 +544,7 @@ const go = async () => {
     TheBlarneyStone.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     TheHearth.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     Lusk.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
+    BarCrudo.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
 }
 
 go();
