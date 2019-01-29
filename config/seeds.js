@@ -566,7 +566,7 @@ const go = async () => {
                 "Happy Hour Cocktail"
             ]
         },
-        imageUrl: "https://cdn.vox-cdn.com/thumbor/g_yjNkAzGRZUmszGGmbvUIN3dPg=/0x0:2000x1333/1570x1178/filters:focal(840x506:1160x826):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/62460440/ROOH_PChang_5289.0.0.0.0.jpg"
+        imageUrl: "https://cdn.vox-cdn.com/thumbor/pkgJxPWu_kFsJeNeLMCve9LPbww=/0x0:2736x1824/1570x1178/filters:focal(1150x694:1586x1130):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/62460446/Disco_Nap_2.0.0.jpg"
     })
     HarperAndRye.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     Maybecks.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
