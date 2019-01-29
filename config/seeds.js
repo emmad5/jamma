@@ -537,6 +537,37 @@ const go = async () => {
         },
         imageUrl: "https://cdn.vox-cdn.com/thumbor/g_yjNkAzGRZUmszGGmbvUIN3dPg=/0x0:2000x1333/1570x1178/filters:focal(840x506:1160x826):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/62460440/ROOH_PChang_5289.0.0.0.0.jpg"
     })
+    const Starbelly = new Business({
+        name: "Starbelly",
+        address: "3583 16th St, San Francisco, CA 94114",
+        days: ["Mon", "Tues", "Weds", "Thurs", "Fri", "Sun"],
+        longLat: [-122.432563, 37.764140],
+        startTime: "15:30",
+        endTime: "18:00",
+        menu: {
+            "6": [
+                "Salumi Plate",
+                "Cheese Plate",
+                "Liver Plate"
+            ],
+            "8": [
+                "Honey Basil Fried Chicken Wings"
+            ],
+            "7": [
+                "Manhattan",
+                "Patio Punch",
+                "Shot",
+                "1/2 Beer"
+            ],
+            "20": [
+                "Full Meal",
+                "Burger",
+                "Fries",
+                "Happy Hour Cocktail"
+            ]
+        },
+        imageUrl: "https://cdn.vox-cdn.com/thumbor/g_yjNkAzGRZUmszGGmbvUIN3dPg=/0x0:2000x1333/1570x1178/filters:focal(840x506:1160x826):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/62460440/ROOH_PChang_5289.0.0.0.0.jpg"
+    })
     HarperAndRye.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     Maybecks.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     EZ5.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
@@ -563,6 +594,7 @@ const go = async () => {
     Lusk.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     BarCrudo.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     Rooh.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
+    Starbelly.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
 }
 
 go();
