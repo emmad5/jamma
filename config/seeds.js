@@ -568,6 +568,24 @@ const go = async () => {
         },
         imageUrl: "https://cdn.vox-cdn.com/thumbor/pkgJxPWu_kFsJeNeLMCve9LPbww=/0x0:2736x1824/1570x1178/filters:focal(1150x694:1586x1130):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/62460446/Disco_Nap_2.0.0.jpg"
     })
+    const TikiHaven = new Business({
+        name: "Tiki Haven",
+        address: "1334 Noriega St, San Francisco, CA 94122",
+        days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
+        longLat: [-122.478184, 37.754295],
+        startTime: "16:00",
+        endTime: "18:00",
+        menu: {
+            "9": [
+                "Tiki Cocktails",
+                "Classics"
+            ],
+            "18": [
+                "Fire Bowl"
+            ]
+        },
+        imageUrl: "http://tikihavensf.com/wordpress/wp-content/uploads/2014/08/1.jpg"
+    })
     HarperAndRye.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     Maybecks.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     EZ5.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
@@ -595,6 +613,7 @@ const go = async () => {
     BarCrudo.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     Rooh.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     Starbelly.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
+    TikiHaven.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
 }
 
 go();
