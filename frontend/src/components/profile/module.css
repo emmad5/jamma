@@ -97,3 +97,18 @@
  box-shadow: none;
   background: rgb(255, 252, 252);
 }
+
+.img-show-small {
+  height: 100px; 
+  /* width: 100%; */
+  width: 200px; 
+  
+  background-repeat: no-repeat;  
+  /* background-size: cover;  */
+  object-fit: cover; 
+  padding-top: 15px; 
+  padding-bottom: 15px; 
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

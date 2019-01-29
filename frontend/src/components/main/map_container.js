@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import Map from './map';
 import { getBusinesses } from '../../actions/business_actions';
-import {openModal} from '../../actions/modal_actions';
+import {openModal, closeModal} from '../../actions/modal_actions';
 const mstp = state => {
     let businesses = [];
     if (state.business) {
@@ -16,7 +16,8 @@ const mstp = state => {
 const mdtp = dispatch => {
     return {
         getBusinesses: () => dispatch(getBusinesses()),
-        openModal: (options) => dispatch(openModal('happyhour', options))
+        openModal: (type, options) => dispatch(openModal(type, options)),
+        closeModal: () => dispatch(closeModal())
     };
 };
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { closeModal } from '../actions/modal_actions';
 import { connect } from 'react-redux';
 import HappyHourShowContainer from './profile/happy_hour_show_container';
+import SmallHappyHourShow from './profile/small_happy_hour_shiow';
 import './modalstyle.css';
 
 function Modal({ modal, closeModal }) {
@@ -14,6 +15,10 @@ function Modal({ modal, closeModal }) {
         case 'happyhour':
             modal_class = 'modal-background';
             component = <HappyHourShowContainer options={modal.options}/>
+            break;
+        case 'smallhappyhour':
+            modal_class = 'modal-background-2';
+            component = <SmallHappyHourShow options={modal.options}/>
             break;
         default:
             return null;

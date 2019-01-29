@@ -72,15 +72,49 @@ class Map extends React.Component {
 
     
     addHappyHour() {
+      
         if (this.props.businesses.length) {
+         
             for (let i = 0; i < this.props.businesses.length; i++) {
+                let biz = this.props.businesses[i]
                 let pos = new window.google.maps.LatLng(this.props.businesses[i].longLat[1], this.props.businesses[i].longLat[0]);
                 const marker = new window.google.maps.Marker({
                     position: pos,
                     map: this.map,
+                    color: "white",
+             
                 });
                 marker.addListener('click', () => {
-                    this.props.openModal({ business: this.props.businesses[i]});
+                    this.props.openModal('happyhour', { business: this.props.businesses[i]});
+                });
+                // marker.addListener('mouseover', () => {   
+                //     this.props.openModal('smallhappyhour', { business: this.props.businesses[i] });
+                // })
+                // marker.addListener('mouseout', () => {
+                //     this.props.closeModal('smallhappyhour', { business: this.props.businesses[i] });
+                    
+                // })
+                marker.addListener('mouseover', function (event) {
+                    let label = {
+                        text: biz.name,
+                        color: 'black',
+                        labelClass: 'label',
+                        fontsize: 100,
+                        fontSize: "16px",
+                        fontWeight: "bold",
+                        background: 'white',
+                    }
+                    this.setLabel(label);
+                    // var icon = { 
+                    //     url: 'https://st2.depositphotos.com/1368414/10995/v/950/depositphotos_109950466-stock-illustration-vodka-martini-cocktail-glass.jpg', 
+                    //     scaledSize: new window.google.maps.Size(100, 100),
+                      
+                    // };
+                    // this.setIcon(icon)
+                    // this.setIcon(biz.imageUrl)
+                });
+                marker.addListener('mouseout', function (event) {
+                    this.setLabel(null);
                 });
             }
         } 
