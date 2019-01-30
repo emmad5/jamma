@@ -594,7 +594,7 @@ const go = async () => {
         startTime: "17:30",
         endTime: "19:00",
         menu: {
-            "2.5": [
+            "2": [
                 "Oysters"
             ],
             "5": [
