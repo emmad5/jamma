@@ -586,6 +586,23 @@ const go = async () => {
         },
         imageUrl: "http://tikihavensf.com/wordpress/wp-content/uploads/2014/08/1.jpg"
     })
+    const BlackCat = new Business({
+        name: "Black Cat",
+        address: "400 Eddy St, San Francisco, CA 94109",
+        days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
+        longLat: [-122.414413, 37.783787],
+        startTime: "17:30",
+        endTime: "19:00",
+        menu: {
+            "2.5": [
+                "Oysters"
+            ],
+            "5": [
+                "Duck Fat Fries"
+            ]
+        },
+        imageUrl: "https://cdn.vox-cdn.com/thumbor/7kVdN0e6vdPgW1qZKWbsigAzteU=/0x0:2000x1600/1620x1215/filters:focal(840x640:1160x960):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/62460435/BlackCat_PChang-1772.0.0.0.jpg"
+    })
     HarperAndRye.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     Maybecks.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     EZ5.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
@@ -614,6 +631,7 @@ const go = async () => {
     Rooh.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     Starbelly.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     TikiHaven.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
+    BlackCat.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
 }
 
 go();
