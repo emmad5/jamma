@@ -25,9 +25,9 @@ class Splash extends React.Component {
                 </div>
 
                 <div className="fav-cities-splash">
-                    <h2>explore your favorite cities'</h2> 
+                    <h2>explore San Francisco's</h2> 
                     
-                    <h3>favorite happy hours</h3>
+                    <h3>best happy hours</h3>
                 </div>
 
               <div>
