@@ -97,12 +97,12 @@ class Map extends React.Component {
                 marker.addListener('mouseover', function (event) {
                     let label = {
                         text: biz.name,
-                        color: 'black',
+                        color: '#8FB5B7',
                         labelClass: 'label',
-                        fontsize: 100,
-                        fontSize: "16px",
+                        fontSize: '20px',
+                        fontFamily: 'Symbol',
                         fontWeight: "bold",
-                        background: 'white',
+                     
                     }
                     this.setLabel(label);
                     // var icon = { 
