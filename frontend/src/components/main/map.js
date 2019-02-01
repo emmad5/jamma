@@ -9,6 +9,9 @@ class Map extends React.Component {
         this.addHappyHour = this.addHappyHour.bind(this);
         this.handleLocationError = this.handleLocationError.bind(this)
     }
+    componentWillUnmount() {
+        this.props.closeModal()
+    }
 
     componentDidMount(){
         this.props.getBusinesses();
