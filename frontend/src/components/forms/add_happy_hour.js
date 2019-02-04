@@ -75,7 +75,7 @@ class AddHappyHour extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-         
+        
         let business = {
             name: this.state.name,
             address: this.state.address,
