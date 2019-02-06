@@ -617,6 +617,27 @@ const go = async () => {
         },
         imageUrl: "https://cdn.vox-cdn.com/thumbor/SdmaOxRtwQYz_kE_BNfNpO3brZ8=/0x0:3285x2190/1620x1215/filters:focal(1380x833:1904x1357):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/62460439/Petit_Marlowe___by_Aubrie_Pick.0.0.jpg"
     })
+    const BarCrudo = new Business({
+        name: "Bar Crudo",
+        address: "655 Divisadero St, San Francisco, CA 94114",
+        days: ["Mon", "Tues", "Weds", "Thurs", "Fri", "Sat", "Sun"],
+        longLat: [-122.438130, 37.775709],
+        startTime: "17:00",
+        endTime: "18:30",
+        menu: {
+            "1": [
+                "Oysters"
+            ],
+            "4": [
+                "Beer"
+            ],
+            "6": [
+                "Wine",
+                "Seafood Chowder"
+            ]
+        },
+        imageUrl: "https://www.theinfatuation.com/san-francisco/reviews/bar-crudo"
+    })
     HarperAndRye.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     Maybecks.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     EZ5.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
@@ -647,6 +668,7 @@ const go = async () => {
     TikiHaven.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     BlackCat.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     PetitMarlowe.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
+    BarCrudo.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
 }
 
 go();
