@@ -619,7 +619,7 @@ const go = async () => {
     })
     const PalmHouse = new Business({
         name: "Palm House",
-        address: "2032 Union St, San Francisco, CA 94114",
+        address: "2032 Union St.",
         days: ["Tues", "Weds", "Thurs", "Fri"],
         longLat: [-122.432485, 37.797555],
         startTime: "17:00",
@@ -641,6 +641,30 @@ const go = async () => {
             ]
         },
         imageUrl: "https://infatuation.imgix.net/media/images/reviews/palm-house/banners/1531494089.36.jpg?auto=format&h=840&w=1336"
+    })
+    const ElTechodeLolinda = new Business({
+        name: "El Techo de Lolinda",
+        address: "2516 Mission St, San Francisco, CA 94110",
+        days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
+        longLat: [-122.419281, 37.756618],
+        startTime: "16:00",
+        endTime: "18:00",
+        menu: {
+            "4": [
+                "Beers"
+            ],
+            "5": [
+                "Guacamole",
+                "Empanadas"
+            ],
+            "7": [
+                "Margaritas"
+            ],
+            "11": [
+                "Rose Flight"
+            ]
+        },
+        imageUrl: "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjq8NDh0qfgAhW5IjQIHVjlBFoQjRx6BAgBEAU&url=%2Furl%3Fsa%3Di%26source%3Dimages%26cd%3D%26ved%3D%26url%3Dhttp%253A%252F%252Fcyneats.com%252Fel-techo-de-lolinda%252F%26psig%3DAOvVaw1PlbnfCWQZZ5GgshdQ1teR%26ust%3D1549561009335493&psig=AOvVaw1PlbnfCWQZZ5GgshdQ1teR&ust=1549561009335493"
     })
     HarperAndRye.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     Maybecks.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
@@ -673,6 +697,7 @@ const go = async () => {
     BlackCat.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     PetitMarlowe.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     PalmHouse.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
+    ElTechodeLolinda.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
 }
 
 go();
