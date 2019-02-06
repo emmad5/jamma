@@ -616,7 +616,7 @@ const go = async () => {
             ]
         },
         imageUrl: "https://cdn.vox-cdn.com/thumbor/SdmaOxRtwQYz_kE_BNfNpO3brZ8=/0x0:3285x2190/1620x1215/filters:focal(1380x833:1904x1357):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/62460439/Petit_Marlowe___by_Aubrie_Pick.0.0.jpg"
-    })
+    }) 
     HarperAndRye.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     Maybecks.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     EZ5.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
