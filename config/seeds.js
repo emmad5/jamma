@@ -617,26 +617,30 @@ const go = async () => {
         },
         imageUrl: "https://cdn.vox-cdn.com/thumbor/SdmaOxRtwQYz_kE_BNfNpO3brZ8=/0x0:3285x2190/1620x1215/filters:focal(1380x833:1904x1357):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/62460439/Petit_Marlowe___by_Aubrie_Pick.0.0.jpg"
     })
-    const BarCrudo = new Business({
-        name: "Bar Crudo",
-        address: "655 Divisadero St, San Francisco, CA 94114",
-        days: ["Mon", "Tues", "Weds", "Thurs", "Fri", "Sat", "Sun"],
-        longLat: [-122.438130, 37.775709],
+    const PalmHouse = new Business({
+        name: "Palm House",
+        address: "2032 Union St, San Francisco, CA 94114",
+        days: ["Tues", "Weds", "Thurs", "Fri"],
+        longLat: [-122.432485, 37.797555],
         startTime: "17:00",
         endTime: "18:30",
         menu: {
-            "1": [
-                "Oysters"
-            ],
             "4": [
-                "Beer"
+                "Fries"
+            ],
+            "5": [
+                "Sweet Potato Fries",
+                "Beers"
             ],
             "6": [
-                "Wine",
-                "Seafood Chowder"
+                "Guacamole",
+                "Slushies"
+            ],
+            "7": [
+                "Select Cocktails"
             ]
         },
-        imageUrl: "https://www.theinfatuation.com/san-francisco/reviews/bar-crudo"
+        imageUrl: "https://infatuation.imgix.net/media/images/reviews/palm-house/banners/1531494089.36.jpg?auto=format&h=840&w=1336"
     })
     HarperAndRye.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     Maybecks.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
@@ -668,6 +672,7 @@ const go = async () => {
     TikiHaven.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     BlackCat.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     PetitMarlowe.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
+    PalmHouse.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
 }
 
 go();
