@@ -668,7 +668,6 @@ const go = async () => {
     TikiHaven.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     BlackCat.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     PetitMarlowe.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
-    BarCrudo.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
 }
 
 go();
