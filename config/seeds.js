@@ -668,7 +668,7 @@ const go = async () => {
     })
     const ICHISushi = new Business({
         name: "ICHI Sushi",
-        address: "3369 Mission St, San Francisco, CA 94110 ",
+        address: "3369 Mission St, San Francisco, CA 94110",
         days: ["Mon", "Tues", "Weds", "Thurs", "Fri", "Sat"],
         longLat: [-122.421598, 37.742717],
         startTime: "17:30",
@@ -687,6 +687,26 @@ const go = async () => {
             ]
         },
         imageUrl: "https://infatuation.imgix.net/media/images/reviews/ichi-sushi-ni-bar/banners/1491346528.87.jpg?auto=format&h=840&w=1336"
+    })
+    const ParkChaletGardenRestaurant = new Business({
+        name: "Park Chalet Garden Restaurant",
+        address: "1000 Great Hwy, San Francisco, CA 94121",
+        days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
+        longLat: [-122.4013817, 37.798770399999995],
+        startTime: "15:00",
+        endTime: "18:00",
+        menu: {
+            "1.50": [
+                "Oysters"
+            ],
+            "4": [
+                "Beer"
+            ],
+            "6": [
+                "Cocktails"
+            ]
+        },
+        imageUrl: "https://static1.squarespace.com/static/557a2462e4b002c66e9a44b3/55ad255ee4b0185f028498cc/55ad255fe4b0e0c0474db59d/1437410655511/photo_gallery_res5.jpg"
     })
     HarperAndRye.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     Maybecks.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
@@ -721,6 +741,7 @@ const go = async () => {
     PalmHouse.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     ElTechodeLolinda.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     ICHISushi.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
+    ParkChaletGardenRestaurant.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
 }
 
 go();
