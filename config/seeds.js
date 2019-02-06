@@ -666,6 +666,28 @@ const go = async () => {
         },
         imageUrl: "https://s3-media4.fl.yelpcdn.com/bphoto/YZZvDAXqRriZ4eWS6KIg1g/o.jpg"
     })
+    const ICHISushi = new Business({
+        name: "ICHI Sushi",
+        address: "3369 Mission St, San Francisco, CA 94110 ",
+        days: ["Mon", "Tues", "Weds", "Thurs", "Fri", "Sat"],
+        longLat: [-122.421598, 37.742717],
+        startTime: "17:30",
+        endTime: "19:00",
+        menu: {
+            "3": [
+                "Skewers"
+            ],
+            "4": [
+                "Sapporo"
+            ],
+            "6": [
+                "Snacks",
+                "Sake",
+                "Wine"
+            ]
+        },
+        imageUrl: "https://infatuation.imgix.net/media/images/reviews/ichi-sushi-ni-bar/banners/1491346528.87.jpg?auto=format&h=840&w=1336"
+    })
     HarperAndRye.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     Maybecks.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     EZ5.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
@@ -698,6 +720,7 @@ const go = async () => {
     PetitMarlowe.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     PalmHouse.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     ElTechodeLolinda.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
+    ICHISushi.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
 }
 
 go();
