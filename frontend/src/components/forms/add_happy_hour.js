@@ -67,7 +67,7 @@ class AddHappyHour extends React.Component {
         }
     }
     
-    renderRedirect() { 
+    renderRedirect() {
         if (this.state.redirect) {
             return (<Redirect to='/map' />)
         }
