@@ -1,7 +1,7 @@
 import React from 'react';
 import Geocode from "react-geocode";
 import './form.css';
-import { Redirect } from 'react-router' 
+import { Redirect } from 'react-router'
 
 Geocode.setApiKey("AIzaSyBqwVIzzxEVM3LVo-wrdv9So1P1SB857H8");
 
