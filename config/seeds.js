@@ -688,6 +688,30 @@ const go = async () => {
         },
         imageUrl: "https://infatuation.imgix.net/media/images/reviews/ichi-sushi-ni-bar/banners/1491346528.87.jpg?auto=format&h=840&w=1336"
     })
+    const ParkChalet = new Business({
+        name: "Park Chalet",
+        address: "1000 Great Hwy, San Francisco, CA 94121",
+        days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
+        longLat: [-122.510222, 37.769750],
+        startTime: "15:00",
+        endTime: "18:00",
+        menu: {
+            "4": [
+                "Pints of Ale"
+            ],
+            "7": [
+                "Cocktails"
+            ],
+            "7": [
+                "Crispy Fried Chicken Wings",
+                "Calamari"
+            ],
+            "10": [
+                "Burger-and-a-Beer"
+            ]
+        },
+        imageUrl: "https://25va3qc1hw-flywheel.netdna-ssl.com/wp-content/uploads/2011/03/park_chalet.jpg"
+    })
     const Serpentine = new Business({
         name: "Serpentine",
         address: "2495 3rd Street, San Francisco, CA 94107",
