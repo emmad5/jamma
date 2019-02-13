@@ -688,6 +688,24 @@ const go = async () => {
         },
         imageUrl: "https://infatuation.imgix.net/media/images/reviews/ichi-sushi-ni-bar/banners/1491346528.87.jpg?auto=format&h=840&w=1336"
     })
+    const Serpentine = new Business({
+        name: "Serpentine",
+        address: "2495 3rd Street, San Francisco, CA 94107",
+        days: ["Mon", "Tues", "Weds", "Thurs", "Fri"],
+        longLat: [-122.388158, 37.758059],
+        startTime: "17:00",
+        endTime: "19:00",
+        menu: {
+            "5": [
+                "Beer",
+                "Wine",
+                "2495 Sour",
+                "Whiskey Smash",
+                "Beso de Bruja"
+            ]
+        },
+        imageUrl: "https://static1.squarespace.com/static/5987e4cf8419c22ddf34724e/5ab41191575d1f0b79ae5ccc/5ab44b52575d1f48a5ac6237/1539789241449/slide1.jpg"
+    })
     HarperAndRye.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     Maybecks.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     EZ5.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
