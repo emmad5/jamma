@@ -764,6 +764,7 @@ const go = async () => {
     ElTechodeLolinda.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     ICHISushi.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
     Serpentine.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
+    ParkChalet.save().then(() => console.log("It worked!")).catch(() => console.log("It failed!"));
 }
 
 go();
